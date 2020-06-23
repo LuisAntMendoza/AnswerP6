@@ -1,6 +1,6 @@
 -- MariaDB dump 10.17  Distrib 10.4.11-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: AnswerP6
+-- Host: localhost    Database: answerp6
 -- ------------------------------------------------------
 -- Server version	10.4.11-MariaDB
 
@@ -23,11 +23,11 @@ DROP TABLE IF EXISTS `categoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `categoria` (
-  `id_Categoria` int(2) NOT NULL,
+  `id_categoria` int(2) NOT NULL AUTO_INCREMENT,
   `Categoria` varchar(30) NOT NULL,
-  PRIMARY KEY (`id_Categoria`),
+  PRIMARY KEY (`id_categoria`),
   UNIQUE KEY `Categoria` (`Categoria`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,6 +36,7 @@ CREATE TABLE `categoria` (
 
 LOCK TABLES `categoria` WRITE;
 /*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
+INSERT INTO `categoria` VALUES (1,'actividades académicas'),(2,'ciencia'),(3,'cultura'),(4,'deportes');
 /*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -47,30 +48,32 @@ DROP TABLE IF EXISTS `encuesta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `encuesta` (
-  `id_Encuesta` int(6) NOT NULL,
+  `id_Encuesta` int(6) NOT NULL AUTO_INCREMENT,
   `Titulo` varchar(30) NOT NULL,
   `Descripcion` varchar(250) NOT NULL,
   `id_Categoria` int(2) DEFAULT NULL,
   `FechaInicio` date NOT NULL,
   `FechaFinal` date NOT NULL,
   `id_Pregunta1` int(6) NOT NULL,
-  `id_Pregunta2` int(6) DEFAULT NULL,
-  `id_Pregunta3` int(6) DEFAULT NULL,
-  `id_Pregunta4` int(6) DEFAULT NULL,
-  `id_Pregunta5` int(6) DEFAULT NULL,
+  `id_Pregunta2` int(6) NOT NULL,
+  `id_Pregunta3` int(6) NOT NULL,
+  `id_Pregunta4` int(6) NOT NULL,
+  `id_Pregunta5` int(6) NOT NULL,
   PRIMARY KEY (`id_Encuesta`),
+  UNIQUE KEY `Titulo` (`Titulo`),
+  UNIQUE KEY `id_Pregunta1` (`id_Pregunta1`),
+  UNIQUE KEY `id_Pregunta2` (`id_Pregunta2`),
+  UNIQUE KEY `id_Pregunta2_2` (`id_Pregunta2`),
+  UNIQUE KEY `id_Pregunta3` (`id_Pregunta3`),
+  UNIQUE KEY `id_Pregunta4` (`id_Pregunta4`),
+  UNIQUE KEY `id_Pregunta5` (`id_Pregunta5`),
   KEY `id_Categoria` (`id_Categoria`),
-  KEY `id_Pregunta1` (`id_Pregunta1`),
-  KEY `id_Pregunta2` (`id_Pregunta2`),
-  KEY `id_Pregunta3` (`id_Pregunta3`),
-  KEY `id_Pregunta4` (`id_Pregunta4`),
-  KEY `id_Pregunta5` (`id_Pregunta5`),
-  CONSTRAINT `encuesta_ibfk_1` FOREIGN KEY (`id_Categoria`) REFERENCES `categoria` (`id_Categoria`),
   CONSTRAINT `encuesta_ibfk_2` FOREIGN KEY (`id_Pregunta1`) REFERENCES `pregunta` (`id_pregunta`),
   CONSTRAINT `encuesta_ibfk_3` FOREIGN KEY (`id_Pregunta2`) REFERENCES `pregunta` (`id_pregunta`),
   CONSTRAINT `encuesta_ibfk_4` FOREIGN KEY (`id_Pregunta3`) REFERENCES `pregunta` (`id_pregunta`),
   CONSTRAINT `encuesta_ibfk_5` FOREIGN KEY (`id_Pregunta4`) REFERENCES `pregunta` (`id_pregunta`),
-  CONSTRAINT `encuesta_ibfk_6` FOREIGN KEY (`id_Pregunta5`) REFERENCES `pregunta` (`id_pregunta`)
+  CONSTRAINT `encuesta_ibfk_6` FOREIGN KEY (`id_Pregunta5`) REFERENCES `pregunta` (`id_pregunta`),
+  CONSTRAINT `encuesta_ibfk_7` FOREIGN KEY (`id_Categoria`) REFERENCES `categoria` (`id_categoria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -91,11 +94,11 @@ DROP TABLE IF EXISTS `grupo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `grupo` (
-  `id_Grupo` int(2) NOT NULL,
+  `id_grupo` int(2) NOT NULL AUTO_INCREMENT,
   `Grupo` int(3) NOT NULL,
-  PRIMARY KEY (`id_Grupo`),
+  PRIMARY KEY (`id_grupo`),
   UNIQUE KEY `Grupo` (`Grupo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -104,6 +107,7 @@ CREATE TABLE `grupo` (
 
 LOCK TABLES `grupo` WRITE;
 /*!40000 ALTER TABLE `grupo` DISABLE KEYS */;
+INSERT INTO `grupo` VALUES (1,401),(2,402),(3,403),(4,404),(5,405),(6,406),(7,407),(8,408),(9,409),(10,410),(11,411),(12,412),(13,413),(14,414),(15,415),(16,416),(17,417),(18,451),(19,452),(20,453),(21,454),(22,455),(23,456),(24,457),(25,458),(26,459),(27,460),(28,461),(29,462),(30,463),(31,464),(32,465),(33,466),(34,501),(35,502),(36,503),(37,504),(38,505),(39,506),(40,507),(41,508),(42,509),(43,510),(44,511),(45,512),(46,513),(47,514),(48,515),(49,516),(50,517),(51,518),(52,551),(53,552),(54,553),(55,554),(56,555),(57,556),(58,557),(59,558),(60,559),(61,560),(62,561),(63,562),(64,563),(65,564),(66,601),(67,602),(68,603),(69,604),(70,605),(71,606),(72,607),(73,608),(74,609),(75,610),(76,611),(77,612),(78,613),(79,614),(80,615),(81,616),(82,617),(83,618),(84,619),(85,651),(86,652),(87,653),(88,654),(89,655),(90,656),(91,657),(92,658),(93,659),(94,660),(95,661),(96,662),(97,663),(98,664);
 /*!40000 ALTER TABLE `grupo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,7 +119,7 @@ DROP TABLE IF EXISTS `pregunta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pregunta` (
-  `id_pregunta` int(6) NOT NULL,
+  `id_pregunta` int(6) NOT NULL AUTO_INCREMENT,
   `Pregunta` varchar(50) NOT NULL,
   `ImgApoyo` longblob DEFAULT NULL,
   `id_Respuesta1` int(6) NOT NULL,
@@ -193,24 +197,23 @@ DROP TABLE IF EXISTS `usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuario` (
-  `id_usuario` int(6) NOT NULL,
-  `Nombre` varchar(20) NOT NULL,
-  `ApellidoPat` varchar(15) NOT NULL,
-  `ApellidoMat` varchar(15) NOT NULL,
-  `FNacimiento` date NOT NULL,
-  `FotoPerfil` longblob NOT NULL,
-  `NCuenta` int(9) NOT NULL,
-  `RFC` varchar(13) NOT NULL,
-  `CorreoElectronico` varchar(30) NOT NULL,
-  `Contraseña` tinytext NOT NULL,
+  `id_usuario` int(6) NOT NULL AUTO_INCREMENT,
+  `Usuario` varchar(50) NOT NULL,
+  `Identificador` varchar(50) NOT NULL,
+  `Nombre` varchar(50) NOT NULL,
+  `ApellidoPat` varchar(50) NOT NULL,
+  `ApellidoMat` varchar(50) NOT NULL,
+  `FNacimiento` varchar(50) NOT NULL,
+  `CorreoElectronico` varchar(50) NOT NULL,
+  `Contraseña` varchar(60) NOT NULL,
   `id_Grupo` int(2) DEFAULT NULL,
-  `NTrabajador` int(6) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
-  UNIQUE KEY `NCuenta` (`NCuenta`),
-  UNIQUE KEY `RFC` (`RFC`),
   UNIQUE KEY `CorreoElectronico` (`CorreoElectronico`),
+  UNIQUE KEY `Usuario` (`Usuario`),
+  UNIQUE KEY `iDENTIFICADOR` (`Identificador`),
+  UNIQUE KEY `Identificador_2` (`Identificador`),
   KEY `id_Grupo` (`id_Grupo`),
-  CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_Grupo`) REFERENCES `grupo` (`id_Grupo`)
+  CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_Grupo`) REFERENCES `grupo` (`id_grupo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -232,4 +235,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-22 19:24:47
+-- Dump completed on 2020-06-23 17:38:22
