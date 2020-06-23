@@ -1,0 +1,152 @@
+.modalCSS {
+    position: fixed;
+    width: 50%;
+    height: 400px;
+    background-color: white;
+    top: 25%;
+    left: 25%;
+    z-index: 10;
+    transition: 0.5s linear;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    display: none;
+}
+
+.fade-body {
+    background-color: black;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    display: none;
+}
+
+.cabeza-modal {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 10%;
+    border-bottom: 1.5px solid gray;
+}
+
+.cuerpo-modal {
+    padding: 10px 15px;
+    line-height: 21px;
+}
+
+.paletaColor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+
+.cuerpo-modal h3 {
+    color: blue;
+    text-align: center;
+}
+
+.cuerpo-modal h4 {
+    color: red;
+}
+
+.cabeza-modal i {
+    width: 5%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.paletaColor div {
+    width: 10%;
+    height: 25px;
+}
+
+#Primario1 {
+    background-color: #F2F2F2;
+}
+
+#Secundario1 {
+    background-color: #B3B3B3;
+}
+
+#Terciario1 {
+    background-color: #7F7F7F;
+}
+
+#Primario2 {
+    background-color: #9D98D9;
+}
+
+#Secundario2 {
+    background-color: #413E59;
+}
+
+#Terciario2 {
+    background-color: #252433;
+}
+
+#Primario3 {
+    background-color: #828282;
+}
+
+#Secundario3 {
+    background-color: #525252;
+}
+
+#Terciario3 {
+    background-color: #383838;
+}
+
+#aceptarPaleta {
+    padding: 10px 30px;
+    background-color: blue;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@keyframes desvanecerModal {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes desvanecerFade {
+    from {
+        opacity: 0.6;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes aparecerModal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.6;
+    }
+}
