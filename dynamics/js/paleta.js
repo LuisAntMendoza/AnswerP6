@@ -22,19 +22,19 @@ function colorearPaleta() {
         $(".Secundario").css("background-color", "#B3B3B3");
         $(".Terciario").css("background-color", "#7F7F7F");
         $(".CuartoColor").css("background-color", "#A4A4A4");
-        console.log("modal 1");
+        $(".Principal").css("color", "black");
     } else if (valCookie("Paleta") == 2) {
         $(".Principal").css("background-color", "#9D98D9");
         $(".Secundario").css("background-color", "#413E59");
         $(".Terciario").css("background-color", "#252433");
         $(".CuartoColor").css("background-color", "#6F6B99");
-        console.log("modal 2");
+        $(".Principal").css("color", "white");
     } else if (valCookie("Paleta") == 3) {
         $(".Principal").css("background-color", "#828282");
         $(".Secundario").css("background-color", "#525252");
         $(".Terciario").css("background-color", "#383838");
         $(".CuartoColor").css("background-color", "#727272");
-        console.log("modal 3");
+        $(".Principal").css("color", "white");
     }
 }
 
@@ -43,20 +43,20 @@ $(document).ready(() => {
         $(".Principal").css("background-color", "#F2F2F2");
         $(".Secundario").css("background-color", "#B3B3B3");
         $(".Terciario").css("background-color", "#7F7F7F");
-        $(".CuartoColor").css("background-color", "#B3B3B3");
-        console.log("modal 1");
+        $(".CuartoColor").css("background-color", "#A4A4A4");
+        $(".Principal").css("color", "black");
     } else if (valCookie("Paleta") == 2) {
         $(".Principal").css("background-color", "#9D98D9");
         $(".Secundario").css("background-color", "#413E59");
         $(".Terciario").css("background-color", "#252433");
         $(".CuartoColor").css("background-color", "#6F6B99");
-        console.log("modal 2");
+        $(".Principal").css("color", "white");
     } else if (valCookie("Paleta") == 3) {
         $(".Principal").css("background-color", "#828282");
         $(".Secundario").css("background-color", "#525252");
         $(".Terciario").css("background-color", "#383838");
         $(".CuartoColor").css("background-color", "#525252");
-        console.log("modal 3");
+        $(".Principal").css("color", "white");
     } else {
         abrirModal();
     }
