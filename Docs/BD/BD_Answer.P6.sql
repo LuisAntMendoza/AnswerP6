@@ -55,18 +55,18 @@ CREATE TABLE `encuesta` (
   `FechaInicio` date NOT NULL,
   `FechaFinal` date NOT NULL,
   `id_Pregunta1` int(6) NOT NULL,
-  `id_Pregunta2` int(6) NOT NULL,
-  `id_Pregunta3` int(6) NOT NULL,
-  `id_Pregunta4` int(6) NOT NULL,
-  `id_Pregunta5` int(6) NOT NULL,
+  `id_Pregunta2` int(6) DEFAULT NULL,
+  `id_Pregunta3` int(6) DEFAULT NULL,
+  `id_Pregunta4` int(6) DEFAULT NULL,
+  `id_Pregunta5` int(6) DEFAULT NULL,
   PRIMARY KEY (`id_Encuesta`),
   UNIQUE KEY `Titulo` (`Titulo`),
   UNIQUE KEY `id_Pregunta1` (`id_Pregunta1`),
+  UNIQUE KEY `id_Pregunta5` (`id_Pregunta5`),
+  UNIQUE KEY `id_Pregunta4` (`id_Pregunta4`),
+  UNIQUE KEY `id_Pregunta3` (`id_Pregunta3`),
   UNIQUE KEY `id_Pregunta2` (`id_Pregunta2`),
   UNIQUE KEY `id_Pregunta2_2` (`id_Pregunta2`),
-  UNIQUE KEY `id_Pregunta3` (`id_Pregunta3`),
-  UNIQUE KEY `id_Pregunta4` (`id_Pregunta4`),
-  UNIQUE KEY `id_Pregunta5` (`id_Pregunta5`),
   KEY `id_Categoria` (`id_Categoria`),
   CONSTRAINT `encuesta_ibfk_2` FOREIGN KEY (`id_Pregunta1`) REFERENCES `pregunta` (`id_pregunta`),
   CONSTRAINT `encuesta_ibfk_3` FOREIGN KEY (`id_Pregunta2`) REFERENCES `pregunta` (`id_pregunta`),
@@ -236,4 +236,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-23 22:49:37
+-- Dump completed on 2020-06-24 15:19:21
