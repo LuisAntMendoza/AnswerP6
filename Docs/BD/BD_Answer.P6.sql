@@ -176,6 +176,7 @@ CREATE TABLE `respuesta` (
   `id_Respuesta` int(6) NOT NULL,
   `Respuesta` varchar(50) NOT NULL,
   `ImgApoyoRes` longblob DEFAULT NULL,
+  `votos` int(6) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id_Respuesta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -204,7 +205,7 @@ CREATE TABLE `usuario` (
   `ApellidoPat` varchar(50) NOT NULL,
   `ApellidoMat` varchar(50) NOT NULL,
   `FNacimiento` varchar(50) NOT NULL,
-  `CorreoElectronico` varchar(50) NOT NULL,
+  `CorreoElectronico` varchar(70) NOT NULL,
   `Contraseña` varchar(60) NOT NULL,
   `id_Grupo` int(2) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
@@ -235,4 +236,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-23 17:38:22
+-- Dump completed on 2020-06-23 22:49:37
