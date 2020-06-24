@@ -1,0 +1,52 @@
+.cont-carrusel {
+    position: relative;
+    width: 80%;
+    height: 60%;
+    margin: auto;
+}
+
+.fade-carrusel {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.texto-carrusel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    z-index: 2;
+    color: white;
+}
+
+.boton {
+    width: 40%;
+    height: 10%;
+    margin: auto;
+    display: flex;
+    border-radius: 20px;
+}
+
+.boton h3 {
+    margin: auto;
+    color: white;
+}
+
+#articulo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#carruselInicio {
+    z-index: 0;
+}
+
+#carruselInicio img {
+    height: 408px;
+}
