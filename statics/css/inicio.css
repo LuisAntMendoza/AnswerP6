@@ -3,6 +3,8 @@
     width: 80%;
     height: 60%;
     margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .fade-carrusel {
@@ -23,10 +25,21 @@
     text-align: center;
     z-index: 2;
     color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.texto-carrusel * {
+    margin: auto;
+    width: 80%;
+}
+
+.texto-carrusel h3 {
+    width: 80%;
 }
 
 .boton {
-    width: 40%;
+    width: 35%;
     height: 10%;
     margin: auto;
     display: flex;
@@ -45,6 +58,10 @@
 
 #carruselInicio {
     z-index: 0;
+}
+
+#btn-acceder {
+    cursor: pointer;
 }
 
 #carruselInicio img {

@@ -126,7 +126,6 @@ if($_FILES["imgPerfil"]["type"] == "image/png" || $_FILES["imgPerfil"]["type"] =
     rename($temporal, $dir."/".$userFoto.".".$extension);
 }
 else {
-    echo "imagen";
     header("location: ../../templates/errorRegistro.html");
     exit();
 }

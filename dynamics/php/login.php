@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("./config.php");
 $conexion = conectarBD();
 
@@ -33,23 +34,22 @@ if($usuario != "") {
         $usuarioBase = Decifrar($resultado[1]);
         if($usuarioBase == $usuario) {
             if(password_verify($Contraseña, $resultado[8])) {
-                // $_SESSION['usuario'] = Decifrar($resultado[1]);
-                // $_SESSION['Usuario2'] = $resultado[0];
-                // $_SESSION['Poder'] = $resultado[7];
-                //header("location: index.php");
-                echo "exito";
+                $_SESSION['usuario'] = Decifrar($resultado[1]);
+                $_SESSION['nombre'] = Decifrar($resultado[3]);
+                $_SESSION['apPat'] = Decifrar($resultado[4]);
+                $_SESSION['apMat'] = Decifrar($resultado[5]);
+                $_SESSION['fNac'] = Decifrar($resultado[6]);
+                $_SESSION['correo'] = Decifrar($resultado[7]);
+                $_SESSION['grupo'] = $resultado[9];
+                header("location: ../../templates/inicio.html");
                 exit();
             }
             else {
-                echo "contra incorrecta";
-                // $_SESSION['Error'] = "<p>Contraseña incorrecta</p>";
                 header("location:../../templates/errorLogin.html");
                 exit();
             }
         }
     }
-    echo "no usuario";
-    // $_SESSION['Error'] = "<p>Usuario no encontrado</p>";
     header("location:../../templates/errorLogin.html");
     exit();
 }
@@ -60,23 +60,22 @@ if($email != "") {
         $usuarioBase = Decifrar($resultado[7]);
         if($usuarioBase == $email) {
             if(password_verify($Contraseña, $resultado[8])) {
-                // $_SESSION['usuario'] = Decifrar($resultado[1]);
-                // $_SESSION['Usuario2'] = $resultado[0];
-                // $_SESSION['Poder'] = $resultado[7];
-                //header("location: index.php");
-                echo "exito";
+                $_SESSION['usuario'] = Decifrar($resultado[1]);
+                $_SESSION['nombre'] = Decifrar($resultado[3]);
+                $_SESSION['apPat'] = Decifrar($resultado[4]);
+                $_SESSION['apMat'] = Decifrar($resultado[5]);
+                $_SESSION['fNac'] = Decifrar($resultado[6]);
+                $_SESSION['correo'] = Decifrar($resultado[7]);
+                $_SESSION['grupo'] = Decifrar($resultado[9]);
+                header("location: ../../templates/inicio.html");
                 exit();
             }
             else {
-                echo "contra incorrecta";
-                // $_SESSION['Error'] = "<p>Contraseña incorrecta</p>";
                 header("location:../../templates/errorLogin.html");
                 exit();
             }
         }
     }
-    echo "no usuario";
-    // $_SESSION['Error'] = "<p>Usuario no encontrado</p>";
     header("location:../../templates/errorLogin.html");
     exit();
 }
