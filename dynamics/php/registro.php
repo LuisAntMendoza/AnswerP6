@@ -18,7 +18,6 @@ if(preg_match("/(^[A-Z][a-zñÑáéíóúÁÉÍÓÚ]+$)|(^[A-Z][a-zñÑáéíó�
     $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
 }
 else {
-    echo "Nombre";
     header("location:../../templates/errorRegistro.html");
     exit();
 }
@@ -28,7 +27,6 @@ if(preg_match("/(^[A-Z][a-zñÑáéíóúÁÉÍÓÚ]+$)/", $_POST['apPat'])) {
     $apPat = mysqli_real_escape_string($conexion, $_POST['apPat']);
 }
 else {
-    echo "ApPat";
     header("location:../../templates/errorRegistro.html");
     exit();
 }
@@ -38,7 +36,6 @@ if(preg_match("/(^[A-Z][a-zñÑáéíóúÁÉÍÓÚ]+$)/", $_POST['apMat'])) {
     $apMat = mysqli_real_escape_string($conexion, $_POST['apMat']);
 }
 else {
-    echo "apMat";
     header("location:../../templates/errorRegistro.html");
     exit();
 }
@@ -51,7 +48,6 @@ else if (preg_match("/^\d{6}$/", $_POST['claveUn'])) {
     $claveUn = mysqli_real_escape_string($conexion, $_POST['claveUn']);
 }
 else {
-    echo "clave";
     header("location:../../templates/errorRegistro.html");
     exit();
 }
@@ -66,7 +62,6 @@ if(preg_match("/^\d{9}$/", $_POST['usuario'])) {
         $grupo = intval($grupo);
     }
     else {
-        echo "grupo";
         header("location:../../templates/errorRegistro.html");
         exit();
     }
@@ -77,7 +72,6 @@ else if (preg_match("/^[A-Z]{4}[0-9]{6}[0-9A-Z]{3}$/", $_POST['usuario'])) {
     $grupo = "null";
 }
 else {
-    echo "usuario";
     header("location:../../templates/errorRegistro.html");
     exit();
 }
@@ -87,7 +81,6 @@ if(preg_match("/^(([0-1][0-9]{3})|(20(([0-1][0-9])|20)))-(0[0-9]|1[0-2])-(([0-2]
     $fNac = mysqli_real_escape_string($conexion, $_POST['fNac']);
 }
 else {
-    echo "fnac";
     header("location:../../templates/errorRegistro.html");
     exit();
 }
@@ -97,7 +90,6 @@ if(preg_match("/^[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+
     $email = mysqli_real_escape_string($conexion, $_POST['email']);
 }
 else {
-    echo "email";
     header("location:../../templates/errorRegistro.html");
     exit();
 }
@@ -107,13 +99,11 @@ if(preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!-+])([A-Za-z\d!-+]|[^ ]){1
     $Contraseña = mysqli_real_escape_string($conexion, $_POST['password']);
 }
 else {
-    echo "password";
     header("location:../../templates/errorRegistro.html");
     exit();
 }
 
 if(consultarUsuario($usuario) == false) {
-    echo "user DB";
     header("location:../../templates/errorRegistro.html");
     exit();
 }

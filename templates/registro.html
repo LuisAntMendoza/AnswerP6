@@ -19,7 +19,7 @@
     <script src="../dynamics/js/modalPaleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/paleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/registro.js" charset="utf-8"></script>
-    <script src="../dynamics/js/linksTemplates.js" charset="utf-8"></script>
+    <script src="../dynamics/js/links.js" charset="utf-8"></script>
 </head>
 
 <body class="Terciario">
@@ -113,14 +113,17 @@
                                 <div class="form-input"><input type="submit" value="Registrarse" id="inpRegistro" class="Terciario"></div>
                             </div>
                         </form>
-                        <form action="" method="post" id="form-inicio">
+                        <form action="../dynamics/php/login.php" method="post" id="form-inicio">
                             <div class="inicio-1">
                                 <h5>Numero de Cuenta / RFC / Correo electronico</h5>
-                                <input type="text" class="color-input">
+                                <input type="text" class="color-input" name="usuario" required
+                                    pattern="(^[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$)|(^\d{9}$)|(^[A-Z]{4}[0-9]{6}[0-9A-Z]{3}$)"
+                                    title="Ingrese un usuario válido">
                                 <h5>Contraseña</h5>
-                                <input type="text" class="color-input"><br>
+                                <input type="password" class="color-input" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!-+])([A-Za-z\d!-+]|[^ ]){10,20}$"
+                                    title="Ingrese una contraseña válida. Requiere entre 10 y 20 caracteres, mínimo 1 minúscula, 1 mayúscula y 1 caractér especial." required><br>
                                 <h5 id="mensajeInicio"></h5>
-                                <input type="submit" class="Terciario" id="inpLogin">
+                                <input type="submit" class="Terciario" id="inpLogin" value="Iniciar Sesión">
                             </div>
                             <div class="inicio-2 Secundario">
                                 <img src="../statics/img/logos/logoCoyote.png" alt="" id="img-inicio">

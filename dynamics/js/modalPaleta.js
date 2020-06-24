@@ -25,6 +25,7 @@ $(document).ready(() => {
         paleta = 3;
     })
     $("#aceptarPaleta").on("click", () => {
+        borrarCookie("Paleta");
         document.cookie = "Paleta=" + paleta;
     })
     $("#aceptarPaleta").on("click", () => {

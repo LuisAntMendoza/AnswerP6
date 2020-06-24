@@ -16,6 +16,12 @@ function valCookie(nombre) {
     return regreso;
 }
 
+function borrarCookie(cookie) {
+    let time = new Date();
+    time.setTime(time.getTime() - 1)
+    document.cookie = cookie + "=0;expires=" + time.toGMTString();
+}
+
 function colorearPaleta() {
     if (valCookie("Paleta") == 1) {
         $(".Principal").css("background-color", "#F2F2F2");
@@ -55,7 +61,7 @@ $(document).ready(() => {
         $(".Principal").css("background-color", "#828282");
         $(".Secundario").css("background-color", "#525252");
         $(".Terciario").css("background-color", "#383838");
-        $(".CuartoColor").css("background-color", "#525252");
+        $(".CuartoColor").css("background-color", "#727272");
         $(".Principal").css("color", "white");
     } else {
         abrirModal();

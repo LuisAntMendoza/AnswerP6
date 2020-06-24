@@ -1,8 +1,8 @@
 $(document).ready(() => {
     $("#link-inicio").on("click", () => {
-        window.location = "index.html";
+        window.location = "inicio.html";
     })
     $("#link-perfil").on("click", () => {
-        window.location = "templates/registro.html";
+        window.location = "registro.html";
     })
 })
