@@ -60,7 +60,6 @@ CREATE TABLE `encuesta` (
   `id_pregunta4` varchar(20) DEFAULT NULL,
   `id_pregunta5` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id_encuesta`),
-  UNIQUE KEY `Titulo` (`Titulo`),
   UNIQUE KEY `id_Pregunta1` (`id_pregunta1`),
   UNIQUE KEY `id_Pregunta5` (`id_pregunta5`),
   UNIQUE KEY `id_Pregunta4` (`id_pregunta4`),
@@ -198,7 +197,7 @@ DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id_usuario` int(6) NOT NULL AUTO_INCREMENT,
   `Usuario` varchar(50) NOT NULL,
-  `Identificador` varchar(50) NOT NULL,
+  `Identificador` varchar(70) DEFAULT NULL,
   `Nombre` varchar(50) NOT NULL,
   `ApellidoPat` varchar(50) NOT NULL,
   `ApellidoMat` varchar(50) NOT NULL,
@@ -215,7 +214,7 @@ CREATE TABLE `usuario` (
   UNIQUE KEY `Identificador_2` (`Identificador`),
   KEY `id_Grupo` (`id_Grupo`),
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_Grupo`) REFERENCES `grupo` (`id_grupo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -236,4 +235,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-25 16:51:37
+-- Dump completed on 2020-06-25 18:03:06

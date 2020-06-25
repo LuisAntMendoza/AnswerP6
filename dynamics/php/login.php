@@ -70,7 +70,7 @@ if($email != "") {
                 $_SESSION['apMat'] = Decifrar($resultado[5]);
                 $_SESSION['fNac'] = Decifrar($resultado[6]);
                 $_SESSION['correo'] = Decifrar($resultado[7]);
-                $_SESSION['grupo'] = Decifrar($resultado[9]);
+                $_SESSION['grupo'] = $resultado[9];
                 $_SESSION['generadas'] = $resultado[10];
                 $_SESSION['respondidas'] = $resultado[11];
                 header("location: ../../templates/inicio.html");

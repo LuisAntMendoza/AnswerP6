@@ -19,7 +19,7 @@ if(preg_match("/(^[A-Z][a-zñÑáéíóúÁÉÍÓÚ]+$)|(^[A-Z][a-zñÑáéíó�
 }
 else {
     echo "nombre";
-    //header("location:../../templates/errorRegistro.html");
+    header("location:../../templates/errorRegistro.html");
     exit();
 }
 
@@ -29,7 +29,7 @@ if(preg_match("/(^[A-Z][a-zñÑáéíóúÁÉÍÓÚ]+$)/", $_POST['apPat'])) {
 }
 else {
     echo "appat";
-    //header("location:../../templates/errorRegistro.html");
+    header("location:../../templates/errorRegistro.html");
     exit();
 }
 
@@ -39,7 +39,7 @@ if(preg_match("/(^[A-Z][a-zñÑáéíóúÁÉÍÓÚ]+$)/", $_POST['apMat'])) {
 }
 else {
     echo "apmat";
-    //header("location:../../templates/errorRegistro.html");
+    header("location:../../templates/errorRegistro.html");
     exit();
 }
 
@@ -52,7 +52,7 @@ else if (preg_match("/^\d{6}$/", $_POST['claveUn'])) {
 }
 else {
     echo "clave";
-    //header("location:../../templates/errorRegistro.html");
+    header("location:../../templates/errorRegistro.html");
     exit();
 }
 
@@ -67,7 +67,7 @@ if(preg_match("/^\d{9}$/", $_POST['usuario'])) {
     }
     else {
         echo "grupo";
-        //header("location:../../templates/errorRegistro.html");
+        header("location:../../templates/errorRegistro.html");
         exit();
     }
 }
@@ -78,7 +78,7 @@ else if (preg_match("/^[A-Z]{4}[0-9]{6}[0-9A-Z]{3}$/", $_POST['usuario'])) {
 }
 else {
     echo "usuario";
-    //header("location:../../templates/errorRegistro.html");
+    header("location:../../templates/errorRegistro.html");
     exit();
 }
 
@@ -88,7 +88,7 @@ if(preg_match("/^(([0-1][0-9]{3})|(20(([0-1][0-9])|20)))-(0[0-9]|1[0-2])-(([0-2]
 }
 else {
     echo "fnac";
-    //header("location:../../templates/errorRegistro.html");
+    header("location:../../templates/errorRegistro.html");
     exit();
 }
 
@@ -98,7 +98,7 @@ if(preg_match("/^[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+
 }
 else {
     echo "correo";
-    //header("location:../../templates/errorRegistro.html");
+    header("location:../../templates/errorRegistro.html");
     exit();
 }
 
@@ -108,13 +108,13 @@ if(preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!-+])([A-Za-z\d!-+]|[^ ]){1
 }
 else {
     echo "contraseña";
-    //header("location:../../templates/errorRegistro.html");
+    header("location:../../templates/errorRegistro.html");
     exit();
 }
 
 if(consultarUsuario($usuario, $conexion) == false) {
     echo "consultarUsuario";
-    //header("location:../../templates/errorRegistro.html");
+    header("location:../../templates/errorRegistro.html");
     exit();
 }
 
@@ -137,7 +137,7 @@ if($_FILES["imgPerfil"]["type"] == "image/png" || $_FILES["imgPerfil"]["type"] =
 }
 else {
     echo "archivo";
-    //header("location: ../../templates/errorRegistro.html");
+    header("location: ../../templates/errorRegistro.html");
     exit();
 }
 
