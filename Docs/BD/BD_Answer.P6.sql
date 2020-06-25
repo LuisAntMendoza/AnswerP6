@@ -1,13 +1,13 @@
--- MariaDB dump 10.17  Distrib 10.4.11-MariaDB, for Win64 (AMD64)
+-- MySQL dump 10.13  Distrib 5.7.26, for osx10.10 (x86_64)
 --
--- Host: localhost    Database: answerp6
+-- Host: localhost    Database: AnswerP6
 -- ------------------------------------------------------
--- Server version	10.4.11-MariaDB
+-- Server version	5.7.26
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -52,8 +52,8 @@ CREATE TABLE `encuesta` (
   `Titulo` varchar(30) NOT NULL,
   `Descripcion` varchar(250) NOT NULL,
   `id_Categoria` int(2) DEFAULT NULL,
-  `FechaInicio` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `FechaFinal` date NOT NULL,
+  `FechaInicio` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `FechaFinal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `id_pregunta1` varchar(20) NOT NULL,
   `id_pregunta2` varchar(20) DEFAULT NULL,
   `id_pregunta3` varchar(20) DEFAULT NULL,
@@ -174,7 +174,7 @@ DROP TABLE IF EXISTS `respuesta`;
 CREATE TABLE `respuesta` (
   `id_Respuesta` varchar(20) NOT NULL,
   `Respuesta` varchar(50) NOT NULL,
-  `votos` int(6) NOT NULL DEFAULT 0,
+  `votos` int(6) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_Respuesta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -206,8 +206,8 @@ CREATE TABLE `usuario` (
   `CorreoElectronico` varchar(70) NOT NULL,
   `Contraseña` varchar(60) NOT NULL,
   `id_Grupo` int(2) DEFAULT NULL,
-  `EncuCreadas` int(3) NOT NULL DEFAULT 0,
-  `EncuRespondidas` int(4) NOT NULL DEFAULT 0,
+  `EncuCreadas` int(3) NOT NULL DEFAULT '0',
+  `EncuRespondidas` int(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `CorreoElectronico` (`CorreoElectronico`),
   UNIQUE KEY `Usuario` (`Usuario`),
@@ -236,4 +236,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-25 14:00:11
+-- Dump completed on 2020-06-25 16:51:37
