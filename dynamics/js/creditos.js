@@ -13,4 +13,19 @@ $(document).ready(() => {
     $("#aceptarPaleta").on("click", () => {
         setTimeout(colorearBordes, 450);
     })
+    $("#git-luis").on("click", () => {
+        window.open("https://github.com/LuisAntMendoza");
+    });
+    $("#git-cris").on("click", () => {
+        window.open("https://github.com/CristianUmAg");
+    });
+    $("#git-emi").on("click", () => {
+        window.open("https://github.com/Emilianole6312");
+    });
+    $("#git-gabo").on("click", () => {
+        window.open("https://github.com/Gaborivas22");
+    });
+    $("#git-jose").on("click", () => {
+        window.open("https://github.com/juarezzjose");
+    });
 })

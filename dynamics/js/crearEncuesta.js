@@ -1,13 +1,19 @@
 function crearPregunta() {
-    if ($($("#encuesta").children()).length < 6) {
+    if ($($("#encuesta").children()).length < 7) {
+        preguntas++;
         let pregunta = $("<div>");
         $(pregunta).addClass("pregunta");
+        $(pregunta).addClass("CuartoColor");
         let h4 = $("<h4>");
-        $(h4).text("Ingrese su pregunta");
+        $(h4).text("Ingrese su pregunta: ");
         let inpPregunta = $("<input>");
         $(inpPregunta).attr("type", "text");
-        $(inpPregunta).attr("name", "pregunta");
+        $(inpPregunta).attr("name", "pregunta" + preguntas);
         $(inpPregunta).attr("class", "inpPregunta");
+        let inpFileQuest = $("<input>");
+        $(inpFileQuest).attr("type", "file");
+        $(inpFileQuest).attr("name", "imgQuest[]");
+        $(inpFileQuest).attr("accept", "image/*");
         let respuestas = $("<div>");
         $(respuestas).addClass("respuestas");
         for (let i = 0; i < 2; i++) {
@@ -15,9 +21,14 @@ function crearPregunta() {
             $(respuesta).addClass("respuesta");
             let b = $("<b>");
             $(b).addClass("opcion")
-            $(b).text("A");
+            $(b).text("·");
             let inpRespuesta = $("<input>");
             $(inpRespuesta).attr("type", "text");
+            $(inpRespuesta).attr("name", "respuesta" + preguntas + "[]");
+            let inpFileResp = $("<input>");
+            $(inpFileResp).attr("type", "file");
+            $(inpFileResp).attr("name", "imgResp[]");
+            $(inpFileResp).attr("accept", "image/*");
             let borrar = $("<button>");
             $(borrar).text("Borrar respuesta");
             $(borrar).on("click", (e) => {
@@ -27,7 +38,7 @@ function crearPregunta() {
                     $($(e.target).parent()).remove();
                 }
             });
-            $(respuesta).append(b, inpRespuesta, borrar);
+            $(respuesta).append(b, inpRespuesta, inpFileResp, borrar);
             $(respuestas).append(respuesta);
         }
         let button = $("<button>");
@@ -37,9 +48,14 @@ function crearPregunta() {
             if ($($($(e.target).parent()).children()).length < 11) {
                 e.preventDefault();
                 let b = $("<b>");
-                $(b).text("A");
+                $(b).text("·");
                 let inpRespuesta = $("<input>");
                 $(inpRespuesta).attr("type", "text");
+                $(inpRespuesta).attr("name", "respuesta[]");
+                let inpFileResp = $("<input>");
+                $(inpFileResp).attr("type", "file");
+                $(inpFileResp).attr("name", "imgResp[]");
+                $(inpFileResp).attr("accept", "image/*");
                 let respuesta = $("<div>");
                 $(respuesta).addClass("respuesta");
                 let borrar = $("<button>");
@@ -51,19 +67,30 @@ function crearPregunta() {
                         $($(e.target).parent()).remove();
                     }
                 })
-                $(respuesta).append(b, inpRespuesta, borrar);
+                $(respuesta).append(b, inpRespuesta, inpFileResp, borrar);
                 $(e.target).before(respuesta);
             }
         });
+        let borrarQuest = $("<button>");
+        borrarQuest.text("Borrar Pregunta");
+        $(borrarQuest).on("click", (e) => {
+            e.preventDefault();
+            if ($($("#encuesta").children()).length > 3) {
+                preguntas--;
+                $($(e.target).parent()).remove();
+            }
+        })
         $(respuestas).append(button);
-        $(pregunta).append(h4, inpPregunta, respuestas);
+        $(pregunta).append(h4, inpPregunta, inpFileQuest, respuestas, borrarQuest);
         $("#agregarQuest").before(pregunta);
+        colorearPaleta();
     }
 }
-
-$("#agregarQuest").on("click", (e) => {
-    e.preventDefault();
+let preguntas = 0;
+$(document).ready(() => {
+    $("#agregarQuest").on("click", (e) => {
+        e.preventDefault();
+        crearPregunta();
+    })
     crearPregunta();
 })
-
-crearPregunta();
