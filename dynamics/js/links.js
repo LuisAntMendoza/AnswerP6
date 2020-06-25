@@ -30,4 +30,7 @@ $(document).ready(() => {
     $("#link-encuestas").on("click", () => {
         window.location = "encuestas.html";
     })
+    $("#ultimoNav").on("click", () => {
+        window.location = "creditos.html";
+    })
 })
