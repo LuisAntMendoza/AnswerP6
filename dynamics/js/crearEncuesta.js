@@ -51,7 +51,7 @@ function crearPregunta() {
                 $(b).text("·");
                 let inpRespuesta = $("<input>");
                 $(inpRespuesta).attr("type", "text");
-                $(inpRespuesta).attr("name", "respuesta[]");
+                $(inpRespuesta).attr("name", "respuesta" + preguntas + "[]");
                 let inpFileResp = $("<input>");
                 $(inpFileResp).attr("type", "file");
                 $(inpFileResp).attr("name", "imgResp[]");
@@ -93,4 +93,17 @@ $(document).ready(() => {
         crearPregunta();
     })
     crearPregunta();
+    fetch("../dynamics/php/getCategoria.php").then((response) => {
+        return response.json();
+    }).then((data) => {
+        for (let i = 0; i < data.length; i++) {
+            let option = $("<option>");
+            $(option).attr("value", data[i]["id_categoria"]);
+            $(option).text(data[i]["Categoria"]);
+            $("#select-categoria").append(option);
+        }
+        //console.log(data);
+    }).catch((error) => {
+        console.log(error.message);
+    })
 })
