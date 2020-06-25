@@ -1,0 +1,100 @@
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    margin: auto;
+}
+
+.descripcion {
+    width: 90%;
+    height: 15%;
+}
+
+.integrantes {
+    height: 60%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.integrante {
+    width: 26%;
+    height: 45%;
+    border-radius: 0 30px 0 30px;
+    margin: auto;
+}
+
+.integrante-header {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.integrante-header h5 {
+    width: 65%;
+    margin: auto;
+}
+
+.integrante-body {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.integrante-body p {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.foto-integrante {
+    height: 80%;
+    width: 22%;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.integrante-brand {
+    width: 45%;
+    height: 45%;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    cursor: pointer;
+}
+
+.integrante-brand span, .integrante-brand i {
+    margin: auto;
+}
+
+.github {
+    background-color: black;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+#articulo {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: center;
+}
+
+#img-logo {
+    height: 80%;
+    margin: auto 2%;
+}

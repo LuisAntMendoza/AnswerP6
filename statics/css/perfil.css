@@ -1,0 +1,94 @@
+.cuerpo-perfil {
+    width: 95%;
+    height: 90%;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.perfil-1 {
+    width: 30%;
+    height: 90%;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.perfil-2 {
+    width: 60%;
+    height: 90%;
+    border-radius: 20px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-perfil {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.form-img {
+    width: 90%;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+.form-img h5, .form-img input {
+    margin: 10px auto;
+}
+
+.form-img input[type="file"] {
+    font-size: 15px;
+}
+
+.form-img input[type="submit"] {
+    border-radius: 20px;
+    color: white;
+    padding: 0 20px;
+}
+
+.form-perfil input {
+    width: 80%;
+    margin: auto;
+}
+
+.form-perfil input[type="submit"] {
+    color: white;
+    border-radius: 20px;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.perfil-2 h5 {
+    width: 80%;
+    margin: auto;
+}
+
+.perfil-1 h5 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#articulo {
+    display: flex;
+}
+
+#img-perfil {
+    width: 80%;
+    height: 50%;
+    border: 2px solid black;
+    margin: auto;
+}

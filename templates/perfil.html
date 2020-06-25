@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../statics/css/principal.css">
     <link rel="stylesheet" href="../libs/fontawesome/css/all.css">
     <link rel="stylesheet" href="../statics/css/modalPaleta.css">
-    <link rel="stylesheet" href="../statics/css/errorRegistro.css">
+    <link rel="stylesheet" href="../statics/css/perfil.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../statics/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../statics/favicon/favicon-16x16.png">
     <!-- Bootstrap -->
@@ -20,6 +20,7 @@
     <script src="../dynamics/js/paleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/links.js" charset="utf-8"></script>
     <script src="../dynamics/js/sesiones.js" charset="utf-8"></script>
+    <script src="../dynamics/js/perfil.js" charset="utf-8"></script>
 </head>
 
 <body class="Terciario">
@@ -57,10 +58,35 @@
         </aside>
         <div id="contenido">
             <article id="articulo" class="Secundario">
-                <div class="cuerpoError Principal">
-                    <h2>Ha ocurrido un error durante su registro.</h2>
-                    <h3>Favor de revisar sus datos y volver a intentarlo.</h3>
-                    <a href="registro.html" class="CuartoColor">Volver a Registro</a>
+                <div class="cuerpo-perfil Principal">
+                    <div class="perfil-1 CuartoColor">
+                        <img src="" alt="" id="img-perfil">
+                        <form action="../dynamics/php/cambiarPerfil.php" method="post" enctype="multipart/form-data" class="form-img Secundario">
+                            <h5>Cambiar foto de perfil</h5>
+                            <input type="file" name="imgPerfil" accept="image/*" required>
+                            <input type="submit" name="" value="Cambiar" class="Terciario">
+                        </form>
+                        <h5 id="h5-nombre"></h5>
+                    </div>
+                    <div class="perfil-2 CuartoColor">
+                        <h5 id="h5-usuario"></h5>
+                        <h5 id="h5-fNac"></h5>
+                        <h5 id="h5-correo"></h5>
+                        <form action="../dynamics/php/cambiarContra.php" method="post" class="form-perfil Secundario">
+                            <h5>Cambiar contraseña</h5>
+                            <p>Ingrese su nueva contraseña</p>
+                            <input type="password" name="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!-+])([A-Za-z\d!-+]|[^ ]){10,20}$"
+                                title="Ingrese una contraseña válida. Requiere entre 10 y 20 caracteres, mínimo 1 minúscula, 1 mayúscula y 1 caractér especial."><br>
+                            <input type="submit" value="Cambiar" class="Terciario">
+                        </form>
+                        <form action="../dynamics/php/cambiarCorreo.php" method="post" class="form-perfil Secundario">
+                            <h5>Cambiar correo</h5>
+                            <p>Ingrese su nuevo correo</p>
+                            <input type="email" name="correo" required pattern="^[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
+                                title="Ingrese un correo electrónico válido"><br>
+                            <input type="submit" name="" value="Cambiar" class="Terciario">
+                        </form>
+                    </div>
                 </div>
             </article>
         </div>

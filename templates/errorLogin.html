@@ -19,6 +19,7 @@
     <script src="../dynamics/js/modalPaleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/paleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/links.js" charset="utf-8"></script>
+    <script src="../dynamics/js/sesiones.js" charset="utf-8"></script>
 </head>
 
 <body class="Terciario">
@@ -26,8 +27,8 @@
         <nav class="navbar navbar-dark Terciario">
             <a class="navbar-brand CuartoColor"><img src="../statics/img/logos/logoQuest.png" alt="" id="logo-nav">Answer P6</a>
             <form class="form-inline">
-                <button class="btn my-2 my-sm-0 mx-1 text-white CuartoColor" type="submit">Usuario</button>
-                <button class="btn my-2 my-sm-0 mx-1 text-white CuartoColor" type="submit">Cerrar sesión</button>
+                <button class="btn my-2 my-sm-0 mx-1 text-white CuartoColor" type="submit" id="btn-usuario">Usuario</button>
+                <button class="btn my-2 my-sm-0 mx-1 text-white CuartoColor" type="submit" id="cerrar-sesion">Cerrar sesión</button>
             </form>
         </nav>
     </header>
@@ -41,13 +42,17 @@
                 <p>Perfil</p>
                 <i class="fas fa-user"></i>
             </div>
+            <div class="tabAside CuartoColor" id="link-encuestas">
+                <p>Encuestas</p>
+                <i class="fas fa-edit"></i>
+            </div>
             <div class="tabAside CuartoColor" id="escogerPaleta">
                 <p>Escoger paleta</p>
                 <i class="fas fa-tint"></i>
             </div>
             <div class="tabAside CuartoColor" id="ultimoNav">
-                <p>Ayuda</p>
-                <i class="far fa-question-circle"></i>
+                <p>DevTeam</p>
+                <i class="fas fa-code"></i>
             </div>
         </aside>
         <div id="contenido">
