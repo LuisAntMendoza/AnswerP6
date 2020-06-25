@@ -1,4 +1,4 @@
-# AnswerP6
+# AnswerP6 ![logoQuest3](https://user-images.githubusercontent.com/65323540/85762696-9b6d2000-b6d9-11ea-861a-aca9fe47e008.png)
 ## Equipo: Whiter Team :sunglasses:
 ## Integrantes:
 * Gabriel Rivas Maldonado
