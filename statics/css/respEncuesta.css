@@ -67,3 +67,20 @@
     margin-bottom: 30px;
     border-radius: 20px;
 }
+
+#antes {
+    display: none;
+}
+
+#despues {
+    display: none;
+}
+
+#cont-canvas * {
+    margin: 40px auto;
+}
+
+.grafica-encuesta {
+    width: 90%;
+    color: purp
+}

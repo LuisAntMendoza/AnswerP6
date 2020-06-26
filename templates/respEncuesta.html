@@ -16,6 +16,7 @@
     <script src="../libs/jquery-3.5.1.min.js" charset="utf-8"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="../libs/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="../libs/chart.min.js" charset="utf-8"></script>
     <script src="../dynamics/js/modalPaleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/paleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/links.js" charset="utf-8"></script>
@@ -63,6 +64,17 @@
                         <div class="header-encuesta CuartoColor">
                             <h3 id="titulo-encuesta"></h3>
                             <p id="descripcion-encuesta"></p>
+                            <div id="antes">
+                                <h3>Esta encuesta aún no ha comenzado</h3>
+                                <h4>La encuesta comenzará el: <span id="fInicio"></span></h4>
+                            </div>
+                            <div id="despues">
+                                <h3>Los resultados de su encuesta son: </h3>
+                                <div id="cont-canvas">
+
+                                </div>
+                                <canvas id="grafica-encuesta"></canvas>
+                            </div>
                         </div>
                         <!-- <div class="pregunta CuartoColor">
                             <h5>Pregunta 1</h5>
@@ -85,6 +97,7 @@
                                 </div>
                             </div>
                         </div> -->
+
                         <input type="submit" id="enviarForm">
                     </form>
                 </div>
