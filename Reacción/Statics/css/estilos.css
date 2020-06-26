@@ -1,0 +1,75 @@
+@font-face {
+  font-family: Rajdhani-Bold;
+  src: url("../../../../lib/Fonts/Rajdhani-Bold.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rajdhani-Bold;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #20152D;
+}
+img {
+  width: 95px;
+  height: 95px;
+}
+.ratting {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.ratting input {
+  display: none;
+}
+.ratting label {
+  position: relative;
+  width: 0;
+  height: 128px;
+  cursor: pointer;
+  transition: 0.5s;
+  filter: grayscale(1);
+  text-align: center;
+  opacity: 0;
+}
+.ratting:hover label {
+  width: 160px;
+  opacity: 0.2;
+}
+.ratting input:hover + label, .ratting input:checked + label {
+  filter: grayscale(0);
+  opacity: 1;
+  width: 160px;
+}
+.ratting label h4 {
+  color: #ffffff;
+  font-size: 24px;
+  padding-top: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-50px) scale(0);
+  transition: 0.5s;
+}
+.ratting input:hover + label h4, .ratting input:checked + label h4 {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.text {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translate(-50%);
+  color: #ffffff;
+  width: 500px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 36px;
+}
