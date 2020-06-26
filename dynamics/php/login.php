@@ -44,6 +44,7 @@ if($usuario != "") {
                 $_SESSION['grupo'] = $resultado[9];
                 $_SESSION['generadas'] = $resultado[10];
                 $_SESSION['respondidas'] = $resultado[11];
+                $_SESSION['poder'] = $resultado[12];
                 header("location: ../../templates/inicio.html");
                 exit();
             }
@@ -73,6 +74,7 @@ if($email != "") {
                 $_SESSION['grupo'] = $resultado[9];
                 $_SESSION['generadas'] = $resultado[10];
                 $_SESSION['respondidas'] = $resultado[11];
+                $_SESSION['poder'] = $resultado[12];
                 header("location: ../../templates/inicio.html");
                 exit();
             }

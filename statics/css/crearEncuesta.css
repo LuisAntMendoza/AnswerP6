@@ -107,3 +107,12 @@ input[type="file"] {
 #agregarQuest {
     margin-bottom: 20px;
 }
+
+#divGrupos {
+    flex-wrap: wrap;
+    display: none;
+}
+
+#divGrupos * {
+    width: 100%;
+}

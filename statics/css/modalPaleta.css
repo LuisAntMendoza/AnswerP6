@@ -2,7 +2,6 @@
     background-color: white;
     border-radius: 20px;
     display: none;
-    display: flex;
     flex-direction: column;
     height: 400px;
     left: 25%;

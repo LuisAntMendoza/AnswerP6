@@ -102,8 +102,39 @@ $(document).ready(() => {
             $(option).text(data[i]["Categoria"]);
             $("#select-categoria").append(option);
         }
-        //console.log(data);
     }).catch((error) => {
         console.log(error.message);
+    });
+    fetch("../dynamics/php/grupos.php").then((response) => {
+        return response.json();
+    }).then((data) => {
+        for (let i = 0; i < data.length; i++) {
+            let option = $("<option>");
+            $(option).attr("value", data[i]["id_grupo"]);
+            $(option).text(data[i]["Grupo"]);
+            $("#select-grupos").append(option);
+        }
+    }).catch((error) => {
+        console.log(error.message);
+    });
+    fetch("../dynamics/php/getTypeUser.php").then((response) => {
+        return response.json();
+    }).then((data) => {
+        for (let i = 0; i < data.length; i++) {
+            console.log(data);
+            let option = $("<option>");
+            $(option).attr("value", data[i]["id_tipo"]);
+            $(option).text(data[i]["TipoUsuario"]);
+            $("#select-poder").append(option);
+        }
+    }).catch((error) => {
+        console.log(error.message);
+    });
+    $("#select-poder").on("change", () => {
+        if ($("#select-poder").val() == 3) {
+            $("#divGrupos").css("display", "flex");
+        } else {
+            $("#divGrupos").css("display", "none");
+        }
     })
 })
