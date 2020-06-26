@@ -59,31 +59,34 @@
         <div id="contenido">
             <article id="articulo" class="Secundario">
                 <div class="contenedor-encuesta Principal">
-                    <div class="header-encuesta CuartoColor">
-                        <h3 id="titulo-encuesta"></h3>
-                        <p id="descripcion-encuesta"></p>
-                    </div>
-                    <div class="pregunta CuartoColor">
-                        <h5>Pregunta 1</h5>
-                        <img src="../statics/img/fotosResp/resp1.png" alt="" class="fotoPregunta">
-                        <div class="respuestas">
-                            <div class="respuesta">
-                                <input type="radio" name="respuesta1"><img src="../statics/img/fotosResp/resp1.png" alt=""><span>Respuesta</span><br>
-                            </div>
-                            <div class="respuesta">
-                                <input type="radio" name="respuesta1"><img src="../statics/img/fotosResp/resp1.png" alt=""><span>Respuesta</span><br>
-                            </div>
-                            <div class="respuesta">
-                                <input type="radio" name="respuesta1"><img src="../statics/img/fotosResp/resp1.png" alt=""><span>Respuesta</span><br>
-                            </div>
-                            <div class="respuesta">
-                                <input type="radio" name="respuesta1"><img src="../statics/img/fotosResp/resp1.png" alt=""><span>Respuesta</span><br>
-                            </div>
-                            <div class="respuesta">
-                                <input type="radio" name="respuesta1"><img src="../statics/img/fotosResp/resp1.png" alt=""><span>Respuesta</span>
-                            </div>
+                    <form action="../dynamics/php/datosEncuesta.php" method="post" id="cont-encuesta">
+                        <div class="header-encuesta CuartoColor">
+                            <h3 id="titulo-encuesta"></h3>
+                            <p id="descripcion-encuesta"></p>
                         </div>
-                    </div>
+                        <!-- <div class="pregunta CuartoColor">
+                            <h5>Pregunta 1</h5>
+                            <img src="../statics/img/fotosResp/resp1.png" alt="" class="fotoPregunta">
+                            <div class="respuestas">
+                                <div class="respuesta">
+                                    <input type="radio" name="respuesta1"><img src="../statics/img/fotosResp/resp1.png" alt=""><span>Respuesta</span>
+                                </div>
+                                <div class="respuesta">
+                                    <input type="radio" name="respuesta1"><img src="../statics/img/fotosResp/resp1.png" alt=""><span>Respuesta</span><br>
+                                </div>
+                                <div class="respuesta">
+                                    <input type="radio" name="respuesta1"><img src="../statics/img/fotosResp/resp1.png" alt=""><span>Respuesta</span><br>
+                                </div>
+                                <div class="respuesta">
+                                    <input type="radio" name="respuesta1"><img src="../statics/img/fotosResp/resp1.png" alt=""><span>Respuesta</span><br>
+                                </div>
+                                <div class="respuesta">
+                                    <input type="radio" name="respuesta1"><img src="../statics/img/fotosResp/resp1.png" alt=""><span>Respuesta</span>
+                                </div>
+                            </div>
+                        </div> -->
+                        <input type="submit" id="enviarForm">
+                    </form>
                 </div>
             </article>
         </div>

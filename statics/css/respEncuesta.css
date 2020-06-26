@@ -26,6 +26,10 @@
     padding: 20px;
 }
 
+.respuestas {
+    width: 100%;
+}
+
 .pregunta h5 {
     width: 90%;
     text-align: center;
@@ -49,4 +53,17 @@
 
 #articulo {
     display: flex;
+}
+
+#cont-encuesta {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#enviarForm {
+    margin: auto;
+    width: 20%;
+    margin-bottom: 30px;
+    border-radius: 20px;
 }
