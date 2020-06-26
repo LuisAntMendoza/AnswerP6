@@ -1,18 +1,32 @@
+.tabAside:hover i {
+    text-decoration: none;
+}
+
+.tabAside p {
+    margin: auto;
+}
+
+.tabAside i {
+    font-size: 30px;
+    margin: auto 12px auto auto;
+    text-decoration: none;
+}
+
 .tabAside {
-    color: white;
-    width: 200px;
-    height: 50px;
-    margin: 15px auto 15px 0;
-    transition: 0.5s linear;
-    left: -150px;
-    position: relative;
-    border-radius: 0 20px 20px 0;
-    z-index: 1;
-    display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    border-radius: 0 20px 20px 0;
+    color: white;
     cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50px;
+    justify-content: space-between;
+    left: -150px;
+    margin: 15px auto 15px 0;
+    position: relative;
+    transition: 0.5s linear;
+    width: 200px;
+    z-index: 1;
 }
 
 .navbar-brand {
@@ -25,42 +39,28 @@
     left: 0;
 }
 
-.tabAside:hover i {
-    text-decoration: none;
-}
-
-.tabAside p {
-    margin: auto;
-}
-
-.tabAside i {
-    margin: auto 12px auto auto;
-    font-size: 30px;
-    text-decoration: none;
-}
-
 #cuerpo {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 }
 
 #ultimoNav {
-    position: absolute;
     bottom: 20px;
+    position: absolute;
     margin: auto auto auto 0;
 }
 
 #navLateral {
-    width: 5%;
-    height: 93vh;
+    align-items: flex-start;
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: flex-start;
+    height: 93vh;
+    justify-content: flex-start;
     position: relative;
+    width: 5%;
 }
 
 #contenido {
@@ -68,23 +68,23 @@
 }
 
 #pie {
+    bottom: 0;
     color: white;
-    width: 95%;
     padding: 15px 10px;
     position: absolute;
-    bottom: 0;
     right: 0;
+    width: 95%;
 }
 
 #articulo {
-    width: 95%;
-    height: 83vh;
     border-radius: 20px;
+    height: 83vh;
     margin: auto;
+    width: 95%;
 }
 
 #logo-nav {
     height: 30px;
-    width: 30px;
     margin-right: 10px;
+    width: 30px;
 }

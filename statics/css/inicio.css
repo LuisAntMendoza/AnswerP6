@@ -1,32 +1,6 @@
-.cont-carrusel {
-    position: relative;
-    width: 80%;
-    height: 60%;
-    margin: auto;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.fade-carrusel {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.7;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-}
-
-.texto-carrusel {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    text-align: center;
-    z-index: 2;
+.boton h3 {
     color: white;
-    display: flex;
-    flex-wrap: wrap;
+    margin: auto;
 }
 
 .texto-carrusel * {
@@ -38,18 +12,49 @@
     width: 80%;
 }
 
-.boton {
-    width: 35%;
-    height: 10%;
-    margin: auto;
-    display: flex;
-    border-radius: 20px;
+#carruselInicio img {
+    height: 408px;
 }
 
-.boton h3 {
+.cont-carrusel {
+    border-radius: 20px;
+    height: 60%;
     margin: auto;
-    color: white;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
 }
+
+.fade-carrusel {
+    background-color: black;
+    height: 100%;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.texto-carrusel {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.boton {
+    border-radius: 20px;
+    display: flex;
+    height: 10%;
+    margin: auto;
+    width: 35%;
+}
+
 
 #articulo {
     display: flex;
@@ -62,8 +67,4 @@
 
 #btn-acceder {
     cursor: pointer;
-}
-
-#carruselInicio img {
-    height: 408px;
 }

@@ -1,48 +1,48 @@
 .cuerpo-perfil {
-    width: 95%;
-    height: 90%;
-    margin: auto;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
+    height: 90%;
+    margin: auto;
+    width: 95%;
 }
 
 .perfil-1 {
-    width: 30%;
-    height: 90%;
-    margin: auto;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
+    height: 90%;
+    margin: auto;
+    width: 30%;
 }
 
 .perfil-2 {
-    width: 60%;
-    height: 90%;
     border-radius: 20px;
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
+    height: 90%;
+    margin: auto;
+    width: 60%;
 }
 
 .form-perfil {
-    width: 40%;
-    margin: auto;
+    border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: auto;
     text-align: center;
     padding: 20px;
-    border-radius: 20px;
+    width: 40%;
 }
 
 .form-img {
-    width: 90%;
-    margin: auto;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
     padding-top: 15px;
+    width: 90%;
 }
 
 .form-img h5, .form-img input {
@@ -60,26 +60,26 @@
 }
 
 .form-perfil input {
-    width: 80%;
     margin: auto;
+    width: 80%;
 }
 
 .form-perfil input[type="submit"] {
-    color: white;
     border-radius: 20px;
-    width: 60%;
+    color: white;
     margin-top: 20px;
+    width: 60%;
 }
 
 .perfil-2 h5 {
-    width: 80%;
     margin: auto;
+    width: 80%;
 }
 
 .perfil-1 h5 {
-    width: 80%;
     margin: auto;
     text-align: center;
+    width: 80%;
 }
 
 #articulo {
@@ -87,8 +87,8 @@
 }
 
 #img-perfil {
-    width: 80%;
-    height: 50%;
     border: 2px solid black;
+    height: 50%;
     margin: auto;
+    width: 80%;
 }

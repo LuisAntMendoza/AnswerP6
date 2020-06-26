@@ -1,16 +1,16 @@
 a {
+    border-radius: 20px;
+    color: white !important;
     padding: 15px;
     text-decoration: none;
-    color: white !important;
-    border-radius: 20px;
 }
 
 .cuerpoError {
-    width: 80%;
-    height: 80%;
     border-radius: 20px;
+    height: 80%;
     margin: auto;
     text-align: center;
+    width: 80%;
 }
 
 .cuerpoError * {

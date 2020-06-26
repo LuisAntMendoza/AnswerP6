@@ -1,24 +1,10 @@
-.head-encuesta textarea {
-    resize: none;
-    outline: none;
-    background-color: rgb(224, 224, 224);
-    border-radius: 20px;
-    padding: 5px;
-}
-
-#encuesta button {
-    border-radius: 20px;
-    padding: 2px 7px;
-    outline: none;
-}
-
 input {
-    border-radius: 20px;
-    padding: 5px;
     background-color: rgb(224, 224, 224);
-    width: 40%;
+    border-radius: 20px;
     margin: 0 10px;
     outline: none;
+    padding: 5px;
+    width: 40%;
 }
 
 input[type="submit"] {
@@ -27,38 +13,62 @@ input[type="submit"] {
 }
 
 input[type="file"] {
+    color: black;
     padding: 2px;
     width: 32%;
-    color: black;
+}
+
+.head-encuesta textarea {
+    background-color: rgb(224, 224, 224);
+    border-radius: 20px;
+    outline: none;
+    padding: 5px;
+    resize: none;
 }
 
 .respuestas input {
     margin: 10px 10px;
 }
 
+.cuerpo-crear h3 {
+    margin: 20px auto;
+    text-align: center;
+    width: 95%;
+}
+
+.pregunta>input {
+    margin: 0 30%;
+}
+
+.head-encuesta * {
+    width: 60%;
+}
+
+#encuesta button {
+    border-radius: 20px;
+    outline: none;
+    padding: 2px 7px;
+}
+
 .cuerpo-crear {
+    border-radius: 20px;
     width: 95%;
     height: 90%;
     margin: auto;
-    border-radius: 20px;
     overflow-y: scroll;
     display: flex;
     flex-wrap: wrap;
 }
 
 .head-encuesta {
-    width: 90%;
-    margin: auto;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
+    margin: auto;
     padding: 20px 0;
-}
-
-.head-encuesta * {
-    width: 60%;
+    text-align: center;
+    width: 90%;
 }
 
 .pregunta {
@@ -71,39 +81,29 @@ input[type="file"] {
 }
 
 .respuestas {
-    width: 90%;
-    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 20px auto;
+    width: 90%;
 }
 
 .respuesta {
-    width: 100%;
     margin: auto;
-}
-
-.cuerpo-crear h3 {
-    width: 95%;
-    margin: 20px auto;
-    text-align: center;
+    width: 100%;
 }
 
 #articulo {
-    overflow-y: scroll;
     display: flex;
+    overflow-y: scroll;
 }
 
 #encuesta {
     height: 85%;
-    width: 90%;
     margin: auto;
+    width: 90%;
 }
 
 #agregarQuest {
     margin-bottom: 20px;
-}
-
-.pregunta>input {
-    margin: 0 30%;
 }
