@@ -1,0 +1,52 @@
+.contenedor-encuesta {
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-encuesta {
+    width: 90%;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.pregunta {
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pregunta h5 {
+    width: 90%;
+    text-align: center;
+}
+
+.respuesta {
+    margin: 10px auto;
+}
+
+.fotoPregunta {
+    width: 20%;
+}
+
+.respuesta * {
+    margin: 0 7px;
+}
+
+.respuesta img {
+    width: 10%;
+}
+
+#articulo {
+    display: flex;
+}

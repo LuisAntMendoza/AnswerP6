@@ -17,6 +17,13 @@ if($categoria == 0) {
 }
 $fechaIni = getFecha($_POST["fIni"]);
 $fechaFin = getFecha($_POST["fFin"]);
+$minUser = $_POST['minUser'];
+if(isset($_POST['grupo'])) {
+    $grupo = $_POST['grupo'];
+}
+if($grupo == 0) {
+    $grupo = "null";
+}
 
 $idEncuesta = $_SESSION["idUser"]."-".($_SESSION["generadas"]+1);
 $l = 0;
@@ -44,7 +51,7 @@ for ($i=1; $i < 6; $i++) {
     }
 }
 
-$consulta = 'INSERT INTO encuesta VALUES ("'.$idEncuesta.'", "'.$titulo.'", "'.$descripcion.'", '.$categoria.', "'.$fechaIni.'", "'.$fechaFin.'", '.$arrIdPreguntas[0].', '.$arrIdPreguntas[1].', '.$arrIdPreguntas[2].', '.$arrIdPreguntas[3].', '.$arrIdPreguntas[4].')';
+$consulta = 'INSERT INTO encuesta VALUES ("'.$idEncuesta.'", "'.$titulo.'", "'.$descripcion.'", '.$categoria.', "'.$fechaIni.'", "'.$fechaFin.'", '.$arrIdPreguntas[0].', '.$arrIdPreguntas[1].', '.$arrIdPreguntas[2].', '.$arrIdPreguntas[3].', '.$arrIdPreguntas[4].', '.$minUser.', '.$grupo.')';
 $consultar = mysqli_query($conexion, $consulta);
 
 $_SESSION["generadas"]++;

@@ -5,12 +5,20 @@ function getEncPropias() {
         for (let i = 0; i < data.length; i++) {
             let div = $("<div>");
             $(div).addClass("encuesta CuartoColor encPropia");
+            $(div).data("id-encuesta", data[i].id_encuesta);
+            $(div).on("click", () => {
+                console.log($(div).data("id-encuesta"));
+                document.cookie = "encuesta=" + $(div).data("id-encuesta");
+                document.location = "respEncuesta.html";
+            })
             let h4 = $("<h4>");
             $(h4).text(data[i].Titulo);
             $(div).append(h4);
             $("#agregarEncuesta").before(div);
             colorearPaleta();
         }
+        console.log(data);
+
     }).catch((error) => {
         console.log(error);
     })
@@ -25,9 +33,16 @@ function getEncPub() {
     }).then((response) => {
         return response.json();
     }).then((data) => {
+        console.log(data);
         for (let i = 0; i < data.length; i++) {
             let div = $("<div>");
             $(div).addClass("encuesta CuartoColor encPub");
+            $(div).data("id-encuesta", data[i].id_encuesta);
+            $(div).on("click", () => {
+                //console.log($(div).data("id-encuesta"));
+                document.cookie = "encuesta=" + $(div).data("id-encuesta");
+                document.location = "respEncuesta.html";
+            })
             let h4 = $("<h4>");
             $(h4).text(data[i].Titulo);
             $(div).append(h4);

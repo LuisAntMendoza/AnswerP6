@@ -11,7 +11,7 @@ else {
 }
 $buscar = mysqli_real_escape_string($conexion, $_POST['buscar']);
 
-$result = mysqli_query($conexion, 'SELECT id_encuesta, Titulo FROM encuesta WHERE Titulo LIKE "%'.$buscar.'%" AND id_Categoria LIKE "'.$categoria.'"');
+$result = mysqli_query($conexion, 'SELECT id_encuesta, Titulo FROM encuesta WHERE Titulo LIKE "%'.$buscar.'%" OR id_encuesta LIKE "%'.$buscar.'%" AND id_Categoria LIKE "'.$categoria.'" AND usuarioMin <= "'.$_SESSION["poder"].'"');
 $response = [];
 while($row = mysqli_fetch_assoc($result))
 {
