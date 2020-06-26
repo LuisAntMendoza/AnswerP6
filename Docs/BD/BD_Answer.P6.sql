@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 5.7.26, for osx10.10 (x86_64)
+-- MariaDB dump 10.17  Distrib 10.4.11-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: AnswerP6
+-- Host: localhost    Database: answerp6
 -- ------------------------------------------------------
--- Server version	5.7.26
+-- Server version	10.4.11-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -52,14 +52,16 @@ CREATE TABLE `encuesta` (
   `Titulo` varchar(30) NOT NULL,
   `Descripcion` varchar(250) NOT NULL,
   `id_Categoria` int(2) DEFAULT NULL,
-  `FechaInicio` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `FechaFinal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `FechaInicio` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `FechaFinal` date NOT NULL,
   `id_pregunta1` varchar(20) NOT NULL,
   `id_pregunta2` varchar(20) DEFAULT NULL,
   `id_pregunta3` varchar(20) DEFAULT NULL,
   `id_pregunta4` varchar(20) DEFAULT NULL,
   `id_pregunta5` varchar(20) DEFAULT NULL,
+  `usuarioMin` int(1) DEFAULT NULL,
   PRIMARY KEY (`id_encuesta`),
+  UNIQUE KEY `Titulo` (`Titulo`),
   UNIQUE KEY `id_Pregunta1` (`id_pregunta1`),
   UNIQUE KEY `id_Pregunta5` (`id_pregunta5`),
   UNIQUE KEY `id_Pregunta4` (`id_pregunta4`),
@@ -67,9 +69,11 @@ CREATE TABLE `encuesta` (
   UNIQUE KEY `id_Pregunta2` (`id_pregunta2`),
   UNIQUE KEY `id_Pregunta2_2` (`id_pregunta2`),
   KEY `id_Categoria` (`id_Categoria`),
+  KEY `usuarioMin` (`usuarioMin`),
   CONSTRAINT `encuesta_ibfk_10` FOREIGN KEY (`id_pregunta3`) REFERENCES `pregunta` (`id_pregunta`),
   CONSTRAINT `encuesta_ibfk_11` FOREIGN KEY (`id_pregunta4`) REFERENCES `pregunta` (`id_pregunta`),
   CONSTRAINT `encuesta_ibfk_12` FOREIGN KEY (`id_pregunta5`) REFERENCES `pregunta` (`id_pregunta`),
+  CONSTRAINT `encuesta_ibfk_13` FOREIGN KEY (`usuarioMin`) REFERENCES `tipousuario` (`id_tipo`),
   CONSTRAINT `encuesta_ibfk_7` FOREIGN KEY (`id_Categoria`) REFERENCES `categoria` (`id_categoria`),
   CONSTRAINT `encuesta_ibfk_8` FOREIGN KEY (`id_pregunta1`) REFERENCES `pregunta` (`id_pregunta`),
   CONSTRAINT `encuesta_ibfk_9` FOREIGN KEY (`id_pregunta2`) REFERENCES `pregunta` (`id_pregunta`)
@@ -173,7 +177,7 @@ DROP TABLE IF EXISTS `respuesta`;
 CREATE TABLE `respuesta` (
   `id_Respuesta` varchar(20) NOT NULL,
   `Respuesta` varchar(50) NOT NULL,
-  `votos` int(6) NOT NULL DEFAULT '0',
+  `votos` int(6) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id_Respuesta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -188,6 +192,31 @@ LOCK TABLES `respuesta` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `tipousuario`
+--
+
+DROP TABLE IF EXISTS `tipousuario`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tipousuario` (
+  `id_tipo` int(1) NOT NULL AUTO_INCREMENT,
+  `TipoUsuario` varchar(30) NOT NULL,
+  PRIMARY KEY (`id_tipo`),
+  UNIQUE KEY `TipoUsuario` (`TipoUsuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tipousuario`
+--
+
+LOCK TABLES `tipousuario` WRITE;
+/*!40000 ALTER TABLE `tipousuario` DISABLE KEYS */;
+INSERT INTO `tipousuario` VALUES (1,'Administrador'),(3,'Alumno'),(2,'Profesor');
+/*!40000 ALTER TABLE `tipousuario` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `usuario`
 --
 
@@ -197,7 +226,7 @@ DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id_usuario` int(6) NOT NULL AUTO_INCREMENT,
   `Usuario` varchar(50) NOT NULL,
-  `Identificador` varchar(70) DEFAULT NULL,
+  `Identificador` varchar(50) NOT NULL,
   `Nombre` varchar(50) NOT NULL,
   `ApellidoPat` varchar(50) NOT NULL,
   `ApellidoMat` varchar(50) NOT NULL,
@@ -205,16 +234,19 @@ CREATE TABLE `usuario` (
   `CorreoElectronico` varchar(70) NOT NULL,
   `Contraseña` varchar(60) NOT NULL,
   `id_Grupo` int(2) DEFAULT NULL,
-  `EncuCreadas` int(3) NOT NULL DEFAULT '0',
-  `EncuRespondidas` int(4) NOT NULL DEFAULT '0',
+  `EncuCreadas` int(3) NOT NULL DEFAULT 0,
+  `EncuRespondidas` int(4) NOT NULL DEFAULT 0,
+  `TipoUsuario` int(1) NOT NULL,
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `CorreoElectronico` (`CorreoElectronico`),
   UNIQUE KEY `Usuario` (`Usuario`),
   UNIQUE KEY `iDENTIFICADOR` (`Identificador`),
   UNIQUE KEY `Identificador_2` (`Identificador`),
   KEY `id_Grupo` (`id_Grupo`),
-  CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_Grupo`) REFERENCES `grupo` (`id_grupo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+  KEY `TipoUsuario` (`TipoUsuario`),
+  CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_Grupo`) REFERENCES `grupo` (`id_grupo`),
+  CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`TipoUsuario`) REFERENCES `tipousuario` (`id_tipo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -235,4 +267,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-25 18:03:06
+-- Dump completed on 2020-06-25 20:45:57
