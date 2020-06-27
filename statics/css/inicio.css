@@ -53,8 +53,8 @@
     height: 10%;
     margin: auto;
     width: 35%;
+    cursor: pointer;
 }
-
 
 #articulo {
     display: flex;
@@ -63,8 +63,4 @@
 
 #carruselInicio {
     z-index: 0;
-}
-
-#btn-acceder {
-    cursor: pointer;
 }

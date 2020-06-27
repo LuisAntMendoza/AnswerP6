@@ -19,7 +19,6 @@
     <script src="../dynamics/js/modalPaleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/paleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/links.js" charset="utf-8"></script>
-    <script src="../dynamics/js/sesiones.js" charset="utf-8"></script>
     <script src="../dynamics/js/crearEncuesta.js" charset="utf-8"></script>
 </head>
 
@@ -63,21 +62,22 @@
                         <h3>Genere su encuesta</h3>
                         <div class="head-encuesta CuartoColor">
                             <h4>Titulo de la encuesta: </h4>
-                            <input type="text" name="titulo">
+                            <input type="text" name="titulo" required>
                             <h5>Inserte una descripción</h5>
-                            <textarea name="descripcion" rows="3" cols="80"></textarea>
+                            <textarea name="descripcion" rows="3" cols="80" required></textarea>
                             <h5>Ingrese la categoria de la encuesta</h5>
                             <select name="categoria" id="select-categoria">
                                 <option value="0">Ninguna</option>
                             </select>
                             <h5>Ingrese fecha de inicio</h5>
-                            <input type="datetime-local" name="fIni">
+                            <input type="datetime-local" name="fIni" required>
                             <h5>Ingrese fecha final</h5>
-                            <input type="datetime-local" name="fFin">
-                            <h5>Ingrese filtro de usuario minimo: </h5>
-                            <select class="" name="minUser" id="select-poder">
-                                <option value="0">Ninguno</option>
-                            </select>
+                            <input type="datetime-local" name="fFin" required>
+                            <div id="divUserMin">
+                                <h5>Ingrese filtro de usuario minimo: </h5>
+                                <select name="minUser" id="select-poder">
+                                </select>
+                            </div>
                             <div id="divGrupos">
                                 <h5>Filtro por grupo de alumnos: </h5>
                                 <select class="" name="grupo" id="select-grupos">
