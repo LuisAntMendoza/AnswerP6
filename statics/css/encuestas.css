@@ -41,6 +41,25 @@
     cursor: pointer;
 }
 
+.encPropia {
+    position: relative;
+}
+
+.btn-editar {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.btn-editar i {
+    font-size: 20px;
+    margin: auto;
+}
+
 .encuesta h4 {
     margin: auto;
     color: white;

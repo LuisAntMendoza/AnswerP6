@@ -60,6 +60,10 @@ input[type="file"] {
     flex-wrap: wrap;
 }
 
+.cuerpo-crear form {
+    width: 100%;
+}
+
 .head-encuesta {
     border-radius: 20px;
     display: flex;

@@ -7,13 +7,22 @@ function getEncPropias() {
             $(div).addClass("encuesta CuartoColor encPropia");
             $(div).data("id-encuesta", data[i].id_encuesta);
             $(div).on("click", () => {
-                console.log($(div).data("id-encuesta"));
                 document.cookie = "encuesta=" + $(div).data("id-encuesta");
                 document.location = "respEncuesta.html";
             })
             let h4 = $("<h4>");
             $(h4).text(data[i].Titulo);
-            $(div).append(h4);
+            let editar = $("<div>");
+            $(editar).addClass("btn-editar Terciario");
+            $(editar).on("click", (e) => {
+                e.stopPropagation();
+                document.cookie = "encuesta=" + $(div).data("id-encuesta");
+                document.location = "editarEncuestas.html";
+            });
+            let icono = $("<i>");
+            $(icono).addClass("fas fa-pen");
+            $(editar).append(icono);
+            $(div).append(h4, editar);
             $("#agregarEncuesta").before(div);
             colorearPaleta();
         }

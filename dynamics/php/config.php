@@ -1,7 +1,7 @@
 <?php
 define("HOST", "localhost");
-define("USER", "root");
-define("PASS", "root");
+define("USER", "adminAnswerP6");
+define("PASS", "DB4dm1n-Pseis");
 define("DB", "AnswerP6");
 define("PASSWORD", "Shrek Amo Del Multiverso");
 define("HASH", "sha256");

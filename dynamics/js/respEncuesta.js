@@ -17,7 +17,6 @@ $(document).ready(() => {
         let fIni = new Date(data[0].FechaInicio);
         let fFin = new Date(data[0].FechaFinal);
         let hoy = new Date();
-        console.log(arrSesion);
         let encContestada = undefined;
         for (let i = 0; i < data.length; i++) {
             if (data[i] == false || data[i] == true) {
@@ -122,7 +121,6 @@ $(document).ready(() => {
                     }
                 }
             }
-            //document.cookie = data[0].id_encuesta + "=true";
             let hidden = $("<input>");
             $(hidden).attr("type", "hidden");
             $(hidden).attr("value", data[0].id_encuesta);

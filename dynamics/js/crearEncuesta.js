@@ -96,7 +96,10 @@ $(document).ready(() => {
         if (data.usuario == null) {
             $("#cerrar-sesion").css("display", "none");
             $("#btn-usuario").text("Iniciar Sesión");
-            window.location = "encuestas.html"
+            $("#titulo").text("Favor de iniciar sesión");
+            $(".head-encuesta").remove();
+            $("#encuesta").remove();
+            //window.location = "encuestas.html"
         } else {
             $("#btn-usuario").text("Bienvenid@: " + data.nombre);
             if (data.poder == "3") {

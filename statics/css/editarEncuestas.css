@@ -1,0 +1,106 @@
+form textarea {
+    resize: none;
+}
+
+form input {
+    margin: auto;
+}
+
+.contenedor-encuesta {
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-encuesta {
+    width: 90%;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.pregunta {
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.pregunta form {
+    display: flex;
+    align-items: center;
+    margin: 30px auto;
+}
+
+.respuestas {
+    width: 100%;
+}
+
+.pregunta h5 {
+    text-align: center;
+    margin: auto;
+}
+
+.pregunta>input {
+    width: 40%;
+}
+
+.respuesta {
+    margin: 10px auto;
+    display: flex;
+}
+
+.fotoPregunta {
+    width: 20%;
+    margin: auto;
+}
+
+.respuesta form {
+    margin: auto;
+    width: 50%;
+}
+
+.respuesta img {
+    width: 10%;
+}
+
+#articulo {
+    display: flex;
+}
+
+#cont-encuesta {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#enviarForm {
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+#antes {
+    display: none;
+}
+
+#despues {
+    display: none;
+}
+
+#cont-canvas * {
+    margin: 40px auto;
+}
+
+.grafica-encuesta {
+    width: 90%;
+}
