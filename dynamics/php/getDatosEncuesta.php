@@ -25,6 +25,15 @@ for ($i=0; $i < 5; $i++) {
         }
     }
 }
+$consulta = 'SELECT * FROM encuestas_respondidas';
+$consultar = mysqli_query($conexion, $consulta);
+$contestada = false;
+while ($resultado = mysqli_fetch_row($consultar)) {
+	if ($resultado[0] == $_SESSION['idUser'] && $resultado[1] == $_POST['idEncuesta']) {
+		$contestada = true;
+	}
+}
+array_push($response, $contestada);
 echo json_encode($response);
 
  ?>

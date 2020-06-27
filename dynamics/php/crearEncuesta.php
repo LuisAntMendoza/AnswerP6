@@ -17,7 +17,11 @@ if($categoria == 0) {
 }
 $fechaIni = getFecha($_POST["fIni"]);
 $fechaFin = getFecha($_POST["fFin"]);
-$minUser = $_POST['minUser'];
+if(isset($_POST['minUser'])) {
+    $minUser = $_POST['minUser'];
+} else {
+    $minUser = 4;
+}
 if(isset($_POST['grupo'])) {
     $grupo = $_POST['grupo'];
 }
@@ -74,6 +78,9 @@ for ($i=0; $i < count($arrIdRespuestasImg); $i++) {
         rename($temporal, $dir."/".str_replace('"', "", $arrIdRespuestasImg[$i]).".".$extension);
     }
 }
+
+$consulta = 'INSERT INTO encuestas_respondidas VALUES ("'.$_SESSION["idUser"].'", "'.$idEncuesta.'")';
+$consultar = mysqli_query($conexion, $consulta);
 
 header("location: ../../templates/encuestas.html")
 

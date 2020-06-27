@@ -15,13 +15,20 @@ $(document).ready(() => {
             window.location = "encuestas.html";
         }
         let fIni = new Date(data[0].FechaInicio);
-        let fFin = new Date(data[0].FechaFinal)
+        let fFin = new Date(data[0].FechaFinal);
         let hoy = new Date();
+        console.log(arrSesion);
+        let encContestada = undefined;
+        for (let i = 0; i < data.length; i++) {
+            if (data[i] == false || data[i] == true) {
+                encContestada = data[i];
+            }
+        }
         if (hoy - fIni < 0) {
             $("#antes").css("display", "block");
             $("#fInicio").text(fIni);
             $("#enviarForm").css("display", "none")
-        } else if ((fFin - hoy < 0) || (valCookie("Contestada" + data[0].id_encuesta)) == "true") {
+        } else if ((fFin - hoy < 0) || encContestada == true) {
             $("#despues").css("display", "block");
             $("#enviarForm").css("display", "none")
             let canvas = document.getElementById("grafica-encuesta");
@@ -164,9 +171,6 @@ $(document).ready(() => {
                         l++;
                     }
                 }
-            });
-            $("#enviarForm").on("click", () => {
-                document.cookie = "Contestada" + data[0].id_encuesta + "=true";
             });
         }
     });

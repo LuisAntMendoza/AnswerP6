@@ -54,22 +54,70 @@ function getEncPub() {
     })
 }
 
+function getEncCont() {
+    $(".encCont").remove();
+    fetch("../dynamics/php/getEncCont.php").then((response) => {
+        return response.json();
+    }).then((data) => {
+        for (let i = 0; i < data.length; i++) {
+            let div = $("<div>");
+            $(div).addClass("encuesta CuartoColor encCont");
+            $(div).data("id-encuesta", data[i].id_encuesta);
+            $(div).on("click", () => {
+                console.log($(div).data("id-encuesta"));
+                document.cookie = "encuesta=" + $(div).data("id-encuesta");
+                document.location = "respEncuesta.html";
+            })
+            let h4 = $("<h4>");
+            $(h4).text(data[i].Titulo);
+            $(div).append(h4);
+            $("#encuestas").append(div);
+            colorearPaleta();
+        }
+        console.log(data);
+
+    }).catch((error) => {
+        console.log(error);
+    })
+}
+
 $(document).ready(() => {
     $("#tabRegistro").on("click", () => {
-        $(".barraEncuesta").toggleClass("Principal CuartoColor");
+        $(".barraEncuesta").removeClass("Principal");
+        $(".barraEncuesta").addClass("CuartoColor");
+        $("#tabRegistro").addClass("Principal");
+        $("#tabRegistro").removeClass("CuartoColor");
         $(".encPub").css("display", "flex");
         colorearPaleta();
         $("#barraBusqueda").css("display", "flex");
         $(".encPropia").css("display", "none");
         $("#agregarEncuesta").css("display", "none");
+        $(".encCont").css("display", "none");
     })
     $("#tabInicio").on("click", () => {
-        $(".barraEncuesta").toggleClass("Principal CuartoColor");
+        $(".barraEncuesta").removeClass("Principal");
+        $(".barraEncuesta").addClass("CuartoColor");
+        $("#tabInicio").addClass("Principal");
+        $("#tabInicio").removeClass("CuartoColor");
         $(".encPropia").css("display", "flex");
         $(".encPub").css("display", "none");
         colorearPaleta();
         $("#barraBusqueda").css("display", "none");
         $("#agregarEncuesta").css("display", "flex");
+        $(".encCont").css("display", "none");
+    });
+    $("#tabContestadas").on("click", () => {
+        $(".barraEncuesta").removeClass("Principal");
+        $(".barraEncuesta").addClass("CuartoColor");
+        $("#tabContestadas").addClass("Principal");
+        $("#tabContestadas").removeClass("CuartoColor");
+        $(".encPropia").css("display", "none");
+        $(".encPub").css("display", "none");
+        colorearPaleta();
+        $("#barraBusqueda").css("display", "none");
+        $("#agregarEncuesta").css("display", "none");
+        $(".encCont").css("display", "flex");
+        getEncCont();
     });
     $("#agregarEncuesta").on("click", () => {
         window.location = "crearEncuesta.html";

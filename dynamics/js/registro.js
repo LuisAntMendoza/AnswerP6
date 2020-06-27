@@ -5,14 +5,14 @@ $(document).ready(() => {
         $($($("#claveUn").parent()).children()[0]).text("CURP");
         $($($("#claveUn").parent()).children()[1]).attr("pattern", "^[A-Z]{4}\d{6}(H|M)[A-Z0-9]{7}$");
         $($($("#noUnam").parent()).children()[0]).text("Número de Cuenta");
-        $($($("#noUnam").parent()).children()[1]).attr("pattern", "^\d{9}$");
+        $($($("#noUnam").parent()).children()[1]).attr("pattern", "^[0-9]{9}$");
         $("#contSelect").css("display", "inline-block");
     })
     $("#tab-profe").on("click", () => {
         $(".tabRegistro").toggleClass("Terciario CuartoColor");
         colorearPaleta();
         $($($("#claveUn").parent()).children()[0]).text("Número de Trabajador");
-        $($($("#claveUn").parent()).children()[1]).attr("pattern", "^\d{6}$");
+        $($($("#claveUn").parent()).children()[1]).attr("pattern", "^[0-9]{6}$");
         $($($("#noUnam").parent()).children()[0]).text("RFC");
         $($($("#noUnam").parent()).children()[1]).attr("pattern", "^[A-Z]{4}[0-9]{6}[0-9A-Z]{3}$");
         $("#contSelect").css("display", "none");

@@ -10,6 +10,7 @@ function crearPregunta() {
         $(inpPregunta).attr("type", "text");
         $(inpPregunta).attr("name", "pregunta" + preguntas);
         $(inpPregunta).attr("class", "inpPregunta");
+        $(inpPregunta).attr("required", "true");
         let inpFileQuest = $("<input>");
         $(inpFileQuest).attr("type", "file");
         $(inpFileQuest).attr("name", "imgQuest[]");
@@ -25,6 +26,7 @@ function crearPregunta() {
             let inpRespuesta = $("<input>");
             $(inpRespuesta).attr("type", "text");
             $(inpRespuesta).attr("name", "respuesta" + preguntas + "[]");
+            $(inpRespuesta).attr("required", "true");
             let inpFileResp = $("<input>");
             $(inpFileResp).attr("type", "file");
             $(inpFileResp).attr("name", "imgResp[]");
@@ -88,6 +90,23 @@ function crearPregunta() {
 }
 let preguntas = 0;
 $(document).ready(() => {
+    fetch("../dynamics/php/sesion.php").then((response) => {
+        return response.json();
+    }).then((data) => {
+        if (data.usuario == null) {
+            $("#cerrar-sesion").css("display", "none");
+            $("#btn-usuario").text("Iniciar Sesión");
+            window.location = "encuestas.html"
+        } else {
+            $("#btn-usuario").text("Bienvenid@: " + data.nombre);
+            if (data.poder == "3") {
+                $("#divUserMin").css("display", "none");
+            }
+        }
+        console.log(data);
+    }).catch((error) => {
+        console.log(error);
+    })
     $("#agregarQuest").on("click", (e) => {
         e.preventDefault();
         crearPregunta();

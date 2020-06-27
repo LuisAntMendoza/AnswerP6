@@ -45,6 +45,21 @@
     width: 90%;
 }
 
+.contestadas {
+    width: 100%;
+    display: flex;
+}
+
+.perfil-2 h5 {
+    margin: auto;
+    width: 80%;
+}
+
+.contestadas h5 {
+    width: 40%;
+    margin: auto;
+}
+
 .form-img h5, .form-img input {
     margin: 10px auto;
 }
@@ -71,11 +86,6 @@
     width: 60%;
 }
 
-.perfil-2 h5 {
-    margin: auto;
-    width: 80%;
-}
-
 .perfil-1 h5 {
     margin: auto;
     text-align: center;
@@ -91,4 +101,12 @@
     height: 50%;
     margin: auto;
     width: 80%;
+}
+
+#btn-consultar {
+    width: 20%;
+    height: 70%;
+    margin: auto;
+    border-radius: 20px;
+    color: white;
 }

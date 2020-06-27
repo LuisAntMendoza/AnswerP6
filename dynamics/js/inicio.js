@@ -16,4 +16,7 @@ $(document).ready(() => {
     }).catch((error) => {
         console.log(error);
     })
+    $("#btn-encuestas").on("click", () => {
+        window.location = "encuestas.html";
+    })
 })
