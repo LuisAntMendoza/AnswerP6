@@ -47,13 +47,13 @@ function crearPregunta() {
         $(button).text("Agregar Respuesta");
         $(button).addClass("agregarResp");
         $(button).on("click", (e) => {
+            e.preventDefault();
             if ($($($(e.target).parent()).children()).length < 11) {
-                e.preventDefault();
                 let b = $("<b>");
                 $(b).text("·");
                 let inpRespuesta = $("<input>");
                 $(inpRespuesta).attr("type", "text");
-                $(inpRespuesta).attr("name", "respuesta" + preguntas + "[]");
+                $(inpRespuesta).attr("name", $($($($(e.target).parent()).children()[0]).children()[1]).attr("name"));
                 let inpFileResp = $("<input>");
                 $(inpFileResp).attr("type", "file");
                 $(inpFileResp).attr("name", "imgResp[]");
@@ -88,6 +88,22 @@ function crearPregunta() {
         colorearPaleta();
     }
 }
+
+function GetFormattedDate() {
+    let todayTime = new Date();
+    let month = (todayTime.getMonth() + 1);
+    if (month < 10) {
+        month = "0" + month;
+    }
+    let day = (todayTime.getDate());
+    if (day < 10) {
+        day = "0" + day;
+    }
+    let year = (todayTime.getFullYear());
+    let hour = todayTime.getHours();
+    let minutes = todayTime.getMinutes();
+    return year + "-" + month + "-" + day + "T" + hour + ":" + minutes;
+}
 let preguntas = 0;
 $(document).ready(() => {
     fetch("../dynamics/php/sesion.php").then((response) => {
@@ -99,7 +115,10 @@ $(document).ready(() => {
             $("#titulo").text("Favor de iniciar sesión");
             $(".head-encuesta").remove();
             $("#encuesta").remove();
-            //window.location = "encuestas.html"
+            $("#regresar").css("display", "flex");
+            $("#regresar").on("click", () => {
+                window.location = "encuestas.html"
+            });
         } else {
             $("#btn-usuario").text("Bienvenid@: " + data.nombre);
             if (data.poder == "3") {
@@ -159,4 +178,8 @@ $(document).ready(() => {
             $("#divGrupos").css("display", "none");
         }
     })
+    $("#fIni").attr("min", GetFormattedDate());
+    $("#fIni").on("change", () => {
+        $("#fFin").attr("min", $("#fIni").val());
+    });
 })

@@ -38,10 +38,16 @@
     margin: 25px auto;
     border-radius: 30px 30px 0 30px;
     display: flex;
+    flex-wrap: wrap;
     cursor: pointer;
+    flex-direction: column;
 }
 
 .encPropia {
+    position: relative;
+}
+
+.encPub {
     position: relative;
 }
 
@@ -63,6 +69,10 @@
 .encuesta h4 {
     margin: auto;
     color: white;
+}
+
+.encuesta h5 {
+    margin: auto;
 }
 
 .encuesta h4:hover {
@@ -91,4 +101,8 @@
 
 #agregarEncuesta {
     cursor: pointer;
+}
+
+#btn-buscar {
+    color: white;
 }

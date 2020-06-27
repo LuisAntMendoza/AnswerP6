@@ -41,7 +41,11 @@ if($usuario != "") {
                 $_SESSION['apMat'] = Decifrar($resultado[5]);
                 $_SESSION['fNac'] = Decifrar($resultado[6]);
                 $_SESSION['correo'] = Decifrar($resultado[7]);
-                $_SESSION['grupo'] = $resultado[9];
+                if($resultado[9] == null) {
+                    $_SESSION['grupo'] = "%";
+                } else {
+                    $_SESSION['grupo'] = $resultado[9];
+                }
                 $_SESSION['generadas'] = $resultado[10];
                 $_SESSION['respondidas'] = $resultado[11];
                 $_SESSION['poder'] = $resultado[12];
@@ -71,7 +75,11 @@ if($email != "") {
                 $_SESSION['apMat'] = Decifrar($resultado[5]);
                 $_SESSION['fNac'] = Decifrar($resultado[6]);
                 $_SESSION['correo'] = Decifrar($resultado[7]);
-                $_SESSION['grupo'] = $resultado[9];
+                if($resultado[9] == null) {
+                    $_SESSION['grupo'] = "%";
+                } else {
+                    $_SESSION['grupo'] = $resultado[9];
+                }
                 $_SESSION['generadas'] = $resultado[10];
                 $_SESSION['respondidas'] = $resultado[11];
                 $_SESSION['poder'] = $resultado[12];

@@ -82,6 +82,23 @@ for ($i=0; $i < count($arrIdRespuestasImg); $i++) {
 $consulta = 'INSERT INTO encuestas_respondidas VALUES ("'.$_SESSION["idUser"].'", "'.$idEncuesta.'")';
 $consultar = mysqli_query($conexion, $consulta);
 
+$indice = 0;
+foreach ($_POST['imgRespOrig'] as $key => $value) {
+    if ($value != "0") {
+        $format = pathinfo($value, PATHINFO_EXTENSION);
+        copy("../../statics/img/fotosResp/".$value, '../../statics/img/fotosResp/'.$arrIdRespuestasImg[$indice].'.'.$format);
+    }
+    $indice++;
+}
+$indice = 0;
+foreach ($_POST['imgQuestOrig'] as $key => $value) {
+    if ($value != "0") {
+        $format = pathinfo($value, PATHINFO_EXTENSION);
+        copy("../../statics/img/fotosQuest/".$value, '../../statics/img/fotosQuest/'.$arrIdPreguntas[$indice].'.'.$format);
+    }
+    $indice++;
+}
+
 header("location: ../../templates/encuestas.html")
 
 ?>
