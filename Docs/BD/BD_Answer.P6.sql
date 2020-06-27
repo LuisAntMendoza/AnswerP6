@@ -93,6 +93,32 @@ LOCK TABLES `encuesta` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `encuestas_respondidas`
+--
+
+DROP TABLE IF EXISTS `encuestas_respondidas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `encuestas_respondidas` (
+  `id_Usuario` int(6) NOT NULL,
+  `id_Encuesta` varchar(15) DEFAULT NULL,
+  KEY `id_Usuario` (`id_Usuario`),
+  KEY `id_Encuesta` (`id_Encuesta`),
+  CONSTRAINT `encuestas_respondidas_ibfk_1` FOREIGN KEY (`id_Usuario`) REFERENCES `usuario` (`id_usuario`),
+  CONSTRAINT `encuestas_respondidas_ibfk_2` FOREIGN KEY (`id_Encuesta`) REFERENCES `encuesta` (`id_encuesta`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `encuestas_respondidas`
+--
+
+LOCK TABLES `encuestas_respondidas` WRITE;
+/*!40000 ALTER TABLE `encuestas_respondidas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `encuestas_respondidas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `grupo`
 --
 
@@ -249,7 +275,7 @@ CREATE TABLE `usuario` (
   KEY `TipoUsuario` (`TipoUsuario`),
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_Grupo`) REFERENCES `grupo` (`id_grupo`),
   CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`TipoUsuario`) REFERENCES `tipousuario` (`id_tipo`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -258,6 +284,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` VALUES (3,'wvgRRU0KeSVmeicjgXl9piFcXndWNAlvDO4eUPYKyFM=','d80paNIGUmpz7FG5oMZEHqYLA7xeVDlsd/O27eGgYT9XLB7bNyQC5nVUO5pDeFlF','xIO5GjMYqAwPOAXokEbVvjlbQHs9RuuQdEKTiKXw+jU=','PkJxnhGahYYhP96t75DSVMDsOplHduCTVaQHMF7+H4w=','JOMGNy+fwzQPK6CQRGbZK+IQ3ykP8lhnQqK9kbTB3Gg=','qdx+fPm+8X095cRQOMybNx0cSfZOkhAg4EPB1IsPyJ4=','XlnzNs3nPlkVg/C0zZ2d3jPEghx3bYpvDDVtwTFvhpCJf7PBCuuEfUGVuE/C9zvm','$2y$10$7vbRT2SYhWnA2HI7wIYvV.9XK42RKcoYGSSBevnjWLtdNmhgH2h5i',35,0,0,3);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -270,4 +297,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-26 15:26:52
+-- Dump completed on 2020-06-26 19:26:05
