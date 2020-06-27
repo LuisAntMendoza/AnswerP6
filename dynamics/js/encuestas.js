@@ -94,7 +94,17 @@ function getEncCont() {
             $(h4).text(data[i].Titulo);
             let h5 = $("<h5>");
             $(h5).text(data[i].id_encuesta);
-            $(div).append(h4, h5);
+            let editar = $("<div>");
+            $(editar).addClass("btn-editar Terciario");
+            $(editar).on("click", (e) => {
+                e.stopPropagation();
+                document.cookie = "encuesta=" + $(div).data("id-encuesta");
+                document.location = "reportarEncuestas.html";
+            });
+            let icono = $("<i>");
+            $(icono).addClass("far fa-angry");
+            $(editar).append(icono);
+            $(div).append(h4, h5, editar);
             $("#encuestas").append(div);
             colorearPaleta();
         }
@@ -151,6 +161,9 @@ $(document).ready(() => {
         getEncPub();
     })
     getEncPropias();
+    let hoy = new Date();
+    hoy.setTime(hoy.getTime() - 1);
+    document.cookie = "contestada=0;expires=" + hoy.toGMTString();
     fetch("../dynamics/php/getCategoria.php").then((response) => {
         return response.json();
     }).then((data) => {

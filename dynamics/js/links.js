@@ -33,4 +33,7 @@ $(document).ready(() => {
     $("#ultimoNav").on("click", () => {
         window.location = "creditos.html";
     })
+    $("#admin").on("click", () => {
+        window.location = "admin.html";
+    });
 })

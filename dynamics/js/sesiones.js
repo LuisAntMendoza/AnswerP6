@@ -7,6 +7,9 @@ $(document).ready(() => {
             $("#btn-usuario").text("Iniciar Sesión");
         } else {
             $("#btn-usuario").text("Bienvenid@: " + data.nombre);
+            if (data.poder == 1) {
+                $("#admin").css("display", "flex");
+            }
         }
         console.log(data);
     }).catch((error) => {

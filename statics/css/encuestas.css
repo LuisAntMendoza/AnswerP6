@@ -41,13 +41,6 @@
     flex-wrap: wrap;
     cursor: pointer;
     flex-direction: column;
-}
-
-.encPropia {
-    position: relative;
-}
-
-.encPub {
     position: relative;
 }
 

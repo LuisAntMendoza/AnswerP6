@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../statics/css/principal.css">
     <link rel="stylesheet" href="../libs/fontawesome/css/all.css">
     <link rel="stylesheet" href="../statics/css/modalPaleta.css">
-    <link rel="stylesheet" href="../statics/css/encuestas.css">
+    <link rel="stylesheet" href="../statics/css/reportarEncuestas.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../statics/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../statics/favicon/favicon-16x16.png">
     <!-- Bootstrap -->
@@ -20,7 +20,7 @@
     <script src="../dynamics/js/paleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/links.js" charset="utf-8"></script>
     <script src="../dynamics/js/sesiones.js" charset="utf-8"></script>
-    <script src="../dynamics/js/encuestas.js" charset="utf-8"></script>
+    <script src="../dynamics/js/reportarEncuesta.js" charset="utf-8"></script>
 </head>
 
 <body class="Terciario">
@@ -62,37 +62,14 @@
         </aside>
         <div id="contenido">
             <article id="articulo" class="Secundario">
-                <div class="cuerpoEncuestas">
-                    <div class="barrasEncuestas">
-                        <div class="barraEncuesta Principal" id="tabInicio">
-                            <span>Mis Encuestas</span>
-                        </div>
-                        <div class="barraEncuesta CuartoColor" id="tabRegistro">
-                            <span>Buscar Encuestas</span>
-                        </div>
-                        <div class="barraEncuesta CuartoColor" id="tabContestadas">
-                            <span>Contestadas</span>
-                        </div>
-                    </div>
-                    <div class="bodyEncuesta Principal">
-                        <div id="barraBusqueda">
-                            <form action="" method="post" id="form-buscar">
-                                <span>Buscar: </span>
-                                <input type="search" id="inpBuscar" name="buscar">
-                                <span>Categoria: </span>
-                                <select name="categoria" id="select-categoria">
-                                    <option value="0">Todas</option>
-                                </select>
-                                <button id="btn-buscar" class="Terciario">Buscar</button>
-                            </form>
-                        </div>
-                        <div id="encuestas">
-                            <div class="encuesta CuartoColor" id="agregarEncuesta">
-                                <h4><i class="fas fa-plus"></i></h4>
-                            </div>
-                        </div>
-                        <div id="buscarEncuestas"></div>
-                    </div>
+                <div class="reportar Principal">
+                    <form action="../dynamics/php/reportarEncuesta.php" method="post">
+                        <h3>Reportar Encuestas</h3>
+                        <h4>Ingrese el motivo de su reporte</h4>
+                        <textarea name="razon" rows="8" cols="80"></textarea>
+                        <input type="hidden" name="idEncuesta" id="idEncuesta">
+                        <input type="submit" value="Reportar">
+                    </form>
                 </div>
             </article>
         </div>
@@ -100,7 +77,6 @@
             <h4 class="h4">© 2020 Answer.P6 Company. Todos los derechos reservados.</h4>
         </footer>
     </div>
-
     <div class="fade-body"></div>
     <div class="modalCSS">
         <div class="cuerpo-modal">

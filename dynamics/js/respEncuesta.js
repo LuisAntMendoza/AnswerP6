@@ -27,7 +27,7 @@ $(document).ready(() => {
             $("#antes").css("display", "block");
             $("#fInicio").text(fIni);
             $("#enviarForm").css("display", "none")
-        } else if ((fFin - hoy < 0) || encContestada == true) {
+        } else if ((fFin - hoy < 0) || encContestada == true || valCookie("contestada") == "true") {
             $("#despues").css("display", "block");
             $("#enviarForm").css("display", "none")
             let canvas = document.getElementById("grafica-encuesta");
@@ -172,6 +172,9 @@ $(document).ready(() => {
             });
         }
     });
+    $("#enviarForm").on("click", () => {
+        document.cookie = "contestada=true";
+    })
 })
 
 function getResp(info, id) {
