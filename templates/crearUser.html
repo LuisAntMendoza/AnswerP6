@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="../statics/css/principal.css">
     <link rel="stylesheet" href="../libs/fontawesome/css/all.css">
     <link rel="stylesheet" href="../statics/css/modalPaleta.css">
-    <link rel="stylesheet" href="../statics/css/crearEncuesta.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../statics/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../statics/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="../statics/css/createUser.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
     <script src="../libs/jquery-3.5.1.min.js" charset="utf-8"></script>
@@ -19,7 +19,8 @@
     <script src="../dynamics/js/modalPaleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/paleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/links.js" charset="utf-8"></script>
-    <script src="../dynamics/js/crearEncuesta.js" charset="utf-8"></script>
+    <script src="../dynamics/js/sesiones.js" charset="utf-8"></script>
+    <script src="../dynamics/js/createUser.js" charset="utf-8"></script>
 </head>
 
 <body class="Terciario">
@@ -61,40 +62,29 @@
         </aside>
         <div id="contenido">
             <article id="articulo" class="Secundario">
-                <div class="cuerpo-crear Principal">
-                    <form action="../dynamics/php/crearEncuesta.php" method="post" enctype="multipart/form-data">
-                        <h3 id="titulo">Genere su encuesta</h3>
-                        <div id="regresar" class="Terciario">Volver a Encuestas</div>
-                        <div class="head-encuesta CuartoColor">
-                            <h4>Titulo de la encuesta: </h4>
-                            <input type="text" name="titulo" required>
-                            <h5>Inserte una descripción</h5>
-                            <textarea name="descripcion" rows="3" cols="80" required></textarea>
-                            <h5>Ingrese la categoria de la encuesta</h5>
-                            <select name="categoria" id="select-categoria">
-                                <option value="0">Ninguna</option>
-                            </select>
-                            <h5>Ingrese fecha de inicio</h5>
-                            <input type="datetime-local" name="fIni" required id="fIni">
-                            <h5>Ingrese fecha final</h5>
-                            <input type="datetime-local" name="fFin" required id="fFin">
-                            <div id="divUserMin">
-                                <h5>Ingrese filtro de usuario minimo: </h5>
-                                <select name="minUser" id="select-poder">
-                                </select>
-                            </div>
-                            <div id="divGrupos">
-                                <h5>Filtro por grupo de alumnos: </h5>
-                                <select class="" name="grupo" id="select-grupos">
-                                    <option value="0">Ninguno</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div id="encuesta">
-                            <button id="agregarQuest" class="Terciario">Agregar Pregunta</button>
-                            <input type="submit" value="Crear" class="Terciario">
-                        </div>
+                <div class="cont-form Principal">
+                    <form action="../dynamics/php/registro.php" enctype="multipart/form-data" method="post">
+                        <span>Tipo de usuario:</span>
+                        <select id="select-poder" name="poder">
+                            <option value="1">Administrador</option>
+                            <option value="2">Profesor</option>
+                            <option value="3" selected>Alumno</option>
+                        </select>
+                        <span>Usuario:</span><input type="text" name="usuario" id="usuario" required pattern="^\d{9}$">
+                        <span>Identificador:</span><input type="text" name="claveUn" id="clave" required pattern="^[A-Z]{4}\d{6}(H|M)[A-Z0-9]{7}$">
+                        <span>Nombre:</span><input type="text" name="nombre" required pattern="^[A-Z][a-zñÑáéíóúÁÉÍÓÚ]+$)|(^[A-Z][a-zñÑáéíóúÁÉÍÓÚ]+[ ][A-Z][a-zñÑáéíóúÁÉÍÓÚ]+$">
+                        <span>Apellido Paterno:</span><input type="text" name="apPat" required pattern="^[A-Z][a-zñÑáéíóúÁÉÍÓÚ]+$">
+                        <span>Apellido Materno:</span><input type="text" name="apMat" required pattern="^[A-Z][a-zñÑáéíóúÁÉÍÓÚ]+$">
+                        <span>Fecha de Nacimiento</span><input type="date" name="fNac" required>
+                        <span>Correo Electrónico</span><input type="text" name="email" required pattern="^[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
+                        <span>Contraseña</span><input type="password" name="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!-+])([A-Za-z\d!-+]|[^ ]){10,20}$">
+                        <span>Grupo</span><select name="grupo" id="select-grupos">
+                            <option value="0">Ninguno</option>
+                        </select>
+                        <span>Foto de Perfil</span><input type="file" name="imgPerfil" required accept="image/*">
+                        <input type="submit" value="Crear" class="Terciario" id="enviarForm">
                     </form>
+
                 </div>
             </article>
         </div>

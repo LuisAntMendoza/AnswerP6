@@ -1,7 +1,10 @@
 <?php
+//iniciamos sesion y conectamos a la BD
 session_start();
 include("./config.php");
 $conexion = conectarBD();
+
+//recibe un nombre y te devuelve la extension de esa foto (respuestas)
 $idEncuesta = $_POST['nomResp'];
 $response = [];
 for ($i=0; $i < 5; $i++) {

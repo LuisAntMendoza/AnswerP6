@@ -1,3 +1,46 @@
+.perfil-2 h5 {
+    margin: auto;
+    width: 80%;
+}
+
+.contestadas h5 {
+    margin: auto;
+    width: 40%;
+}
+
+.form-img h5, .form-img input {
+    margin: 10px auto;
+}
+
+
+.form-img input[type="file"] {
+    font-size: 15px;
+}
+
+.form-img input[type="submit"] {
+    border-radius: 20px;
+    color: white;
+    padding: 0 20px;
+}
+
+.form-perfil input {
+    margin: auto;
+    width: 80%;
+}
+
+.form-perfil input[type="submit"] {
+    border-radius: 20px;
+    color: white;
+    margin-top: 20px;
+    width: 60%;
+}
+
+.perfil-1 h5 {
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
+
 .cuerpo-perfil {
     border-radius: 20px;
     display: flex;
@@ -31,8 +74,8 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-    text-align: center;
     padding: 20px;
+    text-align: center;
     width: 40%;
 }
 
@@ -46,50 +89,8 @@
 }
 
 .contestadas {
-    width: 100%;
     display: flex;
-}
-
-.perfil-2 h5 {
-    margin: auto;
-    width: 80%;
-}
-
-.contestadas h5 {
-    width: 40%;
-    margin: auto;
-}
-
-.form-img h5, .form-img input {
-    margin: 10px auto;
-}
-
-.form-img input[type="file"] {
-    font-size: 15px;
-}
-
-.form-img input[type="submit"] {
-    border-radius: 20px;
-    color: white;
-    padding: 0 20px;
-}
-
-.form-perfil input {
-    margin: auto;
-    width: 80%;
-}
-
-.form-perfil input[type="submit"] {
-    border-radius: 20px;
-    color: white;
-    margin-top: 20px;
-    width: 60%;
-}
-
-.perfil-1 h5 {
-    margin: auto;
-    text-align: center;
-    width: 80%;
+    width: 100%;
 }
 
 #articulo {
@@ -104,14 +105,52 @@
 }
 
 #btn-consultar {
-    width: 20%;
-    height: 70%;
-    margin: auto;
     border-radius: 20px;
     color: white;
+    height: 70%;
+    margin: auto;
+    width: 20%;
 }
 
 @media screen and (max-width: 420px) {
+    .form-perfil p {
+        font-size: 11px;
+    }
+
+    .form-perfil input {
+        font-size: 10px;
+    }
+
+    .form-perfil input[type="submit"] {
+        font-size: 10px;
+        width: 30%;
+    }
+
+
+    .perfil-2 h5 {
+        font-size: 15px;
+        width: 90%;
+    }
+
+    .contestadas h5 {
+        width: 61%;
+    }
+
+    .form-img h5 {
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    .form-img input[type="file"] {
+        font-size: 10px;
+        margin: auto;
+        width: 80%;
+    }
+
+    .form-img input[type="submit"] {
+        font-size: 10px;
+    }
+
     .cuerpo-perfil {
         overflow-y: scroll;
     }
@@ -131,46 +170,10 @@
         width: 90%;
     }
 
-    .form-perfil p {
-        font-size: 11px;
-    }
-
-    .form-perfil input {
-        font-size: 10px;
-    }
-
-    .form-perfil input[type="submit"] {
-        font-size: 10px;
-        width: 30%;
-    }
 
     #btn-consultar {
         font-size: 10px;
-        width: 25%;
         height: 55%;
-    }
-
-    .perfil-2 h5 {
-        width: 90%;
-        font-size: 15px;
-    }
-
-    .contestadas h5 {
-        width: 61%;
-    }
-
-    .form-img h5 {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    .form-img input[type="file"] {
-        width: 80%;
-        margin: auto;
-        font-size: 10px;
-    }
-
-    .form-img input[type="submit"] {
-        font-size: 10px;
+        width: 25%;
     }
 }

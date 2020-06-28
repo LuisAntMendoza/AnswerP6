@@ -1,8 +1,10 @@
 <?php
+//iniciamos sesion y conectamos a la BD
 session_start();
 include("./config.php");
 $conexion = conectarBD();
 
+//regresa los datos de los usuarios para usarlos en admin
 $response = [];
 $consulta = 'SELECT * FROM usuario';
 $consultar = mysqli_query($conexion, $consulta);

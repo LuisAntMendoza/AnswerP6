@@ -132,4 +132,42 @@ $(document).ready(() => {
     }).catch((error) => {
         console.log(error);
     })
+    fetch("../dynamics/php/getReportes.php").then((response) => {
+        return response.json();
+    }).then((data) => {
+        console.log(data);
+        for (let i = 0; i < data.length; i++) {
+            let tr = $("<tr>");
+            let razon = $("<td>");
+            $(razon).text(data[i][1]);
+            let encuesta = $("<td>");
+            $(encuesta).text(data[i][2]);
+            let tdTrash = $("<td>");
+            let trash = $("<i>");
+            $(trash).addClass("fas fa-trash-alt");
+            $(trash).on("click", () => {
+                $.ajax({
+                    url: "../dynamics/php/deleteReporte.php",
+                    data: {
+                        idReporte: data[i][0]
+                    },
+                    dataType: "json",
+                    method: "post",
+                    error: (error) => {
+                        console.log(error);
+                    }
+                }).then(() => {
+                    window.location.reload();
+                })
+            })
+            $(tdTrash).append(trash);
+            $(tr).append(razon, encuesta, tdTrash);
+            $("#cuerpo-reportes").append(tr);
+        }
+    }).catch((error) => {
+        console.log(error);
+    })
+    $("#crear-user").on("click", () => {
+        window.location = "crearUser.html";
+    })
 });

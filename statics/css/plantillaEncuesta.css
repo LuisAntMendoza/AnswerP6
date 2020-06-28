@@ -7,37 +7,37 @@ form input {
 }
 
 .contenedor-encuesta {
-    width: 90%;
-    height: 90%;
-    overflow-y: scroll;
-    margin: auto;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
+    height: 90%;
+    margin: auto;
+    overflow-y: scroll;
+    width: 90%;
 }
 
 .header-encuesta {
-    width: 90%;
     border-radius: 20px;
     margin: 20px auto;
     padding: 20px;
     text-align: center;
+    width: 90%;
 }
 
 .pregunta {
-    width: 90%;
-    margin: 20px auto;
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 20px auto;
     padding: 20px;
-    flex-direction: column;
+    width: 90%;
 }
 
 .pregunta form {
-    display: flex;
     align-items: center;
+    display: flex;
     margin: 30px auto;
 }
 
@@ -55,13 +55,13 @@ form input {
 }
 
 .respuesta {
-    margin: 10px auto;
     display: flex;
+    margin: 10px auto;
 }
 
 .fotoPregunta {
-    width: 20%;
     margin: auto;
+    width: 20%;
 }
 
 .respuesta form {
@@ -78,15 +78,15 @@ form input {
 }
 
 #cont-encuesta {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 #enviarForm {
+    border-radius: 20px;
     margin: auto;
     margin-bottom: 30px;
-    border-radius: 20px;
     width: 11%;
 }
 
@@ -103,8 +103,8 @@ form input {
 }
 
 #divGrupos {
-    flex-wrap: wrap;
     display: none;
+    flex-wrap: wrap;
 }
 
 #divGrupos select {
@@ -125,8 +125,8 @@ form input {
     }
 
     .imgRespuesta {
-        width: 50%;
         margin: auto;
+        width: 50%;
     }
 
     .fotoPregunta {
@@ -159,7 +159,7 @@ form input {
     }
 
     #agregarQuest {
-        width: 60%;
         margin: 20px auto;
+        width: 60%;
     }
 }

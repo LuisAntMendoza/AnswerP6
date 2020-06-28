@@ -11,6 +11,23 @@
     margin-right: 40px;
     padding: 10px 20px;
     text-align: center;
+
+.btn-editar i {
+    font-size: 20px;
+    margin: auto;
+}
+
+.encuesta h4 {
+    color: white;
+    margin: auto;
+}
+
+.encuesta h5 {
+    margin: auto;
+}
+
+.encuesta h4:hover {
+    text-decoration: underline;
 }
 
 .barraEncuesta span {
@@ -28,6 +45,8 @@
 .btn-editar {
     border-radius: 10px;
     bottom: 5px;
+    bottom: 5px;
+    border-radius: 10px;
     display: flex;
     height: 40px;
     position: absolute;
@@ -77,6 +96,27 @@
     cursor: pointer;
 }
 
+.encuesta {
+    border-radius: 30px 30px 0 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 40%;
+    margin: 25px auto;
+    position: relative;
+    width: 21%;
+}
+
+#encuestas {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90%;
+    margin: auto;
+    overflow-y: scroll;
+    width: 95%;
+}
+
 #articulo {
     display: flex;
     justify-content: center;
@@ -86,6 +126,10 @@
     display: none;
     height: 5%;
     margin: auto;
+}
+
+#agregarEncuesta {
+    cursor: pointer;
 }
 
 #btn-buscar {
@@ -117,8 +161,8 @@
     }
 
     .encuesta {
-        width: 40%;
         height: 30%;
+        width: 40%;
     }
 
     #barraBusqueda {

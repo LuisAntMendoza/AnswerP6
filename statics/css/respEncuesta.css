@@ -1,38 +1,46 @@
-.contenedor-encuesta {
+.pregunta h5 {
+    text-align: center;
     width: 90%;
-    height: 90%;
-    overflow-y: scroll;
-    margin: auto;
+}
+
+.respuesta * {
+    margin: 0 7px;
+}
+
+#cont-canvas * {
+    margin: 40px auto;
+}
+
+.contenedor-encuesta {
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
+    height: 90%;
+    margin: auto;
+    overflow-y: scroll;
+    width: 90%;
 }
 
 .header-encuesta {
-    width: 90%;
     border-radius: 20px;
     margin: 20px auto;
     padding: 20px;
     text-align: center;
+    width: 90%;
 }
 
 .pregunta {
-    width: 90%;
-    margin: 20px auto;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 20px auto;
     padding: 20px;
+    width: 90%;
 }
 
 .respuestas {
     width: 100%;
-}
-
-.pregunta h5 {
-    width: 90%;
-    text-align: center;
 }
 
 .respuesta {
@@ -43,9 +51,6 @@
     width: 20%;
 }
 
-.respuesta * {
-    margin: 0 7px;
-}
 
 .imgRespuesta {
     width: 10%;
@@ -56,16 +61,16 @@
 }
 
 #cont-encuesta {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 #enviarForm {
-    margin: auto;
-    width: 20%;
-    margin-bottom: 30px;
     border-radius: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 20%;
 }
 
 #antes {
@@ -76,15 +81,16 @@
     display: none;
 }
 
-#cont-canvas * {
-    margin: 40px auto;
-}
-
 .grafica-encuesta {
     width: 90%;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 420px) {    
+    .respuesta span {
+        font-size: 12px;
+    }
+
+
     .fotoPregunta {
         width: 70%;
     }
@@ -92,11 +98,6 @@
     .imgRespuesta {
         width: 25%;
     }
-
-    .respuesta span {
-        font-size: 12px;
-    }
-
     #enviarForm {
         width: 25%;
     }

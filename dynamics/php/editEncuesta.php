@@ -1,14 +1,16 @@
 <?php
+//iniciamos sesion y conectamos a la BD
 session_start();
 include("config.php");
 $conexion = conectarBD();
 
-if (isset($_POST['Titulo']) && $_POST['Titulo'] != "") {
+//segun el post que recibe, actualiza el dato recibido
+if (isset($_POST['Titulo']) && preg_match("/^(\w|\s)+$/", $_POST['Titulo'])) {
     $titulo = mysqli_real_escape_string($conexion, $_POST['Titulo']);
     $consulta = 'UPDATE encuesta SET Titulo = "'.$titulo.'" WHERE id_encuesta = "'.$_POST['idEncuesta'].'"';
     $consultar = mysqli_query($conexion, $consulta);
 }
-elseif (isset($_POST['Descripcion']) && $_POST['Descripcion'] != "") {
+elseif (isset($_POST['Descripcion']) && preg_match("/^(\w|\s)+$/", $_POST['Descripcion'])) {
     $desc = mysqli_real_escape_string($conexion, $_POST['Descripcion']);
     $consulta = 'UPDATE encuesta SET Descripcion = "'.$desc.'" WHERE id_encuesta = "'.$_POST['idEncuesta'].'"';
     $consultar = mysqli_query($conexion, $consulta);

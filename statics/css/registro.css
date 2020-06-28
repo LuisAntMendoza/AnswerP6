@@ -48,8 +48,8 @@ input {
 
 .form-input {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 10px auto;
     width: 40%;
@@ -66,10 +66,10 @@ input {
 
 .inicio-2 {
     border-radius: 20px;
+    display: flex;
     flex-wrap: wrap;
     height: 80%;
     margin: auto 0;
-    display: flex;
     width: 30%;
 }
 
@@ -79,8 +79,8 @@ input {
 }
 
 #form-registro {
-    display: none;
     color: white;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
@@ -160,16 +160,24 @@ input {
 
 @media screen and (max-width: 420px) {
     input {
-        padding: 3px 5px;
         font-size: 10px !important;
+        padding: 3px 5px;
     }
 
-    .barraSesion {
-        padding: 5px 20px;
+    .form-input h5 {
+        font-size: 13px;
     }
 
     .barraSesion span {
         font-size: 14px;
+    }
+
+    .inicio-1 h5 {
+        font-size: 12px;
+    }
+
+    .barraSesion {
+        padding: 5px 20px;
     }
 
     .formSesion {
@@ -181,26 +189,18 @@ input {
     }
 
     .inicio-1 {
-        width: 90%;
         height: auto;
-    }
-
-    .inicio-1 h5 {
-        font-size: 12px;
+        width: 90%;
     }
 
     .inicio-2 {
-        width: 90%;
         height: 60%;
+        width: 90%;
     }
 
     .tabRegistro {
-        padding: 2px 20px;
         margin: 10px auto;
-    }
-
-    .form-input h5 {
-        font-size: 13px;
+        padding: 2px 20px;
     }
 
     #registro-1 {

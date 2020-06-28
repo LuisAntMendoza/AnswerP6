@@ -1,4 +1,5 @@
 <?php
+//conectamos a la BD
 include("config.php");
 $conexion = conectarBD();
 
@@ -60,7 +61,11 @@ else {
 if(preg_match("/^\d{9}$/", $_POST['usuario'])) {
     $usuario = mysqli_real_escape_string($conexion, $_POST['usuario']);
     $userFoto = $usuario;
-    $poder = 3;
+    if (isset($_POST['poder'])) {
+        $poder = $_POST['poder'];
+    }else {
+        $poder = 3;
+    }
     //validamos grupo
     if(preg_match("/^\d{1,2}/", $_POST['grupo'])) {
         $grupo = mysqli_real_escape_string($conexion, $_POST['grupo']);
@@ -76,7 +81,11 @@ else if (preg_match("/^[A-Z]{4}[0-9]{6}[0-9A-Z]{3}$/", $_POST['usuario'])) {
     $usuario = mysqli_real_escape_string($conexion, $_POST['usuario']);
     $userFoto = $usuario;
     $grupo = "null";
-    $poder = 2;
+    if (isset($_POST['poder'])) {
+        $poder = $_POST['poder'];
+    }else {
+        $poder = 2;
+    }
 }
 else {
     echo "usuario";

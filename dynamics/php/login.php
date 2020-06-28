@@ -1,4 +1,5 @@
 <?php
+//iniciamos sesion y conectamos a la BD
 session_start();
 include("./config.php");
 $conexion = conectarBD();
@@ -23,10 +24,11 @@ if(preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!-+])([A-Za-z\d!-+]|[^ ]){1
     $Contraseña = mysqli_real_escape_string($conexion, $_POST['password']);
 }
 else {
-    header("location:../../templates/errorRegistro.html");
+    header("location:../../templates/errorLogin.html");
     exit();
 }
 
+//si ingreso con su usuario hace los calculos y determina si estan bien o no, despues asigna los valores de la sesion
 if($usuario != "") {
     $consulta = 'SELECT * FROM usuario';
     $consultar = mysqli_query($conexion, $consulta);
@@ -62,6 +64,7 @@ if($usuario != "") {
     header("location:../../templates/errorLogin.html");
     exit();
 }
+//si ingreso con su correo hace los calculos y determina si estan bien o no, despues asigna los valores de la sesion
 if($email != "") {
     $consulta = 'SELECT * FROM usuario';
     $consultar = mysqli_query($conexion, $consulta);
