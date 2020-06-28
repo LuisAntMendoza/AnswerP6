@@ -164,7 +164,7 @@ input[type="submit"] {
     }
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (min-width:420px) and (max-width: 1040px) {
     textarea {
         width: 100%;
     }
