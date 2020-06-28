@@ -1,17 +1,3 @@
-.barrasEncuestas {
-    align-items: flex-end;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.barraEncuesta {
-    border-radius: 20px 20px 0 0;
-    cursor: pointer;
-    margin-right: 40px;
-    padding: 10px 20px;
-    text-align: center;
-
 .btn-editar i {
     font-size: 20px;
     margin: auto;
@@ -34,6 +20,21 @@
     font-size: 26px;
 }
 
+.barrasEncuestas {
+    align-items: flex-end;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.barraEncuesta {
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+    margin-right: 40px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
 .bodyEncuesta {
     border-radius: 0 20px 20px 20px;
     display: flex;
@@ -43,8 +44,6 @@
 }
 
 .btn-editar {
-    border-radius: 10px;
-    bottom: 5px;
     bottom: 5px;
     border-radius: 10px;
     display: flex;
@@ -54,46 +53,11 @@
     width: 40px;
 }
 
-.btn-editar i {
-    font-size: 20px;
-    margin: auto;
-}
-
 .cuerpoEncuestas {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
     width: 95%;
-}
-
-.encuesta {
-    border-radius: 30px 30px 0 30px;
-    cursor: pointer;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 40%;
-    margin: 25px auto;
-    position: relative;
-    width: 21%;
-}
-
-.encuesta h4 {
-    color: white;
-    margin: auto;
-}
-
-
-.encuesta h4:hover {
-    text-decoration: underline;
-}
-
-.encuesta h5 {
-    margin: auto;
-}
-
-#agregarEncuesta {
-    cursor: pointer;
 }
 
 .encuesta {
@@ -136,28 +100,18 @@
     color: white;
 }
 
-#encuestas {
-    display: flex;
-    flex-wrap: wrap;
-    height: 90%;
-    margin: auto;
-    overflow-y: scroll;
-    width: 95%;
-}
-
 @media screen and (max-width: 420px) {
     .barraEncuesta {
         margin-right: 5px;
         padding: 7px 10px;
     }
 
+    .bodyEncuesta {
+        height: 90%;
+    }
 
     .barraEncuesta span {
         font-size: 10px;
-    }
-
-    .bodyEncuesta {
-        height: 90%;
     }
 
     .encuesta {
@@ -173,6 +127,14 @@
         font-size: 10px;
     }
 
+    #select-categoria {
+        font-size: 10px;
+    }
+
+    #inpBuscar {
+        font-size: 8px;
+        margin-right: 40%;
+    }
 
     #form-buscar {
         padding-left: 7px;
@@ -181,14 +143,4 @@
     #form-buscar span {
         font-size: 13px;
     }
-
-    #inpBuscar {
-        font-size: 8px;
-        margin-right: 40%;
-    }
-
-    #select-categoria {
-        font-size: 10px;
-    }
-
 }

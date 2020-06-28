@@ -1,12 +1,11 @@
-i {
-  cursor: pointer;
-}
-
 table {
     margin: auto;
     width: 90%;
 }
 
+i {
+    cursor: pointer;
+}
 
 table, td, tr, th {
     border: 2px solid white;
@@ -14,20 +13,6 @@ table, td, tr, th {
     text-align: center;
 }
 
-<<<<<<< HEAD
-.cont-tablas {
-    border-radius: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 30px auto;
-    padding: 20px 0;
-    width: 90%;
-}
-
-.cont-tablas h3 {
-    text-align: center;
-    width: 100%;
-=======
 .cont-tablas h3 {
     text-align: center;
     width: 100%;
@@ -44,7 +29,6 @@ table, td, tr, th {
 
 #categorias form * {
     margin: auto 10px;
->>>>>>> 7414545bde637c502919631be05f69a38bc867b4
 }
 
 .cont-tablas {
@@ -56,20 +40,10 @@ table, td, tr, th {
     width: 90%;
 }
 
-<<<<<<< HEAD
-#categorias form {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 15px auto;
-    width: 100%;
-=======
 #articulo {
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
->>>>>>> 7414545bde637c502919631be05f69a38bc867b4
 }
 
 #crear-user {

@@ -1,40 +1,6 @@
-a:hover {
-  color: white;
-  text-decoration: none;
-}
-
-.descripcion {
-  height: 15%;
-  width: 90%;
-}
-
-.facebook {
-  background-color: #3b5998;
-}
-
-.foto-integrante {
-  border-radius: 50%;
-  height: 80%;
-  margin: auto;
-  width: 22%;
-}
-
-.github {
-  background-color: black;
-}
-
-.integrante {
-  border-radius: 0 30px 0 30px;
-  height: 45%;
-  margin: auto;
-  width: 26%;
-}
-
-.integrante-body {
-  display: flex;
-  flex-wrap: wrap;
-  height: 45%;
-  width: 100%;
+.integrante-header h5 {
+    width: 65%;
+    margin: auto;
 }
 
 .integrante-body p {
@@ -43,38 +9,13 @@ a:hover {
     width: 90%;
 }
 
-.integrante-brand {
-  border-radius: 10px;
-  cursor: pointer;
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  height: 45%;
-  margin: auto;
-  width: 45%;
-}
-
 .integrante-brand span, .integrante-brand i {
-  margin: auto;
-}
-
-.integrante-header {
-  display: flex;
-  flex-wrap: wrap;
-  height: 45%;
-  width: 100%;
-}
-
-.integrante-header h5 {
     margin: auto;
-    width: 65%;
 }
 
-.integrantes {
-  display: flex;
-  flex-wrap: wrap;
-  height: 60%;
-  width: 90%;
+a:hover {
+    color: white;
+    text-decoration: none;
 }
 
 .logo {
@@ -85,6 +26,65 @@ a:hover {
     justify-content: center;
     margin: auto;
     width: 80%;
+}
+
+.descripcion {
+    height: 15%;
+    width: 90%;
+}
+
+.integrantes {
+    display: flex;
+    flex-wrap: wrap;
+    height: 60%;
+    width: 90%;
+}
+
+.integrante {
+    border-radius: 0 30px 0 30px;
+    height: 45%;
+    margin: auto;
+    width: 26%;
+}
+
+.integrante-header {
+    display: flex;
+    flex-wrap: wrap;
+    height: 45%;
+    width: 100%;
+}
+
+.integrante-body {
+    display: flex;
+    flex-wrap: wrap;
+    height: 45%;
+    width: 100%;
+}
+
+.foto-integrante {
+    border-radius: 50%;
+    height: 80%;
+    margin: auto;
+    width: 22%;
+}
+
+.integrante-brand {
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    height: 45%;
+    margin: auto;
+    width: 45%;
+}
+
+.github {
+    background-color: black;
+}
+
+.facebook {
+    background-color: #3b5998;
 }
 
 #articulo {
@@ -100,23 +100,23 @@ a:hover {
 }
 
 @media screen and (max-width: 420px) {
-    .descripcion {
-        height: auto;
-        text-align: justify;
-    }
-
     .integrante {
         margin: 20px auto;
         width: 90%;
     }
 
-    .integrante-header h5 {
-      font-size: 18px;
-    }
-
     .logo {
         height: 7%;
         margin: 15px auto;
+    }
+
+    .descripcion {
+        height: auto;
+        text-align: justify;
+    }
+
+    .integrante-header h5 {
+        font-size: 18px;
     }
 
     .logo h3 {

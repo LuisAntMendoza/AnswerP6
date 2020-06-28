@@ -18,18 +18,16 @@ input[type="file"] {
     width: 32%;
 }
 
-.cuerpo-crear {
+.head-encuesta textarea {
+    background-color: rgb(224, 224, 224);
     border-radius: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    height: 90%;
-    margin: auto;
-    overflow-y: scroll;
-    width: 95%;
+    outline: none;
+    padding: 5px;
+    resize: none;
 }
 
-.cuerpo-crear form {
-    width: 100%;
+.respuestas input {
+    margin: 10px 10px;
 }
 
 .cuerpo-crear h3 {
@@ -38,17 +36,17 @@ input[type="file"] {
     width: 95%;
 }
 
+.pregunta>input {
+    margin: 0 30%;
+}
 
 .head-encuesta * {
     width: 60%;
 }
 
-.head-encuesta textarea {
-    background-color: rgb(224, 224, 224);
+#encuesta button {
     border-radius: 20px;
     outline: none;
-    padding: 5px;
-    resize: none;
     padding: 2px 7px;
 }
 
@@ -86,15 +84,6 @@ input[type="file"] {
     padding: 20px 0;
 }
 
-.pregunta>input {
-    margin: 0 30%;
-}
-
-.respuesta {
-    margin: auto;
-    width: 100%;
-}
-
 .respuestas {
     display: flex;
     flex-wrap: wrap;
@@ -103,12 +92,9 @@ input[type="file"] {
     width: 90%;
 }
 
-.respuestas input {
-    margin: 10px 10px;
-}
-
-#agregarQuest {
-    margin-bottom: 20px;
+.respuesta {
+    margin: auto;
+    width: 100%;
 }
 
 #articulo {
@@ -121,12 +107,10 @@ input[type="file"] {
     margin: auto;
     width: 90%;
 }
-#encuesta button {
-    border-radius: 20px;
-    outline: none;
-    padding: 2px 7px;
-}
 
+#agregarQuest {
+    margin-bottom: 20px;
+}
 
 #divGrupos {
     display: none;
@@ -154,6 +138,19 @@ input[type="file"] {
         width: 30%;
     }
 
+    .respuesta {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .respuesta input {
+        width: 90%;
+    }
+
+    .respuesta button {
+        margin: auto;
+    }
+
     .head-encuesta * {
         width: 90%;
     }
@@ -168,18 +165,6 @@ input[type="file"] {
 
     .pregunta>input {
         margin: 10px auto;
-        width: 90%;
-    }
-
-    .respuesta {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .respuesta button {
-        margin: auto;
-    }
-
-    .respuesta input {
         width: 90%;
     }
 
