@@ -36,7 +36,7 @@
 * Cuando coloques lo anterior te pedirá la contraseña que ya habiamos establecido:
 * contraseña: **DB4dm1n-Pseis**
 * Una vez ingresado al usuario se va a crear la base conlocando:
-* **CREATE DATABASE AnswerP6;**
+* **CREATE DATABASE AnswerP6 CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;**
 * Ya creada deberá de ingresar con: 
 * **USE AnswerP6;**
 4. Una vez ya creada la Base de datos se restaurará el respaldo con el nombre **BD_Answer.P6.sql** que está en la carpeta **Docs** en la subcarpeta **BD**, la cual va a copiar y la pegará en la ruta: _*C:\Xampp\mysql\bin*_ .
@@ -79,6 +79,10 @@
 
 ## Ejecución de la página
 Con los Archivos descargados, la Base de Datos creada y con **Apache Server** activado, ahora solo tendrá que ir al navegador de preferencia y en la sección de URL colocará localhost y presionará la Carpeta AnswerP6 y podrá disfrutar de la experiencia de esta Fantastica página  :sparkles: :sparkles:
+
+## Contraseña y datos de administrador para tener acceso completo a sus funciones
+Usuario: ABCD123456EFG
+Password: G0dAdm!n369
 
 ## Características del proyecto
 * Al entrar a la página se puede seleccionar entre las tres paletas de colores, que posteriormente si el usuario desea puede seleccionar otra paleta de las 3 ya establecidas.
