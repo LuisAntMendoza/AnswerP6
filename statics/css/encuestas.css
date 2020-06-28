@@ -1,16 +1,16 @@
 .barrasEncuestas {
-    display: flex;
-    flex-wrap: wrap;
     align-items: flex-end;
     color: white;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .barraEncuesta {
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+    margin-right: 40px;
     padding: 10px 20px;
     text-align: center;
-    border-radius: 20px 20px 0 0;
-    margin-right: 40px;
-    cursor: pointer;
 }
 
 .barraEncuesta span {
@@ -20,38 +20,38 @@
 .cuerpoEncuestas {
     display: flex;
     flex-wrap: wrap;
-    width: 95%;
     height: 100%;
+    width: 95%;
 }
 
 .bodyEncuesta {
-    width: 100%;
-    height: 80%;
     border-radius: 0 20px 20px 20px;
     display: flex;
     flex-wrap: wrap;
+    height: 80%;
+    width: 100%;
 }
 
 .encuesta {
-    width: 21%;
+    border-radius: 30px 30px 0 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     height: 40%;
     margin: 25px auto;
-    border-radius: 30px 30px 0 30px;
-    display: flex;
-    flex-wrap: wrap;
-    cursor: pointer;
-    flex-direction: column;
     position: relative;
+    width: 21%;
 }
 
 .btn-editar {
-    position: absolute;
     bottom: 5px;
-    right: 5px;
-    width: 40px;
-    height: 40px;
     border-radius: 10px;
     display: flex;
+    height: 40px;
+    position: absolute;
+    right: 5px;
+    width: 40px;
 }
 
 .btn-editar i {
@@ -60,8 +60,8 @@
 }
 
 .encuesta h4 {
-    margin: auto;
     color: white;
+    margin: auto;
 }
 
 .encuesta h5 {
@@ -73,12 +73,12 @@
 }
 
 #encuestas {
-    height: 90%;
-    width: 95%;
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
+    height: 90%;
+    margin: auto;
     overflow-y: scroll;
+    width: 95%;
 }
 
 #articulo {
@@ -87,9 +87,9 @@
 }
 
 #barraBusqueda {
+    display: none;
     height: 5%;
     margin: auto;
-    display: none;
 }
 
 #agregarEncuesta {
@@ -102,8 +102,8 @@
 
 @media screen and (max-width: 420px) {
     .barraEncuesta {
-        padding: 7px 10px;
         margin-right: 5px;
+        padding: 7px 10px;
     }
 
     .bodyEncuesta {
@@ -115,8 +115,8 @@
     }
 
     .encuesta {
-        width: 40%;
         height: 30%;
+        width: 40%;
     }
 
     #barraBusqueda {

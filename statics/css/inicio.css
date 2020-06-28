@@ -49,11 +49,11 @@
 
 .boton {
     border-radius: 20px;
+    cursor: pointer;
     display: flex;
     height: 10%;
     margin: auto;
     width: 35%;
-    cursor: pointer;
 }
 
 #articulo {
@@ -67,8 +67,8 @@
 
 @media screen and (max-width: 420px) {
     .boton {
-        width: 70%;
         height: 7%;
+        width: 70%;
     }
 
     .boton h3 {
@@ -76,8 +76,8 @@
     }
 
     .texto-carrusel h3 {
-        width: 100%;
         font-size: 20px;
+        width: 100%;
     }
 
     .texto-carrusel h5 {

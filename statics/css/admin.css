@@ -1,6 +1,6 @@
 table {
-    width: 90%;
     margin: auto;
+    width: 90%;
 }
 
 i {
@@ -13,37 +13,38 @@ table, td, tr, th {
     text-align: center;
 }
 
-.cont-tablas {
-    width: 90%;
-    margin: 30px auto;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 20px;
-    padding: 20px 0;
+.cont-tablas h3 {
+    text-align: center;
+    width: 100%;
 }
 
-.cont-tablas h3 {
+
+#categorias form {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px auto;
     width: 100%;
-    text-align: center;
+}
+
+#categorias form * {
+    margin: auto 10px;
+}
+
+.cont-tablas {
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    padding: 20px 0;
+    width: 90%;
 }
 
 #articulo {
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
-}
-
-#categorias form {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 15px auto;
-}
-
-#categorias form * {
-    margin: auto 10px;
 }
 
 @media screen and (max-width: 420px) {
