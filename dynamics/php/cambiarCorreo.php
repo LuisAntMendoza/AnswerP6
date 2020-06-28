@@ -1,4 +1,5 @@
 <?php
+//iniciamos sesion y conectamos a la BD
 session_start();
 include("./config.php");
 $conexion = conectarBD();
@@ -11,6 +12,7 @@ else {
     header("location:../../templates/errorRegistro.html");
     exit();
 }
+//ciframos el correo y obtenemos el usuario de la BD
 $_SESSION['correo'] = $correo;
 $correo = Cifrar($correo);
 $consulta = "SELECT Usuario FROM usuario";
@@ -20,6 +22,7 @@ while ($resultado = mysqli_fetch_row($consultar)) {
         $usuario = $resultado[0];
     }
 }
+//actualizamos el correo
 $consulta = 'UPDATE usuario SET CorreoElectronico = "'.$correo.'" WHERE Usuario = "'.$usuario.'"';
 $consultar = mysqli_query($conexion, $consulta);
 header("location: ../../templates/perfil.html");

@@ -1,7 +1,9 @@
 <?php
+//iniciamos sesion y conectamos a la BD
 session_start();
 include("./config.php");
 $conexion = conectarBD();
+//obtenemos las encuestas que hemos contestado
 $arrContestadas = [];
 if (isset($_SESSION['poder'])) {
     $consulta = 'SELECT * FROM encuestas_respondidas';
@@ -13,6 +15,7 @@ if (isset($_SESSION['poder'])) {
     }
 }
 
+//regresa los valores de las encuestas que hemos respondido
 $response = [];
 for ($i=0; $i < count($arrContestadas); $i++) {
     $result = mysqli_query($conexion, 'SELECT id_encuesta, Titulo FROM encuesta WHERE id_encuesta = "'.$arrContestadas[$i].'"');

@@ -132,4 +132,7 @@ $(document).ready(() => {
     }).catch((error) => {
         console.log(error);
     })
+    $("#crear-user").on("click", () => {
+        window.location = "crearUser.html";
+    })
 });

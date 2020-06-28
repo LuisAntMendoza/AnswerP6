@@ -1,4 +1,5 @@
 <?php
+//constantes de los cifrados y la BD
 define("HOST", "localhost");
 define("USER", "adminAnswerP6");
 define("PASS", "DB4dm1n-Pseis");
@@ -7,6 +8,7 @@ define("PASSWORD", "Shrek Amo Del Multiverso");
 define("HASH", "sha256");
 define("METHOD", "aes-128-cbc-hmac-sha1");
 
+//nos conectamos a la BD
 function conectarBD() {
 	$conn = mysqli_connect(HOST, USER, PASS, DB);
 
@@ -16,6 +18,7 @@ function conectarBD() {
 	return $conn;
 }
 
+//funcion para cifrar
 function Cifrar($text){
   $key = openssl_digest(PASSWORD, HASH);
   $iv_len = openssl_cipher_iv_length (METHOD);
@@ -35,6 +38,7 @@ function Cifrar($text){
   return $textoCifrado;
 }
 
+//funcion para Decifrar
 function Decifrar ($textoCifrado){
   $key = openssl_digest(PASSWORD, HASH);
   $iv_len = openssl_cipher_iv_length (METHOD);

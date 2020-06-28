@@ -1,8 +1,10 @@
 <?php
+//iniciamos sesion y conectamos a la BD
 session_start();
 include("./config.php");
 $conexion = conectarBD();
 
+//borra la imagen de perfil actual
 function borrarImg() {
     if(file_exists("../../statics/img/fotosPerfil/".$_SESSION['usuario'].".png")) {
         unlink("../../statics/img/fotosPerfil/".$_SESSION['usuario'].".png");
@@ -14,6 +16,7 @@ function borrarImg() {
         unlink("../../statics/img/fotosPerfil/".$_SESSION['usuario'].".jpeg");
     }
 }
+//recibe un archivo y lo renombra segun tu usuario, y lo añade a la carpeta correspondiente
 if($_FILES["imgPerfil"]["type"] == "image/png" || $_FILES["imgPerfil"]["type"] == "image/jpg" || $_FILES["imgPerfil"]["type"] == "image/jpeg") {
     borrarImg();
     $dir = '../../statics/img/fotosPerfil';

@@ -1,7 +1,10 @@
 <?php
+//iniciamos sesion y conectamos a la BD
 session_start();
 include("./config.php");
 $conexion = conectarBD();
+
+//obtiene los datos del perfil solicitado
 $response = [];
 $idUser = $_POST['idUser'];
 $consulta = 'SELECT * FROM usuario WHERE id_usuario = "'.$idUser.'"';

@@ -1,7 +1,9 @@
 <?php
+//iniciamos sesion y conectamos a la BD
 session_start();
 include("./config.php");
 $conexion = conectarBD();
+//regresa el formato de la imagen del usuario
 $usuario = "";
 if(isset($_POST['idUser'])) {
     $usuario = $_POST['idUser'];

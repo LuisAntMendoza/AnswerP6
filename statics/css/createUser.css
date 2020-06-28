@@ -1,0 +1,42 @@
+input {
+    outline: none;
+    border-radius: 20px;
+    padding: 2px 5px;
+}
+
+span {
+    margin-top: 20px;
+}
+
+select {
+    padding: 2px 5px;
+    border-radius: 20px;
+}
+
+.cont-form {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+.cont-form form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.cont-form form * {
+    width: 60%;
+    margin: 5px auto;
+}
+
+#articulo {
+    display: flex;
+}
+
+#enviarForm {
+    width: 20%;
+    color: white;
+}

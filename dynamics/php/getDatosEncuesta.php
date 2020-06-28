@@ -1,8 +1,10 @@
 <?php
+//iniciamos sesion y conectamos a la BD
 session_start();
 include("./config.php");
 $conexion = conectarBD();
 
+//obtiene los valores de la encuesta
 $response = [];
 $result = mysqli_query($conexion, 'SELECT * FROM encuesta WHERE id_encuesta = "'.$_POST["idEncuesta"].'"');
 while($row = mysqli_fetch_assoc($result))
@@ -16,6 +18,7 @@ for ($i=1; $i < 6; $i++) {
     	array_push($response, $row);
     }
 }
+//obtiene los valores de las preguntas de esa encueta
 for ($i=0; $i < 5; $i++) {
     for ($k=0; $k < 10; $k++) {
         $result = mysqli_query($conexion, 'SELECT * FROM respuesta WHERE id_Respuesta = "'.$response[$i+1]['id_Respuesta'.$k].'"');
@@ -25,6 +28,7 @@ for ($i=0; $i < 5; $i++) {
         }
     }
 }
+//obtiene los valores de las respuestas de las preguntas de la encuesta solicitada
 $consulta = 'SELECT * FROM encuestas_respondidas';
 $consultar = mysqli_query($conexion, $consulta);
 $contestada = false;
@@ -33,6 +37,7 @@ while ($resultado = mysqli_fetch_row($consultar)) {
 		$contestada = true;
 	}
 }
+//al final devuelve un arreglo con todos los datos
 array_push($response, $contestada);
 echo json_encode($response);
 
