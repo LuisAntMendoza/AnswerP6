@@ -1,3 +1,7 @@
+body {
+    font-family: "Montserrat" !important;
+}
+
 .tabAside:hover i {
     text-decoration: none;
 }
@@ -91,4 +95,64 @@
 
 #admin {
     display: none;
+}
+
+@media screen and (max-width: 420px) {
+    #navLateral {
+        height: 85vh;
+    }
+
+    nav a {
+        width: 10%;
+        font-size: 10px !important;
+        overflow: hidden;
+    }
+
+    nav form {
+        width: 80%;
+        font-size: 10px;
+    }
+
+    .tabAside {
+        left: -160px;
+        height: 30px;
+    }
+
+    .tabAside i {
+        font-size: 16px;
+    }
+
+    #btn-usuario {
+        width: 50%;
+        font-size: 9px;
+    }
+
+    #cerrar-sesion {
+        width: 35%;
+        font-size: 9px;
+    }
+
+    #logo-nav {
+        width: 20px;
+        height: 20px;
+        margin-left: -2px;
+    }
+
+    #pie .h4 {
+        margin-left: 20px;
+        font-size: 10px;
+    }
+
+    #pie {
+        bottom: 70px;
+    }
+
+    #articulo {
+        height: 75vh;
+    }
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../../libs/fonts/Montserrat/Montserrat-Regular.ttf);
 }

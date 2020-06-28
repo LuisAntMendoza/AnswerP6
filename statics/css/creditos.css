@@ -9,7 +9,6 @@
     width: 90%;
 }
 
-
 .integrante-brand span, .integrante-brand i {
     margin: auto;
 }
@@ -98,4 +97,40 @@ a:hover {
 #img-logo {
     height: 80%;
     margin: auto 2%;
+}
+
+@media screen and (max-width: 420px) {
+    .integrante {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .logo {
+        height: 7%;
+        margin: 15px auto;
+    }
+
+    .descripcion {
+        height: auto;
+        text-align: justify;
+    }
+
+    .integrante-header h5 {
+        font-size: 18px;
+    }
+
+    .logo h3 {
+        width: 75%;
+        font-size: 19px;
+    }
+
+    #articulo {
+        overflow-y: scroll;
+    }
+
+    #img-logo {
+        height: auto;
+        width: 20%;
+        margin-top: -5px;
+    }
 }

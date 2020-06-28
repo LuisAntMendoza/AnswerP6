@@ -20,3 +20,13 @@ a {
 #articulo {
     display: flex;
 }
+
+@media screen and (max-width: 420px) {
+    .cuerpoError h2 {
+        font-size: 14px;
+    }
+
+    .cuerpoError h3 {
+        font-size: 12px;
+    }
+}

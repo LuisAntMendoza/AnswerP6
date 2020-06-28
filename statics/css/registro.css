@@ -2,7 +2,6 @@ input {
     padding: 10px 5px;
 }
 
-
 .barraSesion span {
     font-size: 26px;
 }
@@ -157,4 +156,74 @@ input {
 #select-grupos {
     padding: 10px 5px;
     width: 100%;
+}
+
+@media screen and (max-width: 420px) {
+    input {
+        padding: 3px 5px;
+        font-size: 10px !important;
+    }
+
+    .barraSesion {
+        padding: 5px 20px;
+    }
+
+    .barraSesion span {
+        font-size: 14px;
+    }
+
+    .formSesion {
+        height: 90%;
+    }
+
+    .form-input {
+        margin: auto;
+    }
+
+    .inicio-1 {
+        width: 90%;
+        height: auto;
+    }
+
+    .inicio-1 h5 {
+        font-size: 12px;
+    }
+
+    .inicio-2 {
+        width: 90%;
+        height: 60%;
+    }
+
+    .tabRegistro {
+        padding: 2px 20px;
+        margin: 10px auto;
+    }
+
+    .form-input h5 {
+        font-size: 13px;
+    }
+
+    #registro-1 {
+        width: 90%;
+    }
+
+    #registro-2 {
+        width: 90%;
+    }
+
+    #form-registro {
+        height: 100%;
+    }
+
+    #select-grupos {
+        padding: 0;
+    }
+
+    #img-registro {
+        height: 40%;
+    }
+
+    #registro-1 h4 {
+        margin: 0 auto;
+    }
 }

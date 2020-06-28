@@ -69,7 +69,7 @@ form input {
     width: 50%;
 }
 
-.respuesta img {
+.imgRespuesta {
     width: 10%;
 }
 
@@ -117,4 +117,49 @@ form input {
 
 #encuesta {
     width: 100%;
+}
+
+@media screen and (max-width: 420px) {
+    .respuesta {
+        flex-wrap: wrap;
+    }
+
+    .imgRespuesta {
+        width: 50%;
+        margin: auto;
+    }
+
+    .fotoPregunta {
+        width: 70%;
+    }
+
+    .respuesta button {
+        margin: auto;
+    }
+
+    .pregunta>input {
+        width: 100%;
+    }
+
+    .respuesta input[type="file"] {
+        width: 100%;
+    }
+
+    #descripcion-encuesta {
+        width: 100%;
+    }
+
+    #enviarForm {
+        width: 45%;
+    }
+
+    #encuesta {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #agregarQuest {
+        width: 60%;
+        margin: 20px auto;
+    }
 }

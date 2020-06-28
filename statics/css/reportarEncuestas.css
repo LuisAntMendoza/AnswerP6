@@ -1,3 +1,9 @@
+input[type="submit"] {
+    border-radius: 20px;
+    color: white;
+    padding: 2px 12px;
+}
+
 .reportar form {
     width: 100%;
     display: flex;
@@ -18,4 +24,15 @@
 
 #articulo {
     display: flex;
+}
+
+@media screen and (max-width: 420px) {
+    .reportar form {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .reportar form * {
+        margin: 10px auto;
+    }
 }

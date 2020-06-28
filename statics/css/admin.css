@@ -45,3 +45,21 @@ table, td, tr, th {
 #categorias form * {
     margin: auto 10px;
 }
+
+@media screen and (max-width: 420px) {
+    table {
+        margin: auto 10px;
+    }
+
+    .cont-tablas {
+        overflow-x: scroll;
+    }
+
+    .cont-tablas h3 {
+        font-size: 19px;
+    }
+
+    #categorias form * {
+        font-size: 15px;
+    }
+}

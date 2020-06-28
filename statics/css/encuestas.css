@@ -99,3 +99,48 @@
 #btn-buscar {
     color: white;
 }
+
+@media screen and (max-width: 420px) {
+    .barraEncuesta {
+        padding: 7px 10px;
+        margin-right: 5px;
+    }
+
+    .bodyEncuesta {
+        height: 90%;
+    }
+
+    .barraEncuesta span {
+        font-size: 10px;
+    }
+
+    .encuesta {
+        width: 40%;
+        height: 30%;
+    }
+
+    #barraBusqueda {
+        height: 10%;
+    }
+
+    #btn-buscar {
+        font-size: 10px;
+    }
+
+    #select-categoria {
+        font-size: 10px;
+    }
+
+    #inpBuscar {
+        font-size: 8px;
+        margin-right: 40%;
+    }
+
+    #form-buscar {
+        padding-left: 7px;
+    }
+
+    #form-buscar span {
+        font-size: 13px;
+    }
+}

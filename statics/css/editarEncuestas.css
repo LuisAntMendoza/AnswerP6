@@ -104,3 +104,13 @@ form input {
 .grafica-encuesta {
     width: 90%;
 }
+
+@media screen and (max-width: 420px) {
+    textarea {
+        width: 100%;
+    }
+
+    #select-grupos {
+        width: 60%;
+    }
+}

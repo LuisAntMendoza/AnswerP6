@@ -132,3 +132,43 @@ input[type="file"] {
     border-radius: 20px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 420px) {
+    input[type="submit"] {
+        width: 30%;
+    }
+
+    .respuesta {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .respuesta input {
+        width: 90%;
+    }
+
+    .respuesta button {
+        margin: auto;
+    }
+
+    .head-encuesta * {
+        width: 90%;
+    }
+
+    .head-encuesta h4 {
+        font-size: 18px;
+    }
+
+    .head-encuesta h5 {
+        font-size: 15px;
+    }
+
+    .pregunta>input {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #encuesta {
+        height: 55%;
+    }
+}

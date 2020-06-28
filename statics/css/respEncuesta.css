@@ -47,7 +47,7 @@
     margin: 0 7px;
 }
 
-.respuesta img {
+.imgRespuesta {
     width: 10%;
 }
 
@@ -82,4 +82,22 @@
 
 .grafica-encuesta {
     width: 90%;
+}
+
+@media screen and (max-width: 420px) {
+    .fotoPregunta {
+        width: 70%;
+    }
+
+    .imgRespuesta {
+        width: 25%;
+    }
+
+    .respuesta span {
+        font-size: 12px;
+    }
+
+    #enviarForm {
+        width: 25%;
+    }
 }

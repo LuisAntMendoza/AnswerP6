@@ -160,3 +160,12 @@
         opacity: 0.6;
     }
 }
+
+@media screen and (max-width: 420px) {
+    .modalCSS {
+        width: 90%;
+        left: 5%;
+        top: 20%;
+        height: 440px;
+    }
+}

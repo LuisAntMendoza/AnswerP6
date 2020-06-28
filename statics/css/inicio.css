@@ -64,3 +64,23 @@
 #carruselInicio {
     z-index: 0;
 }
+
+@media screen and (max-width: 420px) {
+    .boton {
+        width: 70%;
+        height: 7%;
+    }
+
+    .boton h3 {
+        font-size: 23px;
+    }
+
+    .texto-carrusel h3 {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .texto-carrusel h5 {
+        visibility: hidden;
+    }
+}

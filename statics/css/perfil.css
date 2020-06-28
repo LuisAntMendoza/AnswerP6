@@ -110,3 +110,67 @@
     border-radius: 20px;
     color: white;
 }
+
+@media screen and (max-width: 420px) {
+    .cuerpo-perfil {
+        overflow-y: scroll;
+    }
+
+    .perfil-1 {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .perfil-2 {
+        width: 90%;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+
+    .form-perfil {
+        width: 90%;
+    }
+
+    .form-perfil p {
+        font-size: 11px;
+    }
+
+    .form-perfil input {
+        font-size: 10px;
+    }
+
+    .form-perfil input[type="submit"] {
+        font-size: 10px;
+        width: 30%;
+    }
+
+    #btn-consultar {
+        font-size: 10px;
+        width: 25%;
+        height: 55%;
+    }
+
+    .perfil-2 h5 {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .contestadas h5 {
+        width: 61%;
+    }
+
+    .form-img h5 {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .form-img input[type="file"] {
+        width: 80%;
+        margin: auto;
+        font-size: 10px;
+    }
+
+    .form-img input[type="submit"] {
+        font-size: 10px;
+    }
+}
