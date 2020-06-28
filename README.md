@@ -96,3 +96,6 @@ Password: G0dAdm!n369
 * Transiciones amigables para la vista.
 * Navegación fácil de aprender y usar.
 * Si el usuario lo desea puede cambiar su contraseña, correo electrónico como también su foto de perfil.
+
+## Importante:
+Los títulos, descripciones, preguntas y respuestas solo pueden ser valores alfanúmericos sin acentos.
