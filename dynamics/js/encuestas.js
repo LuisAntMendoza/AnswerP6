@@ -28,7 +28,6 @@ function getEncPropias() {
             $("#agregarEncuesta").before(div);
             colorearPaleta();
         }
-        console.log(data);
 
     }).catch((error) => {
         console.log(error);
@@ -44,7 +43,6 @@ function getEncPub() {
     }).then((response) => {
         return response.json();
     }).then((data) => {
-        console.log(data);
         for (let i = 0; i < data.length; i++) {
             let div = $("<div>");
             $(div).addClass("encuesta CuartoColor encPub");
@@ -86,7 +84,6 @@ function getEncCont() {
             $(div).addClass("encuesta CuartoColor encCont");
             $(div).data("id-encuesta", data[i].id_encuesta);
             $(div).on("click", () => {
-                console.log($(div).data("id-encuesta"));
                 document.cookie = "encuesta=" + $(div).data("id-encuesta");
                 document.location = "respEncuesta.html";
             })
@@ -108,7 +105,6 @@ function getEncCont() {
             $("#encuestas").append(div);
             colorearPaleta();
         }
-        console.log(data);
 
     }).catch((error) => {
         console.log(error);
@@ -173,7 +169,6 @@ $(document).ready(() => {
             $(option).text(data[i]["Categoria"]);
             $("#select-categoria").append(option);
         }
-        //console.log(data);
     }).catch((error) => {
         console.log(error.message);
     })

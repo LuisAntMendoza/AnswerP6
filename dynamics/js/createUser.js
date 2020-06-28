@@ -8,7 +8,6 @@ $(document).ready(() => {
             $(option).text(data[i]["Grupo"]);
             $("#select-grupos").append(option);
         }
-        //console.log(data);
     }).catch((error) => {
         console.log(error.message);
     })

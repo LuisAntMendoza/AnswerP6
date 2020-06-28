@@ -11,7 +11,6 @@ $(document).ready(() => {
                 $("#admin").css("display", "flex");
             }
         }
-        console.log(data);
     }).catch((error) => {
         console.log(error);
     })

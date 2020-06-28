@@ -37,7 +37,6 @@ function crearPregunta() {
             $(borrar).on("click", (e) => {
                 e.preventDefault();
                 if ($($($($(e.target).parent()).parent()).children()).length > 3) {
-                    console.log($($($($(e.target).parent()).parent()).children()).length);
                     $($(e.target).parent()).remove();
                 }
             });
@@ -68,7 +67,6 @@ function crearPregunta() {
                 $(borrar).on("click", (e) => {
                     e.preventDefault();
                     if ($($($($(e.target).parent()).parent()).children()).length > 3) {
-                        console.log($($($($(e.target).parent()).parent()).children()).length);
                         $($(e.target).parent()).remove();
                     }
                 })
@@ -135,7 +133,6 @@ $(document).ready(() => {
                 $("#admin").css("display", "flex");
             }
         }
-        console.log(data);
     }).catch((error) => {
         console.log(error);
     })
@@ -172,7 +169,6 @@ $(document).ready(() => {
         return response.json();
     }).then((data) => {
         for (let i = 0; i < data.length; i++) {
-            console.log(data);
             let option = $("<option>");
             $(option).attr("value", data[i]["id_tipo"]);
             $(option).text(data[i]["TipoUsuario"]);

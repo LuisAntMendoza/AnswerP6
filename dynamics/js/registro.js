@@ -38,7 +38,6 @@ $(document).ready(() => {
             $(option).text(data[i]["Grupo"]);
             $("#select-grupos").append(option);
         }
-        //console.log(data);
     }).catch((error) => {
         console.log(error.message);
     })
@@ -51,17 +50,12 @@ $(window).ready(function() {
         });
 
         function addImage(e) {
-            console.log("addImage");
             var file = e.target.files[0],
                 imageType = /image.*/;
-            console.log("if");
             if (!file.type.match(imageType))
                 return;
-            console.log("reader");
             var reader = new FileReader();
-            console.log("onload");
             reader.onload = function(e) {
-                console.log("funcion");
                 var result = e.target.result;
                 $('#img-registro').attr("src", result);
             }

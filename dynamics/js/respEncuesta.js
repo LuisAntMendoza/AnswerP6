@@ -14,7 +14,6 @@ $(document).ready(() => {
                 window.location = "inicio.html";
             }
         }
-        console.log(data);
     }).catch((error) => {
         console.log(error);
     })
@@ -29,7 +28,6 @@ $(document).ready(() => {
             console.log(error);
         }
     }).then((data) => {
-        console.log(data);
         if (data[0] == undefined) {
             window.location = "encuestas.html";
         }
@@ -156,7 +154,6 @@ $(document).ready(() => {
                     console.log(error);
                 }
             }).then((dataImg) => {
-                console.log(dataImg);
                 for (let i = 0; i < 5; i++) {
                     if (dataImg[i] == "null") {
                         $($($("#cont-encuesta").children()[i + 1]).children()[1]).remove();
@@ -176,7 +173,6 @@ $(document).ready(() => {
                     console.log(error);
                 }
             }).then((dataResp) => {
-                console.log(dataResp);
                 let l = 0;
                 for (let i = 0; i < 5; i++) {
                     for (let k = 0; k < 10; k++) {

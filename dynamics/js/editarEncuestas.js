@@ -15,7 +15,6 @@ $(document).ready(() => {
                 $("#filtros").css("display", "none");
             }
         }
-        console.log(data);
     }).catch((error) => {
         console.log(error);
     })
@@ -66,7 +65,6 @@ $(document).ready(() => {
             console.log(error);
         }
     }).then((data) => {
-        console.log(data);
         if (data[0] == undefined) {
             window.location = "encuestas.html";
         }

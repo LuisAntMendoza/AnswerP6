@@ -10,7 +10,6 @@ $(document).ready(() => {
             console.log(error);
         }
     }).then((data) => {
-        console.log(data);
         $("#h5-nombre").text("Bienvenid@: " + data[3] + " " + data[4] + " " + data[5]);
         $("#h5-usuario").text("Usuario: " + data[1]);
         $("#h5-fNac").text("Fecha de Nacimiento: " + data[6]);
@@ -28,7 +27,6 @@ $(document).ready(() => {
                 console.log(error);
             }
         }).then((datos) => {
-            console.log(datos);
             $("#img-perfil").attr("src", "../statics/img/fotosPerfil/" + data[1] + "." + datos);
         })
     })

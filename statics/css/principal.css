@@ -157,7 +157,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (min-width: 420px) and (max-width: 1040px) {
     #pie .h4 {
         font-size: 23px;
     }

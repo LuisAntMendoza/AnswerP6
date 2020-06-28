@@ -78,7 +78,6 @@ $(document).ready(() => {
     fetch("../dynamics/php/getCategoria.php").then((response) => {
         return response.json();
     }).then((data) => {
-        console.log(data);
         for (let i = 0; i < data.length; i++) {
             let tr = $("<tr>");
             let categoria = $("<td>");
@@ -111,7 +110,6 @@ $(document).ready(() => {
     fetch("../dynamics/php/getEncAdmin.php").then((response) => {
         return response.json();
     }).then((data) => {
-        console.log(data);
         for (let i = 0; i < data.length; i++) {
             let tr = $("<tr>");
             let titulo = $("<td>");
@@ -135,7 +133,6 @@ $(document).ready(() => {
     fetch("../dynamics/php/getReportes.php").then((response) => {
         return response.json();
     }).then((data) => {
-        console.log(data);
         for (let i = 0; i < data.length; i++) {
             let tr = $("<tr>");
             let razon = $("<td>");
