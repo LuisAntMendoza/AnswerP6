@@ -14,23 +14,36 @@
 ## Instalación
 ### Windows
 ##### Página
-1. Una vez instalada la aplicación Xampp acceder al Panel de control, en el cual se deberá activar los servidores de Apache y MySQL, Este paso en muy importante ya que  de no tener activos estos dos no podrá visualizar la página.
+1. Una vez instalada la aplicación Xampp acceder al Panel de control, en el cual se deberá activar los servidores de Apache y MySQL, Este paso en muy importante por que de no tener activados estos dos no podrá visualizar la página.
 2. Clonar el Repositorio en la ruta **C:/(Ruta_Xampp)/htdocs** .Donde se creará una carpeta con todos los archivos necesarios para la visualización correcta de la página.
 (Para clonar con exito el repositorio deberá de dirijirse a la parte superior donde va a visualizar un botón verde que dice  :arrow_down: **Clone**, Este deberá estar seleccionado como **Clone with HTTPS** y presionar  :clipboard: el cual es el símbolo de porta papeles)
-3. Una vez que se copió el enlace deberá de Abrir su terminal con las teclas de Windows + r, y selecionará su ruta(antes mencionada) una vez en la ruta con ayuda de git se colocará **git clone** y el enlace copiado. Presionará enter, de esta forma todos los archivos que necesita estarán descargados.
+3. Una vez que se copió el enlace deberá de Abrir su terminal con las teclas de Windows + r, y selecionará su ruta(antes mencionada), una vez en la ruta con ayuda de git se colocará **git clone** y el enlace copiado. Presionará enter, de esta forma todos los archivos que necesita estarán descargados.
 ##### Base de Datos 
 1. Verificar si en el Panel de control de Xampp esta activada el módulo de **MySQL**
-2. Crear la Base de Datos:
-* Ingresar a la terminal con _*Windows + r*_ e ir a la ruta **C:\Xampp\mysql\bin**
-* usuario: **adminAnswerP6** contraseña: **DB4dm1n-P6**
-* Una vez que se ingresó al usuario se va a crear la base conlocando:
+2. Crear Ususario:
+* Ingresar a la terminal con  _*Windows \+ **R**_  y escribir **cmd** e ir a la ruta **C:\Xampp\mysql\bin**
+* Escribir:
+* **mysql -u root**
+* Una ves ingresado al usuario root se colocará lo siguiente para crear el nuevo usuario:
+* **CREATE USER 'adminAnswerP6'@'localhost' IDENTIFIED BY 'DB4dm1n-Pseis';**
+* Ya creado el usuario se deben de colocar sus propiedades colocando lo siguiente:
+* **GRANT CREATE,DELETE,INSERT,SELECT,UPDATE ON AnswerP6.* TO 'adminAnswerP6'@'localhost' **
+* Listo ya creaste el nuevo usuario  :clap: :clap:
+3. Crear la Base de Datos:
+* Ingresar a la terminal con  _*Windows \+ **R**_  y escribir **cmd** e ir a la ruta **C:\Xampp\mysql\bin**
+* Una vez estando en la ruta escribir lo siguente:
+* **myqsl -u adminAnswerP6 -p**
+* Cuando coloques lo anterior te pedirá la contraseña que ya habiamos establecido:
+* contraseña: **DB4dm1n-Pseis**
+* Una vez ingresado al usuario se va a crear la base conlocando:
 * **CREATE DATABASE AnswerP6;**
 * Ya creada deberá de ingresar con: 
 * **USE AnswerP6;**
-3. Una vez ya creada la Base de datos se restaurará el respaldo que está en la carpeta **Docs** en la subcarpeta **BD** la cual va a copiar y la pegará en la ruta: _*C:\Xampp\mysql\bin*_ .
-4. Ya que el respaldo se encuentra en la carpeta bin  :file_folder:
-5. En la Consola(Terminal) de MySQL colocará lo siguiente:
+4. Una vez ya creada la Base de datos se restaurará el respaldo con el nombre **BD_Answer.P6.sql** que está en la carpeta **Docs** en la subcarpeta **BD**, la cual va a copiar y la pegará en la ruta: _*C:\Xampp\mysql\bin*_ .
+5. Una vez que el respaldo se encuentra en la carpeta bin  :file_folder:
+* En la Consola(Terminal) de MySQL dentro de la Base de Datos **'AnswerP6'** colocará lo siguiente:
 * **SOURCE BD_Answer.P6.sql;**
+* y presionar enter 
 * Si se realizaron los pasos debidamente ya esta lista la Base de Datos  :clap:
 
 ### MacOS
