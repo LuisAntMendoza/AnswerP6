@@ -80,6 +80,9 @@
 ## Ejecución de la página
 Con los Archivos descargados, la Base de Datos creada y con **Apache Server** activado, ahora solo tendrá que ir al navegador de preferencia y en la sección de URL colocará localhost y presionará la Carpeta AnswerP6 y podrá disfrutar de la experiencia de esta Fantastica página  :sparkles: :sparkles:
 
+### Atención: 
+Esta página ha sido desarrollada en una Mac de 13', y adaptada a los dispositivos iPhone X y iPhone 6/7/8 Plus, asi como el iPad y el iPad Pro. Entrar con un dispositivo diferente puede causar errores en la enseñanza de la página.
+
 ## Contraseña y datos de administrador para tener acceso completo a sus funciones
 Usuario: ABCD123456EFG
 Password: G0dAdm!n369
