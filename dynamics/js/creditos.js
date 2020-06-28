@@ -28,4 +28,19 @@ $(document).ready(() => {
     $("#git-jose").on("click", () => {
         window.open("https://github.com/juarezzjose");
     });
+    $("#face-luis").on("click", () => {
+        window.open("https://www.facebook.com/luisantonio.mendozaramirez.1/");
+    });
+    $("#face-gabo").on("click", () => {
+        window.open("https://www.facebook.com/gabriel.rivasmaldonado");
+    });
+    $("#face-cris").on("click", () => {
+        window.open("https://www.facebook.com/Cristian.What");
+    });
+    $("#face-emi").on("click", () => {
+        window.open("https://www.facebook.com/profile.php?id=100008845056344");
+    })
+    $("#face-jose").on("click", () => {
+        window.open("https://www.facebook.com/micky.muse.1");
+    })
 })
