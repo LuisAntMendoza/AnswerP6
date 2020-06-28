@@ -1,11 +1,11 @@
 # AnswerP6 ![logoQuest3](https://user-images.githubusercontent.com/65323540/85762696-9b6d2000-b6d9-11ea-861a-aca9fe47e008.png)
 ## Equipo: Whiter Team :sunglasses:
 ## Integrantes:
-* Gabriel Rivas Maldonado
-* Luis Antonio Mendoza Ramirez
-* López Esquivel Emiliano
-* Umaña Aguirre Cristian Alberto
-* Juárez Almaguer José Carlos 
+* Gabriel Rivas Maldonado: Javascript y php.
+* Luis Antonio Mendoza Ramirez:  Javascript, php, css y html.
+* López Esquivel Emiliano:  Base de datos.
+* Umaña Aguirre Cristian Alberto:  Diseño.
+* Juárez Almaguer José Carlos:  Documentación.
 ## Guiás de instalación
 ### Aplicaciones necesarias para el uso sin problemas de la pagina:
 * Xampp (Windows) o Mamp (MacOs)
