@@ -8,61 +8,15 @@ input {
 }
 
 input[type="submit"] {
+    color: white;
     padding: 2px;
     width: 15%;
-    color: white;
 }
 
 input[type="file"] {
     color: black;
     padding: 2px;
     width: 32%;
-}
-
-.head-encuesta textarea {
-    background-color: rgb(224, 224, 224);
-    border-radius: 20px;
-    outline: none;
-    padding: 5px;
-    resize: none;
-}
-
-.respuestas input {
-    margin: 10px 10px;
-}
-
-.cuerpo-crear h3 {
-    margin: 20px auto;
-    text-align: center;
-    width: 95%;
-}
-
-.pregunta>input {
-    margin: 0 30%;
-}
-
-.head-encuesta * {
-    width: 60%;
-}
-
-#encuesta button {
-    border-radius: 20px;
-    outline: none;
-    padding: 2px 7px;
-}
-
-.cuerpo-crear {
-    border-radius: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    height: 90%;
-    margin: auto;
-    overflow-y: scroll;
-    width: 95%;
-}
-
-.cuerpo-crear form {
-    width: 100%;
 }
 
 .head-encuesta {
@@ -98,6 +52,46 @@ input[type="file"] {
     width: 100%;
 }
 
+.cuerpo-crear {
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90%;
+    margin: auto;
+    overflow-y: scroll;
+    width: 95%;
+}
+
+.head-encuesta * {
+    width: 60%;
+}
+
+.head-encuesta textarea {
+    background-color: rgb(224, 224, 224);
+    border-radius: 20px;
+    outline: none;
+    padding: 5px;
+    resize: none;
+}
+
+.respuestas input {
+    margin: 10px 10px;
+}
+
+.cuerpo-crear h3 {
+    margin: 20px auto;
+    text-align: center;
+    width: 95%;
+}
+
+.cuerpo-crear form {
+    width: 100%;
+}
+
+.pregunta>input {
+    margin: 0 30%;
+}
+
 #articulo {
     display: flex;
     overflow-y: scroll;
@@ -118,10 +112,6 @@ input[type="file"] {
     flex-wrap: wrap;
 }
 
-#divGrupos * {
-    width: 100%;
-}
-
 #regresar {
     align-items: center;
     border-radius: 20px;
@@ -134,9 +124,19 @@ input[type="file"] {
     width: 20%;
 }
 
+#divGrupos * {
+    width: 100%;
+}
+
 #encuesta button {
     color: white;
     padding: 2px 10px;
+}
+
+#encuesta button {
+    border-radius: 20px;
+    outline: none;
+    padding: 2px 7px;
 }
 
 @media screen and (max-width: 420px) {
@@ -149,16 +149,16 @@ input[type="file"] {
         flex-wrap: wrap;
     }
 
+    .head-encuesta * {
+        width: 90%;
+    }
+
     .respuesta input {
         width: 90%;
     }
 
     .respuesta button {
         margin: auto;
-    }
-
-    .head-encuesta * {
-        width: 90%;
     }
 
     .head-encuesta h4 {

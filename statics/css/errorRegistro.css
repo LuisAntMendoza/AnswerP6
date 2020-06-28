@@ -5,16 +5,16 @@ a {
     text-decoration: none;
 }
 
-.cuerpoError * {
-    margin: 7% auto;
-}
-
 .cuerpoError {
     border-radius: 20px;
     height: 80%;
     margin: auto;
     text-align: center;
     width: 80%;
+}
+
+.cuerpoError * {
+    margin: 7% auto;
 }
 
 #articulo {

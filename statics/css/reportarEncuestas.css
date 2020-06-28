@@ -4,6 +4,12 @@ input[type="submit"] {
     padding: 2px 12px;
 }
 
+.reportar {
+    border-radius: 20px;
+    margin: auto;
+    width: 90%;
+}
+
 .reportar form {
     display: flex;
     flex-direction: column;
@@ -14,12 +20,6 @@ input[type="submit"] {
 
 .reportar form * {
     margin: 30px auto;
-}
-
-.reportar {
-    border-radius: 20px;
-    margin: auto;
-    width: 90%;
 }
 
 #articulo {

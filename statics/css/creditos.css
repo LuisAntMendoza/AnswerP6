@@ -1,23 +1,3 @@
-.integrante-header h5 {
-    width: 65%;
-    margin: auto;
-}
-
-.integrante-body p {
-    margin: auto;
-    text-align: center;
-    width: 90%;
-}
-
-.integrante-brand span, .integrante-brand i {
-    margin: auto;
-}
-
-a:hover {
-    color: white;
-    text-decoration: none;
-}
-
 .logo {
     align-items: center;
     display: flex;
@@ -70,8 +50,8 @@ a:hover {
 
 .integrante-brand {
     border-radius: 10px;
-    cursor: pointer;
     color: white;
+    cursor: pointer;
     display: flex;
     flex-wrap: wrap;
     height: 45%;
@@ -85,6 +65,21 @@ a:hover {
 
 .facebook {
     background-color: #3b5998;
+}
+
+.integrante-brand span, .integrante-brand i {
+    margin: auto;
+}
+
+.integrante-header h5 {
+    margin: auto;
+    width: 65%;
+}
+
+.integrante-body p {
+    margin: auto;
+    text-align: center;
+    width: 90%;
 }
 
 #articulo {

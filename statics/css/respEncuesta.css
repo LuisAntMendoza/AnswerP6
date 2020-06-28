@@ -1,14 +1,5 @@
-.pregunta h5 {
-    text-align: center;
+.grafica-encuesta {
     width: 90%;
-}
-
-.respuesta * {
-    margin: 0 7px;
-}
-
-#cont-canvas * {
-    margin: 40px auto;
 }
 
 .contenedor-encuesta {
@@ -51,9 +42,17 @@
     width: 20%;
 }
 
-
 .imgRespuesta {
     width: 10%;
+}
+
+.respuesta * {
+    margin: 0 7px;
+}
+
+.pregunta h5 {
+    text-align: center;
+    width: 90%;
 }
 
 #articulo {
@@ -81,15 +80,14 @@
     display: none;
 }
 
-.grafica-encuesta {
-    width: 90%;
+#cont-canvas * {
+    margin: 40px auto;
 }
 
-@media screen and (max-width: 420px) {    
+@media screen and (max-width: 420px) {
     .respuesta span {
         font-size: 12px;
     }
-
 
     .fotoPregunta {
         width: 70%;
@@ -98,6 +96,7 @@
     .imgRespuesta {
         width: 25%;
     }
+
     #enviarForm {
         width: 25%;
     }

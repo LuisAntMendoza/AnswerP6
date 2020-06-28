@@ -47,6 +47,15 @@ input[type="submit"] {
     width: 90%;
 }
 
+.respuesta {
+    display: flex;
+    margin: 10px auto;
+}
+
+.respuestas {
+    width: 100%;
+}
+
 .pregunta form {
     align-items: center;
     display: flex;
@@ -58,15 +67,6 @@ input[type="submit"] {
     text-align: center;
 }
 
-.pregunta>input {
-  width: 40%;
-}
-
-.respuesta {
-    display: flex;
-    margin: 10px auto;
-}
-
 .respuesta form {
     margin: auto;
     width: 50%;
@@ -76,8 +76,8 @@ input[type="submit"] {
     width: 10%;
 }
 
-.respuestas {
-    width: 100%;
+.pregunta>input {
+    width: 40%;
 }
 
 #antes {
@@ -109,42 +109,41 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 420px) {
-
-    form input[type="file"] {
-        width: 100%;
-    }
-
     textarea {
         width: 100%;
     }
 
-    .header-encuesta form {
-        margin: 10px auto;
-    }
-
-    .header-encuesta form * {
-        margin: 10px auto;
-    }
-
-    .pregunta {
-        flex-direction: row;
-    }
-
-    .pregunta form {
-        flex-wrap: wrap;
-    }
-
-    .pregunta form * {
-        margin: 5px auto;
+    form input[type="file"] {
+        width: 100%;
     }
 
     .respuesta {
         flex-wrap: wrap;
     }
 
+    .pregunta {
+        flex-direction: row;
+    }
+
+    .header-encuesta form {
+        margin: 10px auto;
+    }
+
+    .pregunta form {
+        flex-wrap: wrap;
+    }
+
     .respuesta form {
         margin: 10px auto;
         width: 100%;
+    }
+
+    .header-encuesta form * {
+        margin: 10px auto;
+    }
+
+    .pregunta form * {
+        margin: 5px auto;
     }
 
     .respuesta form span {
@@ -159,5 +158,4 @@ input[type="submit"] {
     #select-grupos {
         width: 60%;
     }
-
 }

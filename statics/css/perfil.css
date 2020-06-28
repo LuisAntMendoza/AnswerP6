@@ -1,46 +1,3 @@
-.perfil-2 h5 {
-    margin: auto;
-    width: 80%;
-}
-
-.contestadas h5 {
-    margin: auto;
-    width: 40%;
-}
-
-.form-img h5, .form-img input {
-    margin: 10px auto;
-}
-
-
-.form-img input[type="file"] {
-    font-size: 15px;
-}
-
-.form-img input[type="submit"] {
-    border-radius: 20px;
-    color: white;
-    padding: 0 20px;
-}
-
-.form-perfil input {
-    margin: auto;
-    width: 80%;
-}
-
-.form-perfil input[type="submit"] {
-    border-radius: 20px;
-    color: white;
-    margin-top: 20px;
-    width: 60%;
-}
-
-.perfil-1 h5 {
-    margin: auto;
-    text-align: center;
-    width: 80%;
-}
-
 .cuerpo-perfil {
     border-radius: 20px;
     display: flex;
@@ -93,6 +50,48 @@
     width: 100%;
 }
 
+.perfil-2 h5 {
+    margin: auto;
+    width: 80%;
+}
+
+.contestadas h5 {
+    margin: auto;
+    width: 40%;
+}
+
+.form-perfil input {
+    margin: auto;
+    width: 80%;
+}
+
+.perfil-1 h5 {
+    margin: auto;
+    text-align: center;
+    width: 80%;
+}
+
+.form-img h5, .form-img input {
+    margin: 10px auto;
+}
+
+.form-img input[type="file"] {
+    font-size: 15px;
+}
+
+.form-img input[type="submit"] {
+    border-radius: 20px;
+    color: white;
+    padding: 0 20px;
+}
+
+.form-perfil input[type="submit"] {
+    border-radius: 20px;
+    color: white;
+    margin-top: 20px;
+    width: 60%;
+}
+
 #articulo {
     display: flex;
 }
@@ -113,6 +112,25 @@
 }
 
 @media screen and (max-width: 420px) {
+    .cuerpo-perfil {
+        overflow-y: scroll;
+    }
+
+    .perfil-1 {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .perfil-2 {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        width: 90%;
+    }
+
+    .form-perfil {
+        width: 90%;
+    }
+
     .form-perfil p {
         font-size: 11px;
     }
@@ -125,7 +143,6 @@
         font-size: 10px;
         width: 30%;
     }
-
 
     .perfil-2 h5 {
         font-size: 15px;
@@ -150,26 +167,6 @@
     .form-img input[type="submit"] {
         font-size: 10px;
     }
-
-    .cuerpo-perfil {
-        overflow-y: scroll;
-    }
-
-    .perfil-1 {
-        width: 90%;
-        margin: 20px auto;
-    }
-
-    .perfil-2 {
-        width: 90%;
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-    }
-
-    .form-perfil {
-        width: 90%;
-    }
-
 
     #btn-consultar {
         font-size: 10px;

@@ -13,24 +13,6 @@ table, td, tr, th {
     text-align: center;
 }
 
-.cont-tablas h3 {
-    text-align: center;
-    width: 100%;
-}
-
-#categorias form {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 15px auto;
-    width: 100%;
-}
-
-#categorias form * {
-    margin: auto 10px;
-}
-
 .cont-tablas {
     border-radius: 20px;
     display: flex;
@@ -38,6 +20,11 @@ table, td, tr, th {
     margin: 30px auto;
     padding: 20px 0;
     width: 90%;
+}
+
+.cont-tablas h3 {
+    text-align: center;
+    width: 100%;
 }
 
 #articulo {
@@ -51,6 +38,19 @@ table, td, tr, th {
     color: white;
     margin: 20px auto auto auto;
     padding: 2px 10px;
+}
+
+#categorias form {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px auto;
+    width: 100%;
+}
+
+#categorias form * {
+    margin: auto 10px;
 }
 
 @media screen and (max-width: 420px) {
