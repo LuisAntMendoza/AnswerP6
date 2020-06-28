@@ -210,7 +210,7 @@ CREATE TABLE `reporte` (
   PRIMARY KEY (`id_Reporte`),
   KEY `id_Encuesta` (`id_Encuesta`),
   CONSTRAINT `reporte_ibfk_1` FOREIGN KEY (`id_Encuesta`) REFERENCES `encuesta` (`id_encuesta`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -282,7 +282,7 @@ CREATE TABLE `usuario` (
   `id_usuario` int(6) NOT NULL AUTO_INCREMENT,
   `Usuario` varchar(50) NOT NULL,
   `Identificador` varchar(70) DEFAULT NULL,
-  `Nombre` varchar(50) NOT NULL,
+  `nombre` varchar(70) DEFAULT NULL,
   `ApellidoPat` varchar(50) NOT NULL,
   `ApellidoMat` varchar(50) NOT NULL,
   `FNacimiento` varchar(50) NOT NULL,
@@ -302,7 +302,7 @@ CREATE TABLE `usuario` (
   KEY `TipoUsuario` (`TipoUsuario`),
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_Grupo`) REFERENCES `grupo` (`id_grupo`),
   CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`TipoUsuario`) REFERENCES `tipousuario` (`id_tipo`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -311,7 +311,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'KuMI/9cnMXRCojeekfP6OtJoNQ9Z2K7CAm1oTq9+wUU=','hm9bporKzxAt0GYVT+iUD/ZZpFetM9c3m3uKCnfnWZQ=','+cXn4L81MPXXkD7VGUp191Pp4doL5rR0rb47aTy17YI=','RO95gXKa2yGsf31YXjPUMnLQqrbN/c/BWBgDT/zug+g=','3P9cQQ15OICrmhgC8SkqHYGUndwZ2srokhzh6+HFQqw=','CqM6XjFt9tmWCwigAyJ44k6Uom9FrLAYBnzW+ZCBaU8=','2BYrmxFBCaXa9gEDOLinZAuuBWE+MuAGImYlmBfO31/uGDVS6qIuha5fIn6M2FzE','$2y$10$RJVO8yN.wCDipdCA1x9hcuZ147yvtsivxh2QiWt3nvh5wdUNKi6eW',NULL,0,0,1,NULL);
+INSERT INTO `usuario` VALUES (1,'KuMI/9cnMXRCojeekfP6OtJoNQ9Z2K7CAm1oTq9+wUU=','hm9bporKzxAt0GYVT+iUD/ZZpFetM9c3m3uKCnfnWZQ=','+cXn4L81MPXXkD7VGUp191Pp4doL5rR0rb47aTy17YI=','RO95gXKa2yGsf31YXjPUMnLQqrbN/c/BWBgDT/zug+g=','3P9cQQ15OICrmhgC8SkqHYGUndwZ2srokhzh6+HFQqw=','CqM6XjFt9tmWCwigAyJ44k6Uom9FrLAYBnzW+ZCBaU8=','2BYrmxFBCaXa9gEDOLinZAuuBWE+MuAGImYlmBfO31/uGDVS6qIuha5fIn6M2FzE','$2y$10$RJVO8yN.wCDipdCA1x9hcuZ147yvtsivxh2QiWt3nvh5wdUNKi6eW',NULL,2,0,1,NULL);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -324,4 +324,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-27 16:40:13
+-- Dump completed on 2020-06-28  7:51:08
