@@ -124,6 +124,9 @@ $(document).ready(() => {
             if (data.poder == "3") {
                 $("#divUserMin").css("display", "none");
             }
+            if (data.poder == 1) {
+                $("#admin").css("display", "flex");
+            }
         }
         console.log(data);
     }).catch((error) => {

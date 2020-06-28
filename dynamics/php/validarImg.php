@@ -2,19 +2,23 @@
 session_start();
 include("./config.php");
 $conexion = conectarBD();
-function obtenerImg() {
-    $ext = "";
-    if(file_exists("../../statics/img/fotosPerfil/".$_SESSION['usuario'].".png")) {
-        $ext = "png";
-    }
-    elseif (file_exists("../../statics/img/fotosPerfil/".$_SESSION['usuario'].".jpg")) {
-        $ext = "jpg";
-    }
-    elseif (file_exists("../../statics/img/fotosPerfil/".$_SESSION['usuario'].".jpeg")) {
-        $ext = "jpeg";
-    }
-    return $ext;
+$usuario = "";
+if(isset($_POST['idUser'])) {
+    $usuario = $_POST['idUser'];
 }
-echo json_encode(obtenerImg());
+else {
+    $usuario = $_SESSION['usuario'];
+}
+$ext = "";
+if(file_exists("../../statics/img/fotosPerfil/".$usuario.".png")) {
+    $ext = "png";
+}
+elseif (file_exists("../../statics/img/fotosPerfil/".$usuario.".jpg")) {
+    $ext = "jpg";
+}
+elseif (file_exists("../../statics/img/fotosPerfil/".$usuario.".jpeg")) {
+    $ext = "jpeg";
+}
+echo json_encode($ext);
 
 ?>

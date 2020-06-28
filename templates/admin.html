@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../statics/css/principal.css">
     <link rel="stylesheet" href="../libs/fontawesome/css/all.css">
     <link rel="stylesheet" href="../statics/css/modalPaleta.css">
+    <link rel="stylesheet" href="../statics/css/admin.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../statics/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../statics/favicon/favicon-16x16.png">
     <!-- Bootstrap -->
@@ -19,6 +20,7 @@
     <script src="../dynamics/js/paleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/links.js" charset="utf-8"></script>
     <script src="../dynamics/js/sesiones.js" charset="utf-8"></script>
+    <script src="../dynamics/js/admin.js" charset="utf-8"></script>
 </head>
 
 <body class="Terciario">
@@ -60,7 +62,53 @@
         </aside>
         <div id="contenido">
             <article id="articulo" class="Secundario">
-
+                <div id="usuarios" class="Principal cont-tablas">
+                    <h3>Control de Usuarios</h3>
+                    <table id="tabla-usuarios">
+                        <thead>
+                            <tr>
+                                <th>Usuario</th>
+                                <th>Identificador</th>
+                                <th>Nombre</th>
+                                <th>Apellido Paterno</th>
+                                <th>Apellido Materno</th>
+                                <th>Visitar</th>
+                                <th>Bloqueado</th>
+                                <th>Bloquear</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpo-usuario"></tbody>
+                    </table>
+                </div>
+                <div id="categorias" class="Principal cont-tablas">
+                    <h3>Control de Categorias</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Categoria</th>
+                                <th>Borrar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpo-categoria"></tbody>
+                    </table>
+                    <form action="../dynamics/php/addCat.php" method="post">
+                        <h5>Ingrese el nombre de su nueva categoria:</h5>
+                        <input type="text" pattern="^\w+$" name="Categoria">
+                        <input type="submit" value="Añadir">
+                    </form>
+                </div>
+                <div id="encuestas" class="Principal cont-tablas">
+                    <h3>Control de encuestas</h3>
+                    <table>
+                        <thead>
+                            <th>Titulo</th>
+                            <th>Descripcion</th>
+                            <th>Editar</th>
+                        </thead>
+                        <tbody id="cuerpo-encuestas"></tbody>
+                    </table>
+                </div>
             </article>
         </div>
         <footer id="pie" class="Terciario">

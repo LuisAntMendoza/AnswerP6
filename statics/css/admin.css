@@ -1,0 +1,47 @@
+table {
+    width: 90%;
+    margin: auto;
+}
+
+i {
+    cursor: pointer;
+}
+
+table, td, tr, th {
+    border: 2px solid white;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.cont-tablas {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    padding: 20px 0;
+}
+
+.cont-tablas h3 {
+    width: 100%;
+    text-align: center;
+}
+
+#articulo {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+#categorias form {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+}
+
+#categorias form * {
+    margin: auto 10px;
+}

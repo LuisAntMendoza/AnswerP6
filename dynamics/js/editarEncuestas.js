@@ -8,9 +8,12 @@ $(document).ready(() => {
             window.location = "encuestas.html";
         } else {
             $("#btn-usuario").text("Bienvenid@: " + data.nombre);
-        }
-        if (data.poder == 3) {
-            $("#filtros").css("display", "none");
+            if (data.poder == 1) {
+                $("#admin").css("display", "flex");
+            }
+            if (data.poder == 3) {
+                $("#filtros").css("display", "none");
+            }
         }
         console.log(data);
     }).catch((error) => {

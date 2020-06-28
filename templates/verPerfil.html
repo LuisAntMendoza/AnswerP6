@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../statics/css/principal.css">
     <link rel="stylesheet" href="../libs/fontawesome/css/all.css">
     <link rel="stylesheet" href="../statics/css/modalPaleta.css">
-    <link rel="stylesheet" href="../statics/css/respEncuesta.css">
+    <link rel="stylesheet" href="../statics/css/perfil.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../statics/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../statics/favicon/favicon-16x16.png">
     <!-- Bootstrap -->
@@ -16,11 +16,11 @@
     <script src="../libs/jquery-3.5.1.min.js" charset="utf-8"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="../libs/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="../libs/chart.min.js" charset="utf-8"></script>
     <script src="../dynamics/js/modalPaleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/paleta.js" charset="utf-8"></script>
     <script src="../dynamics/js/links.js" charset="utf-8"></script>
-    <script src="../dynamics/js/respEncuesta.js" charset="utf-8"></script>
+    <script src="../dynamics/js/sesiones.js" charset="utf-8"></script>
+    <script src="../dynamics/js/verPerfil.js" charset="utf-8"></script>
 </head>
 
 <body class="Terciario">
@@ -62,25 +62,18 @@
         </aside>
         <div id="contenido">
             <article id="articulo" class="Secundario">
-                <div class="contenedor-encuesta Principal">
-                    <form action="../dynamics/php/datosEncuesta.php" method="post" id="cont-encuesta">
-                        <div class="header-encuesta CuartoColor">
-                            <h3 id="titulo-encuesta"></h3>
-                            <p id="descripcion-encuesta"></p>
-                            <div id="antes">
-                                <h3>Esta encuesta aún no ha comenzado</h3>
-                                <h4>La encuesta comenzará el: <span id="fInicio"></span></h4>
-                            </div>
-                            <div id="despues">
-                                <h3>Los resultados de su encuesta son: </h3>
-                                <div id="cont-canvas">
-
-                                </div>
-                                <canvas id="grafica-encuesta"></canvas>
-                            </div>
-                        </div>
-                        <input type="submit" id="enviarForm">
-                    </form>
+                <div class="cuerpo-perfil Principal">
+                    <div class="perfil-1 CuartoColor">
+                        <img src="" alt="" id="img-perfil">
+                        <h5 id="h5-nombre"></h5>
+                    </div>
+                    <div class="perfil-2 CuartoColor">
+                        <h5 id="h5-usuario"></h5>
+                        <h5 id="h5-fNac"></h5>
+                        <h5 id="h5-correo"></h5>
+                        <h5 id="h5-creadas"></h5>
+                        <h5 id="h5-contestadas"></h5>
+                    </div>
                 </div>
             </article>
         </div>

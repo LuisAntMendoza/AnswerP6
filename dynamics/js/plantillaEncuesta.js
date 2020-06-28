@@ -134,6 +134,9 @@ $(document).ready(() => {
             if (data.poder == "3") {
                 $("#divUserMin").css("display", "none");
             }
+            if (data.poder == 3) {
+                $("#filtros").css("display", "none");
+            }
         }
         console.log(data);
     }).catch((error) => {
