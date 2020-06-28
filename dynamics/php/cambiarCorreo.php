@@ -1,5 +1,6 @@
 <?php
 //iniciamos sesion y conectamos a la BD
+//holaaaa
 session_start();
 include("./config.php");
 $conexion = conectarBD();
