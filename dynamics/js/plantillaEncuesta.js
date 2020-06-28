@@ -59,6 +59,7 @@ function crearPregunta() {
             $(inpFileResp).attr("accept", "image/*");
             let borrar = $("<button>");
             $(borrar).text("Borrar respuesta");
+            $(borrar).addClass("Terciario");
             $(borrar).on("click", (e) => {
                 e.preventDefault();
                 if ($($($($(e.target).parent()).parent()).children()).length > 3) {
@@ -71,7 +72,7 @@ function crearPregunta() {
         }
         let button = $("<button>");
         $(button).text("Agregar Respuesta");
-        $(button).addClass("agregarResp");
+        $(button).addClass("agregarResp Terciario");
         $(button).on("click", (e) => {
             e.preventDefault();
             if ($($($(e.target).parent()).children()).length < 11) {
@@ -88,6 +89,7 @@ function crearPregunta() {
                 $(respuesta).addClass("respuesta");
                 let borrar = $("<button>");
                 $(borrar).text("Borrar respuesta");
+                $(borrar).addClass("Terciario");
                 $(borrar).on("click", (e) => {
                     e.preventDefault();
                     if ($($($($(e.target).parent()).parent()).children()).length > 3) {
@@ -97,10 +99,12 @@ function crearPregunta() {
                 })
                 $(respuesta).append(b, inpRespuesta, inpFileResp, borrar);
                 $(e.target).before(respuesta);
+                colorearPaleta();
             }
         });
         let borrarQuest = $("<button>");
         borrarQuest.text("Borrar Pregunta");
+        $(borrarQuest).addClass("Terciario")
         $(borrarQuest).on("click", (e) => {
             e.preventDefault();
             if ($($("#encuesta").children()).length > 4) {
@@ -254,6 +258,7 @@ $(document).ready(() => {
                             $(span).text("·");
                             let borrar = $("<button>");
                             $(borrar).text("Borrar respuesta");
+                            $(borrar).addClass("Terciario");
                             $(borrar).on("click", (e) => {
                                 e.preventDefault();
                                 if ($($($(e.target).parent()).parent()).length > 3) {
@@ -270,7 +275,7 @@ $(document).ready(() => {
                     }
                     let button = $("<button>");
                     $(button).text("Agregar Respuesta");
-                    $(button).addClass("agregarResp");
+                    $(button).addClass("agregarResp Terciario");
                     $(button).on("click", (e) => {
                         e.preventDefault();
                         if ($($($(e.target).parent()).children()).length < 11) {
@@ -287,6 +292,7 @@ $(document).ready(() => {
                             $(respuesta).addClass("respuesta");
                             let borrar = $("<button>");
                             $(borrar).text("Borrar respuesta");
+                            $(borrar).addClass("Terciario")
                             $(borrar).on("click", (e) => {
                                 e.preventDefault();
                                 if ($($($($(e.target).parent()).parent()).children()).length > 3) {
@@ -296,10 +302,12 @@ $(document).ready(() => {
                             })
                             $(respuesta).append(b, inpRespuesta, inpFileResp, borrar);
                             $(e.target).before(respuesta);
+                            colorearPaleta();
                         }
                     });
                     let borrarQuest = $("<button>");
-                    borrarQuest.text("Borrar Pregunta");
+                    $(borrarQuest).text("Borrar Pregunta");
+                    $(borrarQuest).addClass("Terciario");
                     $(borrarQuest).on("click", (e) => {
                         e.preventDefault();
                         if ($($("#encuesta").children()).length > 4) {

@@ -1,9 +1,21 @@
+.pregunta button {
+    border-radius: 20px;
+    color: white;
+    padding: 2px 10px;
+}
+
 form textarea {
     resize: none;
 }
 
 form input {
     margin: auto;
+}
+
+form button {
+    border-radius: 20px;
+    color: white;
+    padding: 2px 10px;
 }
 
 .contenedor-encuesta {
@@ -56,6 +68,7 @@ form input {
 
 .respuesta {
     display: flex;
+    flex-wrap: wrap;
     margin: 10px auto;
 }
 
@@ -87,7 +100,9 @@ form input {
     border-radius: 20px;
     margin: auto;
     margin-bottom: 30px;
-    width: 11%;
+    width: 20%;
+    color: white;
+    padding: 2px 10px;
 }
 
 #antes {
@@ -163,3 +178,5 @@ form input {
         width: 60%;
     }
 }
+
+@media screen and (max-width:)

@@ -105,6 +105,9 @@ function GetFormattedDate() {
     }
     let year = (todayTime.getFullYear());
     let hour = todayTime.getHours();
+    if (hour < 10) {
+        hour = "0" + hour;
+    }
     let minutes = todayTime.getMinutes();
     return year + "-" + month + "-" + day + "T" + hour + ":" + minutes;
 }

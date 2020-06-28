@@ -1,3 +1,17 @@
+@keyframes animacion {
+    0% {
+        left: -5%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: -5%;
+    }
+}
+
 .boton h3 {
     color: white;
     margin: auto;
@@ -52,10 +66,22 @@
     width: 35%;
 }
 
+#effect {
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    animation-name: animacion;
+    animation-duration: 5s;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.8) 5%, rgba(255, 255, 255, 0) 100%);
+}
+
 #carruselInicio img {
     height: 408px;
 }
-
 
 #articulo {
     display: flex;
@@ -79,7 +105,7 @@
     .texto-carrusel h5 {
         visibility: hidden;
     }
-    
+
     .boton {
         height: 7%;
         width: 70%;
