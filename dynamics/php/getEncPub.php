@@ -16,7 +16,7 @@ if ($_POST['categoria'] == 0) {
 else {
     $categoria = mysqli_real_escape_string($conexion, $_POST["categoria"]);
 }
-if(preg_match("/^(\w\s)+$/", $_POST['buscar'])) {
+if(preg_match("/^(\w|\s)+$/", $_POST['buscar'])) {
     $buscar = mysqli_real_escape_string($conexion, $_POST['buscar']);
 }
 else {
