@@ -1,11 +1,12 @@
-table {
-    width: 90%;
-    margin: auto;
+i {
+  cursor: pointer;
 }
 
-i {
-    cursor: pointer;
+table {
+    margin: auto;
+    width: 90%;
 }
+
 
 table, td, tr, th {
     border: 2px solid white;
@@ -14,17 +15,17 @@ table, td, tr, th {
 }
 
 .cont-tablas {
-    width: 90%;
-    margin: 30px auto;
+    border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
-    border-radius: 20px;
+    margin: 30px auto;
     padding: 20px 0;
+    width: 90%;
 }
 
 .cont-tablas h3 {
-    width: 100%;
     text-align: center;
+    width: 100%;
 }
 
 #articulo {
@@ -34,12 +35,12 @@ table, td, tr, th {
 }
 
 #categorias form {
+    align-items: center;
     display: flex;
-    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     margin: 15px auto;
+    width: 100%;
 }
 
 #categorias form * {

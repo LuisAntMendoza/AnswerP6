@@ -1,10 +1,10 @@
-form textarea {
-    resize: none;
-}
-
 form input {
     margin: auto;
     outline: none;
+}
+
+form textarea {
+    resize: none;
 }
 
 input[type="submit"] {
@@ -31,6 +31,11 @@ input[type="submit"] {
     width: 90%;
 }
 
+.fotoPregunta {
+    margin: auto;
+    width: 20%;
+}
+
 .pregunta {
     border-radius: 20px;
     display: flex;
@@ -40,20 +45,6 @@ input[type="submit"] {
     margin: 20px auto;
     padding: 20px;
     width: 90%;
-}
-
-.respuestas {
-    width: 100%;
-}
-
-.respuesta {
-    display: flex;
-    margin: 10px auto;
-}
-
-.fotoPregunta {
-    margin: auto;
-    width: 20%;
 }
 
 .pregunta form {
@@ -67,6 +58,15 @@ input[type="submit"] {
     text-align: center;
 }
 
+.pregunta>input {
+  width: 40%;
+}
+
+.respuesta {
+    display: flex;
+    margin: 10px auto;
+}
+
 .respuesta form {
     margin: auto;
     width: 50%;
@@ -76,12 +76,20 @@ input[type="submit"] {
     width: 10%;
 }
 
-.pregunta>input {
-    width: 40%;
+.respuestas {
+    width: 100%;
+}
+
+#antes {
+    display: none;
 }
 
 #articulo {
     display: flex;
+}
+
+#cont-canvas * {
+    margin: 40px auto;
 }
 
 #cont-encuesta {
@@ -90,47 +98,23 @@ input[type="submit"] {
     width: 90%;
 }
 
+#despues {
+    display: none;
+}
+
 #enviarForm {
     border-radius: 20px;
     margin: auto;
     margin-bottom: 30px;
 }
 
-#antes {
-    display: none;
-}
-
-#despues {
-    display: none;
-}
-
-#cont-canvas * {
-    margin: 40px auto;
-}
-
 @media screen and (max-width: 420px) {
-    textarea {
-        width: 100%;
-    }
 
     form input[type="file"] {
         width: 100%;
     }
 
-    .respuesta {
-        flex-wrap: wrap;
-    }
-
-    .pregunta {
-        flex-direction: row;
-    }
-
-    .pregunta form {
-        flex-wrap: wrap;
-    }
-
-    .respuesta form {
-        margin: 10px auto;
+    textarea {
         width: 100%;
     }
 
@@ -142,8 +126,25 @@ input[type="submit"] {
         margin: 10px auto;
     }
 
+    .pregunta {
+        flex-direction: row;
+    }
+
+    .pregunta form {
+        flex-wrap: wrap;
+    }
+
     .pregunta form * {
         margin: 5px auto;
+    }
+
+    .respuesta {
+        flex-wrap: wrap;
+    }
+
+    .respuesta form {
+        margin: 10px auto;
+        width: 100%;
     }
 
     .respuesta form span {
@@ -151,11 +152,12 @@ input[type="submit"] {
         width: 100%;
     }
 
+    #form-borrar {
+        margin: auto;
+    }
+
     #select-grupos {
         width: 60%;
     }
 
-    #form-borrar {
-        margin: auto;
-    }
 }

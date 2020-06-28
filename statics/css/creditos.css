@@ -1,6 +1,40 @@
-.integrante-header h5 {
-    width: 65%;
-    margin: auto;
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.descripcion {
+  height: 15%;
+  width: 90%;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.foto-integrante {
+  border-radius: 50%;
+  height: 80%;
+  margin: auto;
+  width: 22%;
+}
+
+.github {
+  background-color: black;
+}
+
+.integrante {
+  border-radius: 0 30px 0 30px;
+  height: 45%;
+  margin: auto;
+  width: 26%;
+}
+
+.integrante-body {
+  display: flex;
+  flex-wrap: wrap;
+  height: 45%;
+  width: 100%;
 }
 
 .integrante-body p {
@@ -9,13 +43,38 @@
     width: 90%;
 }
 
-.integrante-brand span, .integrante-brand i {
-    margin: auto;
+.integrante-brand {
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  height: 45%;
+  margin: auto;
+  width: 45%;
 }
 
-a:hover {
-    color: white;
-    text-decoration: none;
+.integrante-brand span, .integrante-brand i {
+  margin: auto;
+}
+
+.integrante-header {
+  display: flex;
+  flex-wrap: wrap;
+  height: 45%;
+  width: 100%;
+}
+
+.integrante-header h5 {
+    margin: auto;
+    width: 65%;
+}
+
+.integrantes {
+  display: flex;
+  flex-wrap: wrap;
+  height: 60%;
+  width: 90%;
 }
 
 .logo {
@@ -26,65 +85,6 @@ a:hover {
     justify-content: center;
     margin: auto;
     width: 80%;
-}
-
-.descripcion {
-    height: 15%;
-    width: 90%;
-}
-
-.integrantes {
-    display: flex;
-    flex-wrap: wrap;
-    height: 60%;
-    width: 90%;
-}
-
-.integrante {
-    border-radius: 0 30px 0 30px;
-    height: 45%;
-    margin: auto;
-    width: 26%;
-}
-
-.integrante-header {
-    display: flex;
-    flex-wrap: wrap;
-    height: 45%;
-    width: 100%;
-}
-
-.integrante-body {
-    display: flex;
-    flex-wrap: wrap;
-    height: 45%;
-    width: 100%;
-}
-
-.foto-integrante {
-    border-radius: 50%;
-    height: 80%;
-    margin: auto;
-    width: 22%;
-}
-
-.integrante-brand {
-    border-radius: 10px;
-    cursor: pointer;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    height: 45%;
-    margin: auto;
-    width: 45%;
-}
-
-.github {
-    background-color: black;
-}
-
-.facebook {
-    background-color: #3b5998;
 }
 
 #articulo {
@@ -100,9 +100,18 @@ a:hover {
 }
 
 @media screen and (max-width: 420px) {
+    .descripcion {
+        height: auto;
+        text-align: justify;
+    }
+
     .integrante {
         width: 90%;
         margin: 20px auto;
+    }
+
+    .integrante-header h5 {
+      font-size: 18px;
     }
 
     .logo {
@@ -110,18 +119,9 @@ a:hover {
         margin: 15px auto;
     }
 
-    .descripcion {
-        height: auto;
-        text-align: justify;
-    }
-
-    .integrante-header h5 {
-        font-size: 18px;
-    }
-
     .logo h3 {
-        width: 75%;
         font-size: 19px;
+        width: 75%;
     }
 
     #articulo {
@@ -130,7 +130,7 @@ a:hover {
 
     #img-logo {
         height: auto;
-        width: 20%;
         margin-top: -5px;
+        width: 20%;
     }
 }
