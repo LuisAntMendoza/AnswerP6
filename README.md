@@ -43,7 +43,7 @@
 5. Una vez que el respaldo se encuentra en la carpeta bin  :file_folder:
 * En la Consola(Terminal) de MySQL dentro de la Base de Datos **'AnswerP6'** colocará lo siguiente:
 * **SOURCE BD_Answer.P6.sql;**
-* y presionar enter 
+* y presionar **enter**
 * Si se realizaron los pasos debidamente ya esta lista la Base de Datos  :clap:
 
 ### MacOS
@@ -53,8 +53,18 @@
 (Para clonar con éxito el repositorio deberá de dirijirse a la parte superior donde va a visualizar un botón verde que dice  :arrow_down: **Clone**, Este deberá estar seleccionado como **Clone with HTTPS** y presionar  :clipboard: el cual es el símbolo de porta papeles)
 3. Una vez que se copió el enlace deberá de Abrir su aplicación de la terminal, y selecionará su ruta(antes mencionada) una vez en la ruta con ayuda de git se colocará **git clone** y el enlace copiado. Presionará enter, de esta forma todos los archivos que necesita estarán descargados.
 ##### Base de Datos 
+
 1. Verificar si en el Panel de control de MAMP esta activado el módulo de **MySQL Server**
-2. Crear la Base de Datos:
+2. Crear Ususario:
+* Ingresar a la terminal a la ruta **C:\MAMP\bin\apache2\bin**
+* Escribir:
+* **mysql -u root** te pedirá la contraseña la cual es **root**
+* Una ves ingresado al usuario root se colocará lo siguiente para crear el nuevo usuario:
+* **CREATE USER 'adminAnswerP6'@'localhost' IDENTIFIED BY 'DB4dm1n-Pseis';**
+* Ya creado el usuario se deben de colocar sus propiedades colocando lo siguiente:
+* **GRANT CREATE,DELETE,INSERT,SELECT,UPDATE ON AnswerP6.* TO 'adminAnswerP6'@'localhost' **
+* Listo ya creaste el nuevo usuario  :clap: :clap:
+3. Crear la Base de Datos:
 * Ingresar a la aplicación de la terminal e ir a la ruta **C:\MAMP\bin\apache2\bin**
 * usuario: **adminAnswerP6** contraseña: **DB4dm1n-P6**
 * Una vez que se ingresó al usuario se va a crear la base conlocando:
@@ -68,4 +78,4 @@
 * Si se realizaron los pasos debidamente ya esta lista la Base de Datos  :clap:
 
 ## Ejecución de la página
-Con los Archivos descargados,la Base de Datos creada y con **Apache Server** activado, ahora solo tendrá que ir a su navegador de su preferencia y en la sección de URL colocará localhost y presionará la Carpeta AnswerP6 y podrá disfrutar de la experiencia de esta Fantastica página  :sparkles: :sparkles:
+Con los Archivos descargados, la Base de Datos creada y con **Apache Server** activado, ahora solo tendrá que ir al navegador de preferencia y en la sección de URL colocará localhost y presionará la Carpeta AnswerP6 y podrá disfrutar de la experiencia de esta Fantastica página  :sparkles: :sparkles:
