@@ -10,9 +10,6 @@ $(document).ready(() => {
             if (data.poder == 1) {
                 $("#admin").css("display", "flex");
             }
-            if (data.castigo == "true") {
-                window.location = "inicio.html";
-            }
         }
     }).catch((error) => {
         console.log(error);
