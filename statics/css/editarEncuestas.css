@@ -4,64 +4,67 @@ form textarea {
 
 form input {
     margin: auto;
+    outline: none;
+}
+
+input[type="submit"] {
+    border-radius: 20px;
+    color: white;
+    padding: 2px 10px;
 }
 
 .contenedor-encuesta {
-    width: 90%;
-    height: 90%;
-    overflow-y: scroll;
-    margin: auto;
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
+    height: 90%;
+    margin: auto;
+    overflow-y: scroll;
+    width: 90%;
 }
 
 .header-encuesta {
-    width: 90%;
     border-radius: 20px;
     margin: 20px auto;
     padding: 20px;
     text-align: center;
+    width: 90%;
 }
 
 .pregunta {
-    width: 90%;
-    margin: 20px auto;
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 20px auto;
     padding: 20px;
-    flex-direction: column;
-}
-
-.pregunta form {
-    display: flex;
-    align-items: center;
-    margin: 30px auto;
+    width: 90%;
 }
 
 .respuestas {
     width: 100%;
 }
 
-.pregunta h5 {
-    text-align: center;
-    margin: auto;
-}
-
-.pregunta>input {
-    width: 40%;
-}
-
 .respuesta {
-    margin: 10px auto;
     display: flex;
+    margin: 10px auto;
 }
 
 .fotoPregunta {
-    width: 20%;
     margin: auto;
+    width: 20%;
+}
+
+.pregunta form {
+    align-items: center;
+    display: flex;
+    margin: 30px auto;
+}
+
+.pregunta h5 {
+    margin: auto;
+    text-align: center;
 }
 
 .respuesta form {
@@ -73,20 +76,24 @@ form input {
     width: 10%;
 }
 
+.pregunta>input {
+    width: 40%;
+}
+
 #articulo {
     display: flex;
 }
 
 #cont-encuesta {
-    width: 90%;
     display: flex;
     flex-wrap: wrap;
+    width: 90%;
 }
 
 #enviarForm {
+    border-radius: 20px;
     margin: auto;
     margin-bottom: 30px;
-    border-radius: 20px;
 }
 
 #antes {
@@ -101,16 +108,54 @@ form input {
     margin: 40px auto;
 }
 
-.grafica-encuesta {
-    width: 90%;
-}
-
 @media screen and (max-width: 420px) {
     textarea {
         width: 100%;
     }
 
+    form input[type="file"] {
+        width: 100%;
+    }
+
+    .respuesta {
+        flex-wrap: wrap;
+    }
+
+    .pregunta {
+        flex-direction: row;
+    }
+
+    .pregunta form {
+        flex-wrap: wrap;
+    }
+
+    .respuesta form {
+        margin: 10px auto;
+        width: 100%;
+    }
+
+    .header-encuesta form {
+        margin: 10px auto;
+    }
+
+    .header-encuesta form * {
+        margin: 10px auto;
+    }
+
+    .pregunta form * {
+        margin: 5px auto;
+    }
+
+    .respuesta form span {
+        text-align: center;
+        width: 100%;
+    }
+
     #select-grupos {
         width: 60%;
+    }
+
+    #form-borrar {
+        margin: auto;
     }
 }

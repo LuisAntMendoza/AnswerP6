@@ -68,39 +68,39 @@
                             <h3 id="titulo-encuesta"></h3>
                             <input type="text" name="Titulo">
                             <input type="hidden" name="idEncuesta" class="inpIdEnc">
-                            <input type="submit" value="Editar">
+                            <input type="submit" value="Editar" class="Terciario">
                         </form>
                         <form action="../dynamics/php/editEncuesta.php" method="post">
                             <p id="descripcion-encuesta"></p>
                             <textarea name="Descripcion" rows="3" cols="80"></textarea>
                             <input type="hidden" name="idEncuesta" class="inpIdEnc">
-                            <input type="submit" value="Editar">
+                            <input type="submit" value="Editar" class="Terciario">
                         </form>
                         <form action="../dynamics/php/editEncuesta.php" method="post">
                             <select name="Categoria" id="select-categoria">
                                 <option value="0">Ninguna</option>
                             </select>
                             <input type="hidden" name="idEncuesta" class="inpIdEnc">
-                            <input type="submit" value="Editar Categoria">
+                            <input type="submit" value="Editar Categoria" class="Terciario">
                         </form>
                         <div id="filtros">
                             <form action="../dynamics/php/editEncuesta.php" method="post">
                                 <select name="usuarioMin" id="select-poder"></select>
                                 <input type="hidden" name="idEncuesta" class="inpIdEnc">
-                                <input type="submit" value="Editar Filtro">
+                                <input type="submit" value="Editar Filtro" class="Terciario">
                             </form>
                             <form action="../dynamics/php/editEncuesta.php" method="post">
                                 <select name="FiltroGrupo" id="select-grupos">
                                     <option value="0">Ninguno</option>
                                 </select>
                                 <input type="hidden" name="idEncuesta" class="inpIdEnc">
-                                <input type="submit" value="Editar Filtro">
+                                <input type="submit" value="Editar Filtro" class="Terciario">
                             </form>
                         </div>
                     </div>
-                    <form action="../dynamics/php/deleteEncuesta.php" method="post">
+                    <form action="../dynamics/php/deleteEncuesta.php" method="post" id="form-borrar">
                         <input type="hidden" name="idEncuesta" class="inpIdEnc">
-                        <input type="submit" id="enviarForm" value="Borrar Encuesta">
+                        <input type="submit" id="enviarForm" value="Borrar Encuesta" class="Terciario">
                     </form>
                 </div>
             </article>
