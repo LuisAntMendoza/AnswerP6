@@ -66,11 +66,6 @@
 }
 
 @media screen and (max-width: 420px) {
-    .boton {
-        height: 7%;
-        width: 70%;
-    }
-
     .boton h3 {
         font-size: 23px;
     }
@@ -82,5 +77,10 @@
 
     .texto-carrusel h5 {
         visibility: hidden;
+    }
+    
+    .boton {
+        height: 7%;
+        width: 70%;
     }
 }

@@ -1,3 +1,24 @@
+.cuerpo-modal h3 {
+    color: blue;
+    text-align: center;
+}
+
+.cuerpo-modal h4 {
+    color: red;
+}
+
+.cabeza-modal i {
+    cursor: pointer;
+    font-size: 20px;
+    width: 5%;
+}
+
+.paletaColor div {
+    height: 25px;
+    width: 10%;
+}
+
+
 .modalCSS {
     background-color: white;
     border-radius: 20px;
@@ -52,26 +73,6 @@
 
 .paletaColor:hover {
     background-color: lightskyblue;
-}
-
-.cuerpo-modal h3 {
-    color: blue;
-    text-align: center;
-}
-
-.cuerpo-modal h4 {
-    color: red;
-}
-
-.cabeza-modal i {
-    cursor: pointer;
-    font-size: 20px;
-    width: 5%;
-}
-
-.paletaColor div {
-    height: 25px;
-    width: 10%;
 }
 
 #Primario1 {
