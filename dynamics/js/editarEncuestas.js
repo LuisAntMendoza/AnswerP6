@@ -93,6 +93,7 @@ $(document).ready(() => {
                     let btnEditQuest = $("<input>");
                     $(btnEditQuest).attr("type", "submit");
                     $(btnEditQuest).attr("value", "Editar");
+                    $(btnEditQuest).addClass("Terciario");
                     $(formQuest).append(h5Quest, editQuest, btnEditQuest);
                     let formImgQuest = $("<form>");
                     $(formImgQuest).attr("action", "../dynamics/php/editImg.php");
@@ -107,6 +108,7 @@ $(document).ready(() => {
                     let submitImgQuest = $("<input>");
                     $(submitImgQuest).attr("type", "submit");
                     $(submitImgQuest).attr("value", "Editar Img");
+                    $(submitImgQuest).addClass("Terciario");
                     $(formImgQuest).append(imgQuest, editImgQuest, submitImgQuest);
                     let respuestas = $("<div>");
                     $(respuestas).addClass("respuestas");
@@ -127,6 +129,7 @@ $(document).ready(() => {
                             let btnEditResp = $("<input>");
                             $(btnEditResp).attr("type", "submit");
                             $(btnEditResp).attr("value", "Editar");
+                            $(btnEditResp).addClass("Terciario");
                             let imgResp = $("<img>");
                             $(imgResp).attr("id", id_Resp);
                             $(imgResp).addClass("imgRespuesta");
@@ -137,6 +140,7 @@ $(document).ready(() => {
                             let submitImgResp = $("<input>");
                             $(submitImgResp).attr("type", "submit");
                             $(submitImgResp).attr("value", "Editar Img");
+                            $(submitImgResp).addClass("Terciario");
                             let editImgResp = $("<input>");
                             $(editImgResp).attr("")
                             let span = $("<span>");
