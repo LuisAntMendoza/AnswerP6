@@ -12,10 +12,6 @@
     width: 80%;
 }
 
-#carruselInicio img {
-    height: 408px;
-}
-
 .cont-carrusel {
     border-radius: 20px;
     height: 60%;
@@ -55,6 +51,11 @@
     margin: auto;
     width: 35%;
 }
+
+#carruselInicio img {
+    height: 408px;
+}
+
 
 #articulo {
     display: flex;

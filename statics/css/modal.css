@@ -18,6 +18,20 @@
     width: 10%;
 }
 
+.cabeza-modal {
+    align-items: center;
+    border-bottom: 1.5px solid gray;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 10%;
+}
+
+.cuerpo-modal {
+    line-height: 21px;
+    padding: 10px 15px;
+}
+
+
 .modalCSS {
     background-color: white;
     border-radius: 20px;
@@ -42,19 +56,6 @@
     top: 0;
     width: 100%;
     z-index: 9;
-}
-
-.cabeza-modal {
-    align-items: center;
-    border-bottom: 1.5px solid gray;
-    display: flex;
-    flex-direction: row-reverse;
-    height: 10%;
-}
-
-.cuerpo-modal {
-    line-height: 21px;
-    padding: 10px 15px;
 }
 
 .paletaColor {
