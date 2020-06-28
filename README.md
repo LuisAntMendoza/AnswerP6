@@ -22,7 +22,7 @@
 1. Verificar si en el Panel de control de Xampp esta activada el módulo de **MySQL**
 2. Crear la Base de Datos:
 * Ingresar a la terminal con _*Windows + r*_ e ir a la ruta **C:\Xampp\mysql\bin**
-* (colocar el usuario y contraseña)
+* usuario: **adminAnswerP6** contraseña: **DB4dm1n-P6**
 * Una vez que se ingresó al usuario se va a crear la base conlocando:
 * **CREATE DATABASE AnswerP6;**
 * Ya creada deberá de ingresar con: 
@@ -43,7 +43,7 @@
 1. Verificar si en el Panel de control de MAMP esta activado el módulo de **MySQL Server**
 2. Crear la Base de Datos:
 * Ingresar a la aplicación de la terminal e ir a la ruta **C:\MAMP\bin\apache2\bin**
-* (colocar el usuario y contraseña)
+* usuario: **adminAnswerP6** contraseña: **DB4dm1n-P6**
 * Una vez que se ingresó al usuario se va a crear la base conlocando:
 * **CREATE DATABASE AnswerP6 CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;**
 * Ya creada deberá de ingresar con: 
