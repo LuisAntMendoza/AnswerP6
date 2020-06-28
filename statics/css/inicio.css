@@ -111,3 +111,9 @@
         visibility: hidden;
     }
 }
+
+@media screen and (max-width: 1040px) {
+    .cont-carrusel {
+        height: auto;
+    }
+}

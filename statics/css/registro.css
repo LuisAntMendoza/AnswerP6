@@ -227,3 +227,21 @@ input {
         margin: 0 auto;
     }
 }
+
+@media screen and (max-width: 1040px) {
+    .inicio-1, .inicio-2 {
+        width: 45%;
+    }
+
+    .form-input * {
+        width: 100%;
+    }
+
+    #img-registro {
+        height: 40%;
+    }
+
+    #inp-img-registro {
+        width: 100%;
+    }
+}

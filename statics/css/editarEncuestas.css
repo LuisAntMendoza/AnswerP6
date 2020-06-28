@@ -88,10 +88,6 @@ input[type="submit"] {
     display: flex;
 }
 
-#cont-canvas * {
-    margin: 40px auto;
-}
-
 #cont-encuesta {
     display: flex;
     flex-wrap: wrap;
@@ -106,6 +102,14 @@ input[type="submit"] {
     border-radius: 20px;
     margin: auto;
     margin-bottom: 30px;
+}
+
+#form-borrar {
+    margin: auto;
+}
+
+#cont-canvas * {
+    margin: 40px auto;
 }
 
 @media screen and (max-width: 420px) {
@@ -157,5 +161,23 @@ input[type="submit"] {
 
     #select-grupos {
         width: 60%;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    textarea {
+        width: 100%;
+    }
+
+    form input {
+        margin: 0 15px;
+    }
+
+    .respuesta {
+        flex-wrap: wrap;
+    }
+
+    .respuesta form {
+        width: 90%;
     }
 }

@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(../../libs/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
 body {
     font-family: "Montserrat" !important;
 }
@@ -152,7 +157,8 @@ body {
     }
 }
 
-@font-face {
-    font-family: "Montserrat";
-    src: url(../../libs/fonts/Montserrat/Montserrat-Regular.ttf);
+@media screen and (max-width: 1040px) {
+    #pie .h4 {
+        font-size: 23px;
+    }
 }
