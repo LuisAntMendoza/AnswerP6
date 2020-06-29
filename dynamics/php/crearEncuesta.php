@@ -12,13 +12,13 @@ function getFecha($fechaMal) {
 }
 
 //escapamos y validamos los valores recibidos
-if(preg_match("/^(\w|\s)+$/", $_POST['titulo'])) {
+if(preg_match("/^(\w|\s|\?|¿)+$/", $_POST['titulo'])) {
     $titulo = mysqli_real_escape_string($conexion, $_POST["titulo"]);
 }
 else {
     header("location: ../../templates/inicio.html");
 }
-if(preg_match("/^(\w|\s)+$/", $_POST['descripcion'])) {
+if(preg_match("/^(\w|\s|\?|¿)+$/", $_POST['descripcion'])) {
     $descripcion = mysqli_real_escape_string($conexion, $_POST["descripcion"]);
 }
 else {
