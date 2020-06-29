@@ -99,3 +99,4 @@ Password: G0dAdm!n369
 
 ## Importante:
 Los títulos, descripciones, preguntas y respuestas solo pueden ser valores alfanúmericos sin acentos.
+La página al haberse creado en Mac, puede llegar a generar problemas de compatibilidad en Xampp. Se recomienda su visualización en MAMP.
