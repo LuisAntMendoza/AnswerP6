@@ -72,6 +72,7 @@ function crearPregunta() {
                 })
                 $(respuesta).append(b, inpRespuesta, inpFileResp, borrar);
                 $(e.target).before(respuesta);
+                colorearPaleta();
             }
         });
         let borrarQuest = $("<button>");
